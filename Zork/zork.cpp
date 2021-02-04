@@ -1,6 +1,6 @@
 #include "zork.h"
 #include "ui_zork.h"
-
+#include <QScrollBar>
 Zork::Zork(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Zork)
@@ -21,7 +21,12 @@ Zork::~Zork()
 void Zork::updatePositionAfterMoving(){
     QString currentPlainText = ui->plainTextEdit->toPlainText()+QString::fromStdString("\n")+QString::fromStdString(zorkUL->currentRoom->longDescription()+"\n");
 
+
    ui->plainTextEdit->setPlainText(currentPlainText);
+
+   // Puts the scroll bar to the bottom as setting the text moves it back to the top
+   ui->plainTextEdit->moveCursor(QTextCursor::End);
+   ui->plainTextEdit->ensureCursorVisible();
 }
 
 void Zork::on_northButton_clicked()
