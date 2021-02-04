@@ -14,7 +14,7 @@ private:
 	Parser parser;
 	Room *currentRoom;
 	void createRooms();
-	bool processCommand(Command command);
+
 	void printHelp();
 	void goRoom(Command command);
     void createItems();
@@ -25,6 +25,7 @@ public:
     void printWelcome();
 	void play();
 	string go(string direction);
+    bool processCommand(Command command);
 };
 
 #endif /*ZORKUL_H_*/

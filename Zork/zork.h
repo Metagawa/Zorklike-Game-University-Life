@@ -17,7 +17,14 @@ public:
     ~Zork();
 
 private slots:
-    void on_welcomeButton_clicked();
+
+    void on_northButton_clicked();
+
+    void on_eastButton_clicked();
+
+    void on_westButton_clicked();
+
+    void on_southButton_clicked();
 
 private:
     Ui::Zork *ui;
