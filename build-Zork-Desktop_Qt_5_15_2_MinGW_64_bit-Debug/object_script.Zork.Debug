@@ -1,0 +1,10 @@
+debug/Character.o
+debug/Command.o
+debug/CommandWords.o
+debug/item.o
+debug/Parser.o
+debug/Room.o
+debug/main.o
+debug/ZorkUL.o
+debug/zork.o
+debug/moc_zork.o
