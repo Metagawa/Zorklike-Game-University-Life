@@ -39,6 +39,7 @@ private slots:
 private:
     Ui::Zork *ui;
     ZorkUL *zorkUL;
+    void updatePositionAfterMoving();
 
 };
 #endif // ZORK_H

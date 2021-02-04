@@ -8,7 +8,7 @@ Zork::Zork(QWidget *parent)
     ui->setupUi(this);
     zorkUL = new ZorkUL();
     zorkUL->printWelcome();
-    string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription();
+    string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription()+"\n";
     ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
 }
 
@@ -18,42 +18,53 @@ Zork::~Zork()
 }
 
 
+void Zork::updatePositionAfterMoving(){
+    QString currentPlainText = ui->plainTextEdit->toPlainText()+QString::fromStdString("\n")+QString::fromStdString(zorkUL->currentRoom->longDescription()+"\n");
 
+   ui->plainTextEdit->setPlainText(currentPlainText);
+}
 
 void Zork::on_northButton_clicked()
 {
     Command *northCommand = new Command("go", "north");
     zorkUL->processCommand(*northCommand);
+    updatePositionAfterMoving();
+
 }
 
 void Zork::on_eastButton_clicked()
 {
     Command *northCommand = new Command("go", "east");
     zorkUL->processCommand(*northCommand);
+    updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked()
 {
     Command *northCommand = new Command("go", "west");
     zorkUL->processCommand(*northCommand);
+    updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked()
 {
     Command *northCommand = new Command("go", "south");
     zorkUL->processCommand(*northCommand);
+    updatePositionAfterMoving();
 }
 
 void Zork::on_takeButton_clicked()
 {
     Command *takeCommand = new Command("take", "x");
     zorkUL->processCommand(*takeCommand);
+
 }
 
 void Zork::on_infoButton_clicked()
 {
     Command *infoCommand = new Command("info","");
     zorkUL->processCommand(*infoCommand);
+
 }
 
 
