@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>270</width>
-    <height>139</height>
+    <width>590</width>
+    <height>468</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>MV Boli</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Zork</string>
@@ -17,6 +22,12 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="1" column="4">
      <widget class="QPushButton" name="takeButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Take</string>
       </property>
@@ -24,6 +35,12 @@
     </item>
     <item row="2" column="4">
      <widget class="QPushButton" name="eastButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>East</string>
       </property>
@@ -31,6 +48,12 @@
     </item>
     <item row="3" column="2">
      <widget class="QPushButton" name="infoButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Info</string>
       </property>
@@ -38,6 +61,12 @@
     </item>
     <item row="1" column="3">
      <widget class="QPushButton" name="northButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>North</string>
       </property>
@@ -45,6 +74,12 @@
     </item>
     <item row="3" column="3">
      <widget class="QPushButton" name="southButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>South</string>
       </property>
@@ -52,6 +87,12 @@
     </item>
     <item row="1" column="2">
      <widget class="QPushButton" name="putButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Put</string>
       </property>
@@ -59,6 +100,12 @@
     </item>
     <item row="2" column="2">
      <widget class="QPushButton" name="westButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>West</string>
       </property>
@@ -66,6 +113,12 @@
     </item>
     <item row="3" column="4">
      <widget class="QPushButton" name="quitButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Quit</string>
       </property>
@@ -73,6 +126,12 @@
     </item>
     <item row="2" column="3">
      <widget class="QPushButton" name="mapButton">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Map</string>
       </property>
@@ -80,6 +139,12 @@
     </item>
     <item row="0" column="2" colspan="3">
      <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>

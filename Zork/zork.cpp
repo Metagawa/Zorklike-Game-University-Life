@@ -10,6 +10,7 @@ Zork::Zork(QWidget *parent)
     zorkUL->printWelcome();
     string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription()+"\n";
     ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
+    ui->plainTextEdit->setStyleSheet("color: blue;");
 }
 
 Zork::~Zork()
