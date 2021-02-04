@@ -41,3 +41,34 @@ void Zork::on_southButton_clicked()
     Command *northCommand = new Command("go", "south");
     zorkUL->processCommand(*northCommand);
 }
+
+void Zork::on_takeButton_clicked()
+{
+    Command *takeCommand = new Command("take", "x");
+    zorkUL->processCommand(*takeCommand);
+}
+
+void Zork::on_infoButton_clicked()
+{
+    Command *infoCommand = new Command("info","");
+    zorkUL->processCommand(*infoCommand);
+}
+
+
+void Zork::on_mapButton_clicked()
+{
+    Command *mapCommand = new Command("map","");
+    zorkUL->processCommand(*mapCommand);
+}
+
+void Zork::on_putButton_clicked()
+{
+    Command *putCommand = new Command("put", "x");
+    zorkUL->processCommand(*putCommand);
+}
+
+void Zork::on_quitButton_clicked()
+{
+    Command *quitCommand = new Command("quit", "");
+    zorkUL->processCommand(*quitCommand);
+}

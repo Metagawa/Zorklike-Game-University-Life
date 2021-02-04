@@ -26,6 +26,16 @@ private slots:
 
     void on_southButton_clicked();
 
+    void on_takeButton_clicked();
+
+    void on_infoButton_clicked();
+
+    void on_mapButton_clicked();
+
+    void on_putButton_clicked();
+
+    void on_quitButton_clicked();
+
 private:
     Ui::Zork *ui;
     ZorkUL *zorkUL;

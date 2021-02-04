@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>270</width>
+    <height>139</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,31 +15,66 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="3">
-     <widget class="QPushButton" name="eastButton">
+    <item row="0" column="4">
+     <widget class="QPushButton" name="takeButton">
       <property name="text">
-       <string>East</string>
+       <string>Take</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="westButton">
-      <property name="text">
-       <string>West</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
+    <item row="0" column="3">
      <widget class="QPushButton" name="northButton">
       <property name="text">
        <string>North</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
+    <item row="2" column="3">
      <widget class="QPushButton" name="southButton">
       <property name="text">
        <string>South</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QPushButton" name="eastButton">
+      <property name="text">
+       <string>East</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="quitButton">
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="mapButton">
+      <property name="text">
+       <string>Map</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="putButton">
+      <property name="text">
+       <string>Put</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="westButton">
+      <property name="text">
+       <string>West</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="infoButton">
+      <property name="text">
+       <string>Info</string>
       </property>
      </widget>
     </item>
@@ -50,10 +85,16 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>20</height>
+     <width>270</width>
+     <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuZork_UL">
+    <property name="title">
+     <string>Zork UL</string>
+    </property>
+   </widget>
+   <addaction name="menuZork_UL"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
