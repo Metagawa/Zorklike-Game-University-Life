@@ -8,6 +8,8 @@ Zork::Zork(QWidget *parent)
     ui->setupUi(this);
     zorkUL = new ZorkUL();
     zorkUL->printWelcome();
+    string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription();
+    ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
 }
 
 Zork::~Zork()
@@ -69,6 +71,6 @@ void Zork::on_putButton_clicked()
 
 void Zork::on_quitButton_clicked()
 {
-    Command *quitCommand = new Command("quit", "");
-    zorkUL->processCommand(*quitCommand);
+    QApplication::quit();
+
 }

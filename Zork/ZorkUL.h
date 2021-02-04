@@ -11,14 +11,7 @@ using namespace std;
 
 class ZorkUL {
 private:
-	Parser parser;
-	Room *currentRoom;
-	void createRooms();
 
-	void printHelp();
-	void goRoom(Command command);
-    void createItems();
-    void displayItems();
 
 public:
 	ZorkUL();
@@ -26,6 +19,13 @@ public:
 	void play();
 	string go(string direction);
     bool processCommand(Command command);
+    Parser parser;
+    Room *currentRoom;
+    void createRooms();
+    void printHelp();
+    void goRoom(Command command);
+    void createItems();
+    void displayItems();
 };
 
 #endif /*ZORKUL_H_*/
