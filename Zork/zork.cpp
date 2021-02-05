@@ -28,6 +28,19 @@ void Zork::updatePositionAfterMoving(){
    // Puts the scroll bar to the bottom as setting the text moves it back to the top
    ui->plainTextEdit->moveCursor(QTextCursor::End);
    ui->plainTextEdit->ensureCursorVisible();
+   ui->northButton->setDisabled(false);
+   ui->southButton->setDisabled(false);
+   ui->eastButton->setDisabled(false);
+   ui->westButton->setDisabled(false);
+  if( zorkUL->currentRoom->nextRoom("north")==NULL){
+      ui->northButton->setDisabled(true);
+  }else if( zorkUL->currentRoom->nextRoom("south")==NULL){
+       ui->southButton->setDisabled(true);
+  }else if( zorkUL->currentRoom->nextRoom("east")==NULL){
+      ui->eastButton->setDisabled(true);
+  }else if( zorkUL->currentRoom->nextRoom("west")==NULL){
+      ui->westButton->setDisabled(true);
+  }
 }
 
 void Zork::on_northButton_clicked()
