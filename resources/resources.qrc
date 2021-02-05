@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>images/gym-room.png</file>
+    </qresource>
+</RCC>
