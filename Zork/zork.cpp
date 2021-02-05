@@ -34,11 +34,14 @@ void Zork::updatePositionAfterMoving(){
    ui->westButton->setDisabled(false);
   if( zorkUL->currentRoom->nextRoom("north")==NULL){
       ui->northButton->setDisabled(true);
-  }else if( zorkUL->currentRoom->nextRoom("south")==NULL){
+  }
+  if( zorkUL->currentRoom->nextRoom("south")==NULL){
        ui->southButton->setDisabled(true);
-  }else if( zorkUL->currentRoom->nextRoom("east")==NULL){
+  }
+  if( zorkUL->currentRoom->nextRoom("east")==NULL){
       ui->eastButton->setDisabled(true);
-  }else if( zorkUL->currentRoom->nextRoom("west")==NULL){
+  }
+  if( zorkUL->currentRoom->nextRoom("west")==NULL){
       ui->westButton->setDisabled(true);
   }
 }
