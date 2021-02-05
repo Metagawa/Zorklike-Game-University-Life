@@ -46,6 +46,15 @@ void Zork::updatePositionAfterMoving(){
   if( zorkUL->currentRoom->nextRoom("west")==NULL){
       ui->westButton->setDisabled(true);
   }
+
+
+  // update image for room
+  if (zorkUL->currentRoom->shortDescription()=="a"){
+      ui->imageBackground-> setPixmap(QPixmap(":/new/images/images/gym-room.png"));
+  }else if (zorkUL->currentRoom->shortDescription()=="f"){
+      ui->imageBackground-> setPixmap(QPixmap(":/new/images/images/business-room.png"));
+  }
+
 }
 
 void Zork::on_northButton_clicked()
