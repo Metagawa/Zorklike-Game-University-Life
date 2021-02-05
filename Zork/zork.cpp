@@ -11,6 +11,7 @@ Zork::Zork(QWidget *parent)
     string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription()+"\n";
     ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
     ui->plainTextEdit->setStyleSheet("color: blue;");
+    ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
 Zork::~Zork()
