@@ -1,5 +1,5 @@
-#ifndef ZORKUL_H_
-#define ZORKUL_H_
+#ifndef UNILIFE_H_
+#define UNILIFE_H_
 
 #include "Command.h"
 #include "Parser.h"
@@ -9,12 +9,12 @@
 #include <string>
 using namespace std;
 
-class ZorkUL {
+class UniLife {
 private:
 
 
 public:
-	ZorkUL();
+	UniLife();
     void printWelcome();
 	void play();
 	string go(string direction);
@@ -28,4 +28,4 @@ public:
     void displayItems();
 };
 
-#endif /*ZORKUL_H_*/
+#endif /*UNILIFE_H_*/
