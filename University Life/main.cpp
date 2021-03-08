@@ -1,4 +1,4 @@
-#include "zork.h"
+#include "uniZork.h"
 
 #include <QApplication>
 

@@ -1,14 +1,14 @@
 #include <iostream>
 
 using namespace std;
-#include "ZorkUL.h"
+#include "uniLife.h"
 
 
-ZorkUL::ZorkUL() {
+UniLife::UniLife() {
 	createRooms();
 }
 
-void ZorkUL::createRooms()  {
+void UniLife::createRooms()  {
     Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
 
 	a = new Room("a");
@@ -45,11 +45,11 @@ void ZorkUL::createRooms()  {
 /**
  *  Main play routine.  Loops until end of play.
  */
-void ZorkUL::play() {
+void UniLife::play() {
 	printWelcome();
 
 	// Enter the main command loop.  Here we repeatedly read commands and
-	// execute them until the ZorkUL game is over.
+    // execute them until the UniLife game is over.
 
 	bool finished = false;
 	while (!finished) {
@@ -65,7 +65,7 @@ void ZorkUL::play() {
 	cout << "end" << endl;
 }
 
-void ZorkUL::printWelcome() {
+void UniLife::printWelcome() {
 	cout << "start"<< endl;
 	cout << "info for help"<< endl;
 	cout << endl;
@@ -74,10 +74,10 @@ void ZorkUL::printWelcome() {
 
 /**
  * Given a command, process (that is: execute) the command.
- * If this command ends the ZorkUL game, true is returned, otherwise false is
+ * If this command ends the UniLife game, true is returned, otherwise false is
  * returned.
  */
-bool ZorkUL::processCommand(Command command) {
+bool UniLife::processCommand(Command command) {
 	if (command.isUnknown()) {
 		cout << "invalid input"<< endl;
 		return false;
@@ -145,13 +145,13 @@ bool ZorkUL::processCommand(Command command) {
 	return false;
 }
 /** COMMANDS **/
-void ZorkUL::printHelp() {
+void UniLife::printHelp() {
 	cout << "valid inputs are; " << endl;
 	parser.showCommands();
 
 }
 
-void ZorkUL::goRoom(Command command) {
+void UniLife::goRoom(Command command) {
 	if (!command.hasSecondWord()) {
 		cout << "incomplete input"<< endl;
 		return;
@@ -170,7 +170,7 @@ void ZorkUL::goRoom(Command command) {
 	}
 }
 
-string ZorkUL::go(string direction) {
+string UniLife::go(string direction) {
 	//Make the direction lowercase
 	//transform(direction.begin(), direction.end(), direction.begin(),:: tolower);
 	//Move to the next room

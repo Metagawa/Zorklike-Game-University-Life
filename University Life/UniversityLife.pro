@@ -16,8 +16,8 @@ SOURCES += \
     Parser.cpp \
     Room.cpp \
     main.cpp \
-    ZorkUL.cpp \
-    zork.cpp
+    uniLife.cpp \
+    uniZork.cpp
 
 HEADERS += \
     Character.h \
@@ -26,11 +26,11 @@ HEADERS += \
     item.h \
     Parser.cpp \
     Room.h \
-    ZorkUL.h \
-    zork.h
+    uniLife.h \
+    uniZork.h
 
 FORMS += \
-    zork.ui
+    uniZork.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

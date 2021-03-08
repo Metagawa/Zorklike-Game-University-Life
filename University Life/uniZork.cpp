@@ -1,14 +1,14 @@
-#include "zork.h"
-#include "ui_zork.h"
+#include "uniZork.h"
+#include "ui_uniZork.h"
 #include <QScrollBar>
 Zork::Zork(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Zork)
 {
     ui->setupUi(this);
-    zorkUL = new ZorkUL();
-    zorkUL->printWelcome();
-    string welcomeText = "start \ninfo for help\n\n"+ zorkUL->currentRoom->longDescription()+"\n";
+    uniLife = new UniLife();
+    uniLife->printWelcome();
+    string welcomeText = "start \ninfo for help\n\n"+ uniLife->currentRoom->longDescription()+"\n";
     ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
     ui->plainTextEdit->setStyleSheet("color: blue;");
     ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -21,7 +21,7 @@ Zork::~Zork()
 
 
 void Zork::updatePositionAfterMoving(){
-    QString currentPlainText = ui->plainTextEdit->toPlainText()+QString::fromStdString("\n")+QString::fromStdString(zorkUL->currentRoom->longDescription()+"\n");
+    QString currentPlainText = ui->plainTextEdit->toPlainText()+QString::fromStdString("\n")+QString::fromStdString(uniLife->currentRoom->longDescription()+"\n");
 
 
    ui->plainTextEdit->setPlainText(currentPlainText);
@@ -35,24 +35,24 @@ void Zork::updatePositionAfterMoving(){
    ui->southButton->setDisabled(false);
    ui->eastButton->setDisabled(false);
    ui->westButton->setDisabled(false);
-  if( zorkUL->currentRoom->nextRoom("north")==NULL){
+  if( uniLife->currentRoom->nextRoom("north")==NULL){
       ui->northButton->setDisabled(true);
   }
-  if( zorkUL->currentRoom->nextRoom("south")==NULL){
+  if( uniLife->currentRoom->nextRoom("south")==NULL){
        ui->southButton->setDisabled(true);
   }
-  if( zorkUL->currentRoom->nextRoom("east")==NULL){
+  if( uniLife->currentRoom->nextRoom("east")==NULL){
       ui->eastButton->setDisabled(true);
   }
-  if( zorkUL->currentRoom->nextRoom("west")==NULL){
+  if( uniLife->currentRoom->nextRoom("west")==NULL){
       ui->westButton->setDisabled(true);
   }
 
 
   // update image for room
-  if (zorkUL->currentRoom->shortDescription()=="a"){
+  if (uniLife->currentRoom->shortDescription()=="a"){
       ui->imageBackground-> setPixmap(QPixmap(":/new/images/images/gym-room.png"));
-  }else if (zorkUL->currentRoom->shortDescription()=="f"){
+  }else if (uniLife->currentRoom->shortDescription()=="f"){
       ui->imageBackground-> setPixmap(QPixmap(":/new/images/images/business-room.png"));
   }
 
@@ -61,7 +61,7 @@ void Zork::updatePositionAfterMoving(){
 void Zork::on_northButton_clicked()
 {
     Command *northCommand = new Command("go", "north");
-    zorkUL->processCommand(*northCommand);
+    uniLife->processCommand(*northCommand);
     updatePositionAfterMoving();
 
 }
@@ -69,35 +69,35 @@ void Zork::on_northButton_clicked()
 void Zork::on_eastButton_clicked()
 {
     Command *northCommand = new Command("go", "east");
-    zorkUL->processCommand(*northCommand);
+    uniLife->processCommand(*northCommand);
     updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked()
 {
     Command *northCommand = new Command("go", "west");
-    zorkUL->processCommand(*northCommand);
+    uniLife->processCommand(*northCommand);
     updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked()
 {
     Command *northCommand = new Command("go", "south");
-    zorkUL->processCommand(*northCommand);
+    uniLife->processCommand(*northCommand);
     updatePositionAfterMoving();
 }
 
 void Zork::on_takeButton_clicked()
 {
     Command *takeCommand = new Command("take", "x");
-    zorkUL->processCommand(*takeCommand);
+    uniLife->processCommand(*takeCommand);
 
 }
 
 void Zork::on_infoButton_clicked()
 {
     Command *infoCommand = new Command("info","");
-    zorkUL->processCommand(*infoCommand);
+    uniLife->processCommand(*infoCommand);
 
 }
 
@@ -105,13 +105,13 @@ void Zork::on_infoButton_clicked()
 void Zork::on_mapButton_clicked()
 {
     Command *mapCommand = new Command("map","");
-    zorkUL->processCommand(*mapCommand);
+    uniLife->processCommand(*mapCommand);
 }
 
 void Zork::on_putButton_clicked()
 {
     Command *putCommand = new Command("put", "x");
-    zorkUL->processCommand(*putCommand);
+    uniLife->processCommand(*putCommand);
 }
 
 void Zork::on_quitButton_clicked()

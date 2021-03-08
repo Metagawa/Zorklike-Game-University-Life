@@ -1,8 +1,8 @@
-#ifndef ZORK_H
-#define ZORK_H
+#ifndef UNIZORK_H
+#define UNIZORK_H
 
 #include <QMainWindow>
-#include "ZorkUL.h"
+#include "uniLife.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Zork; }
@@ -38,8 +38,8 @@ private slots:
 
 private:
     Ui::Zork *ui;
-    ZorkUL *zorkUL;
+    UniLife *uniLife;
     void updatePositionAfterMoving();
 
 };
-#endif // ZORK_H
+#endif // UNIZORK_H
