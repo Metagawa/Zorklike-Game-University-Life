@@ -13,7 +13,7 @@ Zork based game about the first week of University Life
 ## Get the game
 - [Latest Release](https://github.com/TomC17/CS4076-Project-University-Life/releases/latest)
 
--[Game Design Document - WIP](https://docs.google.com/document/d/1k5iGqbBDBJeoLZsss46p7gMZREndBEyazYB0fdtogC8)
+- [Game Design Document - WIP](https://docs.google.com/document/d/1k5iGqbBDBJeoLZsss46p7gMZREndBEyazYB0fdtogC8)
 
 
 ## Built with
