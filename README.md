@@ -1,2 +1,2 @@
-# CS4076-ZorkUL
-Zork Game based on University Life
+# CS4076-Project-University-Life
+Zork based game about the first week of University Life
