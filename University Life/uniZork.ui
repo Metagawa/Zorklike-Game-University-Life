@@ -98,6 +98,15 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.162921, y1:0.04, x2:0.707742, y2:0.569, stop:0 rgba(179, 179, 89, 255), stop:1 rgba(255, 255, 255, 99));</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
             <property name="segmentStyle">
              <enum>QLCDNumber::Flat</enum>
             </property>
@@ -121,6 +130,15 @@
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame {background-color: rgb(255, 255, 0);}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="lineWidth">
+           <number>15</number>
           </property>
           <property name="text">
            <string/>
