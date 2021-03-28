@@ -21,6 +21,12 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
   ui->lcdNumber->display("12:00");
+
+  // disable every tab except monday
+  for (int i = 1; i <= 6; i++) {
+    int tabIndex = i;
+    ui->tabWidget->setTabEnabled(tabIndex, false);
+  }
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {

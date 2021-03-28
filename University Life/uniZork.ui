@@ -82,7 +82,15 @@
 
 QTabBar::tab:selected{
 background-color: rgb(100, 255, 100);padding-bottom:8px;border-bottom: none;
-} </string>
+} 
+QTabBar::tab:disabled
+{
+    min-width: 0px;
+    max-width: 0px; 
+    color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+	border: none;
+}</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -446,7 +454,6 @@ padding-left: 10;</string>
         </layout>
        </item>
       </layout>
-      <zorder>imageBackground</zorder>
      </widget>
      <widget class="QLabel" name="label">
       <property name="geometry">
@@ -461,6 +468,8 @@ padding-left: 10;</string>
        <string>TextlabelTextlabelTextlabelTextlabelTextlabelTe</string>
       </property>
      </widget>
+     <zorder>lcdNumber</zorder>
+     <zorder>frame</zorder>
      <zorder>tabWidget</zorder>
      <zorder>label</zorder>
     </widget>
