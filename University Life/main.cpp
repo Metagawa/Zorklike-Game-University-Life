@@ -9,14 +9,14 @@ int main(int argc, char *argv[]) {
   QPixmap pixmap(":/new/images/images/splash.png");
   QSplashScreen splash(pixmap);
   splash.show();
-  QTimer::singleShot(5000, &splash,
+  QTimer::singleShot(1500, &splash,
                      &QWidget::close); // keep displayed for 5 seconds
   Zork w;
 
   // splash.finish(&w);
   QMutex mut;
   mut.lock();
-  mut.tryLock(5000);
+  mut.tryLock(1500);
   mut.unlock(); // I am not sure if this is a necessity
   w.show();
   return a.exec();
