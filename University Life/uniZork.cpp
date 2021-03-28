@@ -14,6 +14,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->tabWidget->setTabText(0, "Day 1");
   // remove tab 2
   ui->tabWidget->removeTab(1);
+
+  ui->stackedWidget->setCurrentIndex(1);
 }
 
 Zork::~Zork() { delete ui; }
