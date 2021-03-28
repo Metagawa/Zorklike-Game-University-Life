@@ -1,6 +1,8 @@
 #include "uniZork.h"
 #include "ui_uniZork.h"
 #include <QScrollBar>
+#include <QTabBar>
+#include <QTabWidget>
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   updateOnChangeStackPaneIndex();
@@ -9,7 +11,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   string welcomeText = "start \ninfo for help\n\n" +
                        uniLife->currentRoom->longDescription() + "\n";
   ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
-  //ui->plainTextEdit->setStyleSheet("color: blue;");
+  // ui->plainTextEdit->setStyleSheet("color: blue;");
   ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   // change tab text to Day 1
   ui->tabWidget->setTabText(0, "Monday");
@@ -20,7 +22,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
 
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
-
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {

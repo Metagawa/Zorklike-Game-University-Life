@@ -93,7 +93,7 @@
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
+           <pixmap>:/new/images/images/gym-room.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -240,6 +240,9 @@
       </item>
       <item row="0" column="0">
        <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTabBar::tab { background-color: pink; }</string>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -335,7 +338,7 @@ padding-left: 10;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
+     <pixmap>:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -343,8 +346,6 @@ padding-left: 10;</string>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../resources/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
