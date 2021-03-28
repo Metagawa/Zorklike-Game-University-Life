@@ -17,9 +17,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->tabWidget->setTabText(0, "Monday");
   // remove tab 2
   ui->tabWidget->removeTab(1);
-
-  // Set program to launch on splash
-
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
 }
