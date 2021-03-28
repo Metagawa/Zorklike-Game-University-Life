@@ -16,6 +16,12 @@
     <height>385</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>846</width>
+    <height>385</height>
+   </size>
+  </property>
   <property name="font">
    <font>
     <family>MV Boli</family>
@@ -28,6 +34,12 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>367</height>
+       </size>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
