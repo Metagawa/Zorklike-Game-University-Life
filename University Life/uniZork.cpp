@@ -3,6 +3,7 @@
 #include <QScrollBar>
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
+  updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   uniLife->printWelcome();
   string welcomeText = "start \ninfo for help\n\n" +
@@ -11,13 +12,23 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->plainTextEdit->setStyleSheet("color: blue;");
   ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   // change tab text to Day 1
-  ui->tabWidget->setTabText(0, "Day 1");
+  ui->tabWidget->setTabText(0, "Monday");
   // remove tab 2
   ui->tabWidget->removeTab(1);
 
   // Set program to launch on splash
+
   ui->stackedWidget->setCurrentIndex(1);
+  updateOnChangeStackPaneIndex();
 }
+void Zork::updateOnChangeStackPaneIndex() {
+  if (ui->stackedWidget->currentIndex() == 0) {
+    ui->spiral->show();
+  } else {
+    ui->spiral->hide();
+  }
+}
+
 Zork::~Zork() { delete ui; }
 
 void Zork::updatePositionAfterMoving() {
@@ -106,4 +117,7 @@ void Zork::on_putButton_clicked() {
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
-void Zork::on_goToExplore_clicked() { ui->stackedWidget->setCurrentIndex(0); }
+void Zork::on_goToExplore_clicked() {
+  ui->stackedWidget->setCurrentIndex(0);
+  updateOnChangeStackPaneIndex();
+}

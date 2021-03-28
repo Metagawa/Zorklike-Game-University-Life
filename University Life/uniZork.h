@@ -43,5 +43,6 @@ private:
   Ui::Zork *ui;
   UniLife *uniLife;
   void updatePositionAfterMoving();
+  void updateOnChangeStackPaneIndex();
 };
 #endif // UNIZORK_H
