@@ -3,7 +3,6 @@
 
 #include "uniLife.h"
 #include <QMainWindow>
- #include <QSplashScreen>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
