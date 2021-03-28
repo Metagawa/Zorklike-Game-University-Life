@@ -69,10 +69,10 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>-30</x>
-          <y>-40</y>
-          <width>891</width>
-          <height>441</height>
+          <x>-10</x>
+          <y>-10</y>
+          <width>861</width>
+          <height>401</height>
          </rect>
         </property>
         <property name="layoutDirection">
@@ -85,7 +85,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
+         <pixmap resource="../resources/resources.qrc">:/new/images/images/splash.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>

@@ -111,6 +111,6 @@ void Zork::on_putButton_clicked() {
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
-void Zork::on_goToExplore_clicked() { ui->stackedWidget->setCurrentIndex(0); }
+void Zork::on_goToExplore_clicked() { ui->stackedWidget->setCurrentIndex(1); }
 
-void Zork::update_splash() { ui->stackedWidget->setCurrentIndex(1); }
+void Zork::update_splash() { ui->stackedWidget->setCurrentIndex(2); }

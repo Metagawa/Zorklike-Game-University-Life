@@ -2,5 +2,6 @@
     <qresource prefix="/new/images">
         <file>images/gym-room.png</file>
         <file>images/business-room.png</file>
+        <file>images/splash.png</file>
     </qresource>
 </RCC>
