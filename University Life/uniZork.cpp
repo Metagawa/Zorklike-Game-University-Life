@@ -100,4 +100,4 @@ void Zork::on_putButton_clicked() {
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
-void Zork::on_pushButton_clicked() { ui->stackedWidget->setCurrentIndex(0); }
+void Zork::on_goToExplore_clicked() { ui->stackedWidget->setCurrentIndex(0); }

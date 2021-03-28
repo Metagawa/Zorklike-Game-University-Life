@@ -37,7 +37,7 @@ private slots:
 
   void on_quitButton_clicked();
 
-  void on_pushButton_clicked();
+  void on_goToExplore_clicked();
 
 private:
   Ui::Zork *ui;

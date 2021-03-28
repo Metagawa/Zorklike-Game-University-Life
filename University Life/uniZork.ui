@@ -41,7 +41,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="exploreScene">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -232,7 +232,7 @@
        </layout>
       </widget>
       <widget class="QWidget" name="mainMenu">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="goToExplore">
         <property name="geometry">
          <rect>
           <x>310</x>
