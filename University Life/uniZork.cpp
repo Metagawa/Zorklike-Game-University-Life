@@ -15,7 +15,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   // remove tab 2
   ui->tabWidget->removeTab(1);
 
-  ui->stackedWidget->setCurrentIndex(1);
+  //Set program to launch on splash
+  ui->stackedWidget->setCurrentIndex(0);
 }
 
 Zork::~Zork() { delete ui; }
