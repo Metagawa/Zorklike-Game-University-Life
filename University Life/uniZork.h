@@ -39,6 +39,8 @@ private slots:
 
   void on_goToExplore_clicked();
 
+  void update_splash();
+
 private:
   Ui::Zork *ui;
   UniLife *uniLife;

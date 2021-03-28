@@ -1,6 +1,7 @@
 #include "uniZork.h"
 #include "ui_uniZork.h"
 #include <QScrollBar>
+#include <QTimer>
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   uniLife = new UniLife();
@@ -15,8 +16,11 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   // remove tab 2
   ui->tabWidget->removeTab(1);
 
-  //Set program to launch on splash
+  // Set program to launch on splash
   ui->stackedWidget->setCurrentIndex(0);
+
+  // change to mainmenu after two seconds
+  QTimer::singleShot(2000, this, SLOT(update_splash()));
 }
 
 Zork::~Zork() { delete ui; }
@@ -108,3 +112,5 @@ void Zork::on_putButton_clicked() {
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
 void Zork::on_goToExplore_clicked() { ui->stackedWidget->setCurrentIndex(0); }
+
+void Zork::update_splash() { ui->stackedWidget->setCurrentIndex(1); }
