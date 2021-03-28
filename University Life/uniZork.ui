@@ -23,9 +23,9 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="page_3">
+      <widget class="QWidget" name="exploreScene">
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0" rowspan="2">
          <widget class="QPlainTextEdit" name="plainTextEdit">
@@ -206,7 +206,21 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_4"/>
+      <widget class="QWidget" name="mainMenu">
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>240</y>
+          <width>80</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Go to explore</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
