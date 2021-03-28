@@ -279,7 +279,12 @@
           </property>
           <property name="styleSheet">
            <string notr="true">border: 0;
-background-image: url(:/new/images/images/lines.png);</string>
+background-color: rgb(255, 255, 255);
+background-image: url(:/new/images/images/lines.png);
+padding-left: 10;</string>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QPlainTextEdit::WidgetWidth</enum>
           </property>
           <property name="readOnly">
            <bool>true</bool>
