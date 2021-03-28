@@ -5,7 +5,7 @@
 #include <QTabWidget>
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
-this->setWindowTitle("Univeristy Life");
+  this->setWindowTitle("Univeristy Life");
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   uniLife->printWelcome();
@@ -15,18 +15,22 @@ this->setWindowTitle("Univeristy Life");
   // ui->plainTextEdit->setStyleSheet("color: blue;");
   ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   // change tab text to Day 1
-  //ui->tabWidget->setTabText(0, "Monday");
+  // ui->tabWidget->setTabText(0, "Monday");
   // remove tab 2
-  //ui->tabWidget->removeTab(1);
+  // ui->tabWidget->removeTab(1);
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
   ui->lcdNumber->display("12:00");
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
+    ui->centralwidget->setStyleSheet(
+        "QWidget #centralwidget {\n	background-image: "
+        "url(:/new/images/images/desktop.png);\n\n}");
     ui->spiral->show();
   } else {
     ui->spiral->hide();
+    ui->centralwidget->setStyleSheet("");
   }
 }
 
