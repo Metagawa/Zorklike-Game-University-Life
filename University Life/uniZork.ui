@@ -93,7 +93,7 @@
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>:/new/images/images/gym-room.png</pixmap>
+           <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -249,7 +249,7 @@
          <string notr="true">QTabBar::tab { background-color: rgb(255, 255, 127);border-bottom: 1px dotted Grey; border-top: 1px solid LightGrey;border-left: 1px solid LightGrey;border-right: 1px solid LightGrey;color: rgb(0, 0, 0); margin-right:2px;padding-top:5px;padding-bottom:5px;padding-right:10px;padding-left:10px;}
 
 QTabBar::tab:selected{
-background-color: rgb(100, 255, 100);
+background-color: rgb(100, 255, 100);padding-bottom:8px;
 } </string>
         </property>
         <property name="currentIndex">
@@ -381,7 +381,7 @@ padding-left: 10;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/images/spiral.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -389,6 +389,8 @@ padding-left: 10;</string>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
