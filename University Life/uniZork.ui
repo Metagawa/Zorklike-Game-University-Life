@@ -43,13 +43,13 @@
      <rect>
       <x>15</x>
       <y>10</y>
-      <width>816</width>
+      <width>818</width>
       <height>372</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>816</width>
+      <width>824</width>
       <height>372</height>
      </size>
     </property>
@@ -240,18 +240,27 @@
       </item>
       <item row="0" column="0">
        <widget class="QTabWidget" name="tabWidget">
+        <property name="font">
+         <font>
+          <family>MV Boli</family>
+         </font>
+        </property>
         <property name="styleSheet">
-         <string notr="true">QTabBar::tab { background-image: url(:/new/images/images/business-room.png); }
+         <string notr="true">QTabBar::tab { background-color: rgb(255, 255, 127);color: rgb(0, 0, 0);}
+
 </string>
         </property>
         <property name="currentIndex">
-         <number>6</number>
+         <number>0</number>
         </property>
         <property name="iconSize">
          <size>
           <width>16</width>
           <height>16</height>
          </size>
+        </property>
+        <property name="usesScrollButtons">
+         <bool>false</bool>
         </property>
         <widget class="QWidget" name="Day1">
          <property name="styleSheet">
