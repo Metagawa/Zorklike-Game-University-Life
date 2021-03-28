@@ -30,6 +30,10 @@
   <property name="windowTitle">
    <string>Zork</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../resources/images/logo.ico</normaloff>../resources/images/logo.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
