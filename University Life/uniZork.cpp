@@ -10,6 +10,10 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
   ui->plainTextEdit->setStyleSheet("color: blue;");
   ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+  // change tab text to Day 1
+  ui->tabWidget->setTabText(0, "Day 1");
+  // remove tab 2
+  ui->tabWidget->removeTab(1);
 }
 
 Zork::~Zork() { delete ui; }
