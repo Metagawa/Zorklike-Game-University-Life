@@ -19,6 +19,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   //ui->tabWidget->removeTab(1);
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
+  ui->lcdNumber->display("12:00");
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
