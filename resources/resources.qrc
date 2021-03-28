@@ -4,5 +4,6 @@
         <file>images/business-room.png</file>
         <file>images/splash.png</file>
         <file>images/spiral.png</file>
+        <file>images/lines.png</file>
     </qresource>
 </RCC>
