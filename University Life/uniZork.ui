@@ -35,6 +35,12 @@
     <normaloff>../resources/images/logo.ico</normaloff>../resources/images/logo.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget #centralwidget {
+	background-image: url(:/new/images/images/desktop.png);
+
+}</string>
+   </property>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="enabled">
      <bool>true</bool>
