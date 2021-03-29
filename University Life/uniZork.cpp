@@ -10,7 +10,7 @@
 using namespace std;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
-  this->setWindowTitle("Univeristy Life");
+  this->setWindowTitle("University Life");
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   uniLife->printWelcome();
