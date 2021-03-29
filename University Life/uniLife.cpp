@@ -9,35 +9,36 @@ UniLife::UniLife() {
 }
 
 void UniLife::createRooms()  {
-    Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j;
+    Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l,*m;
 
-	a = new Room("a");
-        a->addItem(new Item("x", 1, 11));
-        a->addItem(new Item("y", 2, 22));
-	b = new Room("b");
-        b->addItem(new Item("xx", 3, 33));
-        b->addItem(new Item("yy", 4, 44));
-	c = new Room("c");
-	d = new Room("d");
-	e = new Room("e");
-	f = new Room("f");
-	g = new Room("g");
-	h = new Room("h");
-	i = new Room("i");
-    j = new Room("j");
-        j->addItem(new Item("Black Pot", 5, 55));
+    a = new Room("Bus Stop");
+    b = new Room("Dorms");
+    c = new Room("Gym");
+    d = new Room("Library");
+    e = new Room("Student Union");
+    f = new Room("Relax Area");
+    g = new Room("Pub");
+    h = new Room("Computer Science");
+    i = new Room("The Quad");
+    j = new Room("Main Building");
+    k = new Room("Shopping Area");
+    l = new Room("Raps");
+    m = new Room("Campus Outlet");
 
 //             (N, E, S, W)
-	a->setExits(f, b, d, c);
-	b->setExits(NULL, NULL, NULL, a);
-	c->setExits(NULL, a, NULL, NULL);
-	d->setExits(a, e, NULL, i);
-	e->setExits(NULL, NULL, NULL, d);
-	f->setExits(NULL, g, a, h);
-    g->setExits(NULL, j, NULL, f);
-	h->setExits(NULL, f, NULL, NULL);
-    i->setExits(NULL, d, NULL, NULL);
-    j->setExits(NULL, NULL, NULL, g);
+    a->setExits(e, b, NULL, NULL);
+    b->setExits(NULL, c, NULL, a);
+    c->setExits(g, NULL, NULL, b);
+    d->setExits(NULL, e, NULL, NULL);
+    e->setExits(i, f, a, d);
+    f->setExits(NULL, g, NULL, e);
+    g->setExits(NULL, NULL, c, f);
+    h->setExits(NULL, i, NULL, NULL);
+    i->setExits(j, k, e, h);
+    j->setExits(NULL, k, i, NULL);
+    k->setExits(l,NULL,m,i);
+    l->setExits(NULL,NULL,k,NULL);
+    m->setExits(k,NULL,NULL,NULL);
 
         currentRoom = a;
 }
