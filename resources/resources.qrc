@@ -7,4 +7,7 @@
         <file>images/lines.png</file>
         <file>images/desktop.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>barbies-jalous-sisters.handwriting.ttf</file>
+    </qresource>
 </RCC>

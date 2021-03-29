@@ -195,7 +195,7 @@ padding-left: 10;</string>
       <property name="geometry">
        <rect>
         <x>465</x>
-        <y>24</y>
+        <y>22</y>
         <width>352</width>
         <height>343</height>
        </rect>
@@ -251,7 +251,7 @@ padding-left: 10;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
+          <pixmap>:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -285,12 +285,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="eastButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>East</string>
@@ -301,12 +307,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="putButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>Put</string>
@@ -317,12 +329,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="quitButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>Quit</string>
@@ -333,12 +351,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="southButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>South</string>
@@ -349,12 +373,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="northButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>North</string>
@@ -365,12 +395,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="infoButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>Info</string>
@@ -381,12 +417,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="westButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>West</string>
@@ -397,12 +439,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="takeButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>Take</string>
@@ -413,12 +461,18 @@ padding-left: 10;</string>
           <widget class="QPushButton" name="mapButton">
            <property name="font">
             <font>
-             <family>MV Boli</family>
-             <pointsize>12</pointsize>
+             <family>Barbies Jalous Sisters</family>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgba(255, 255, 255, 0); border:0px;</string>
+            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+
+	font:20pt &quot;Barbies Jalous Sisters&quot;;
+</string>
            </property>
            <property name="text">
             <string>Map</string>
@@ -433,13 +487,22 @@ padding-left: 10;</string>
       <property name="geometry">
        <rect>
         <x>526</x>
-        <y>252</y>
+        <y>248</y>
         <width>232</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>MV Boli</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>TextlabelTextlabelTextlabelTextlabelTextlabelTe</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <zorder>lcdNumber</zorder>
@@ -476,7 +539,7 @@ padding-left: 10;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
+     <pixmap>:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -484,8 +547,6 @@ padding-left: 10;</string>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="../resources/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
