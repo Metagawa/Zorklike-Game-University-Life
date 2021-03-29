@@ -42,7 +42,10 @@ void Zork::updateOnChangeStackPaneIndex() {
     ui->spiral->show();
     ui->watch->show();
     ui->lcdNumber->show();
-  } else {
+    ui->mainMenuScreen->hide();
+
+  } else if (ui->stackedWidget->currentIndex() == 1) {
+    ui->mainMenuScreen->show();
     ui->spiral->hide();
     ui->centralwidget->setStyleSheet("");
     ui->watch->hide();
