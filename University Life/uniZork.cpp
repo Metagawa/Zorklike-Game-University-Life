@@ -6,6 +6,8 @@
 #include <QStyle>
 #include <QTabBar>
 #include <QTabWidget>
+#include <Qt>
+#include <QtCore>
 #include <iostream>
 using namespace std;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
@@ -36,6 +38,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
   ui->polaroidLabel->setText(QString::fromStdString(
       getRoomName(uniLife->currentRoom->shortDescription())));
+
+  ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -93,6 +97,8 @@ void Zork::updatePositionAfterMoving() {
     pte->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // pte->setGeometry(25, 0, 426, 342);
     //  pte->move(x() - ((25 - width()) / 2), y() - ((0 - height()) / 2));
+    pte->setTextInteractionFlags(Qt::NoTextInteraction);
+
     hlayout->addSpacerItem(item);
     hlayout->addWidget(pte);
     w->setLayout(hlayout);
@@ -202,13 +208,9 @@ void Zork::on_putButton_clicked() {
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
-
 void Zork::on_goToExplore_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
   updateOnChangeStackPaneIndex();
 }
 
-void Zork::on_quitButton_2_clicked()
-{
-     QApplication::quit();
-}
+void Zork::on_quitButton_2_clicked() { QApplication::quit(); }
