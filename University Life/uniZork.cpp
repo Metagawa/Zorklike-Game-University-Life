@@ -40,9 +40,13 @@ void Zork::updateOnChangeStackPaneIndex() {
         "QWidget #centralwidget {\n	background-image: "
         "url(:/new/images/images/desktop.png);\n\n}");
     ui->spiral->show();
+    ui->watch->show();
+    ui->lcdNumber->show();
   } else {
     ui->spiral->hide();
     ui->centralwidget->setStyleSheet("");
+    ui->watch->hide();
+    ui->lcdNumber->hide();
   }
 }
 
