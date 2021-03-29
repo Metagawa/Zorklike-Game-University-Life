@@ -60,7 +60,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
@@ -268,7 +268,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>East</string>
@@ -293,7 +293,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Put</string>
@@ -318,7 +318,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Quit</string>
@@ -343,7 +343,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>South</string>
@@ -368,7 +368,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>North</string>
@@ -393,7 +393,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Info</string>
@@ -418,7 +418,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>West</string>
@@ -443,7 +443,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Take</string>
@@ -468,7 +468,7 @@ padding-left: 10;</string>
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
 	font:25pt &quot;Barbies Jalous Sisters&quot;;
-</string>
+color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Map</string>
