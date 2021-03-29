@@ -223,7 +223,7 @@ padding-left: 10;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
+          <pixmap>:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -528,9 +528,16 @@ padding-left: 10;</string>
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-	font:15pt &quot;Graduate&quot;;
-color: rgb(255, 132, 24);</string>
+       <string notr="true">
+QPushButton{
+      background-color: rgba(0, 0, 255, 0);
+ border:0px;
+font:15pt &quot;Graduate&quot;;
+color: rgb(255, 132, 24);
+}
+QPushButton:hover{
+      font:18pt &quot;Graduate&quot;;
+}</string>
       </property>
       <property name="text">
        <string>New Game</string>
@@ -551,7 +558,7 @@ color: rgb(255, 132, 24);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
+     <pixmap>:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -573,7 +580,7 @@ color: rgb(255, 132, 24);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/watch.png</pixmap>
+     <pixmap>:/images/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -625,7 +632,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/main.png</pixmap>
+     <pixmap>:/images/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -638,8 +645,6 @@ color: rgb(170, 0, 0);
    <zorder>lcdNumber</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="../resources/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
