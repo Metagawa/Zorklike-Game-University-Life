@@ -512,11 +512,16 @@ padding-left: 10;</string>
      <widget class="QPushButton" name="goToExplore">
       <property name="geometry">
        <rect>
-        <x>369</x>
+        <x>314</x>
         <y>287</y>
-        <width>80</width>
-        <height>21</height>
+        <width>191</width>
+        <height>28</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
+	font:15pt &quot;Graduate&quot;;
+color: rgb(255, 132, 24);</string>
       </property>
       <property name="text">
        <string>New Game</string>

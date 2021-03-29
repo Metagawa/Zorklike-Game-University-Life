@@ -18,6 +18,9 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   textDayList = new vector<string>({"", "", "", "", "", "", ""});
   QFontDatabase::addApplicationFont(":/barbies-jalous-sisters.handwriting.ttf");
   QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
+  QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
+  QFont graduate("Graduate", 14, QFont::Normal);
+
   string welcomeText = "start \ninfo for help\n\n" +
                        uniLife->currentRoom->longDescription() + "\n";
   (*textDayList)[0] = (welcomeText);
