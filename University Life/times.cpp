@@ -9,7 +9,7 @@ Times::Times() {
 int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
 bool Times::advanceTime() {
-  time += 7;
+  time += 2;
   if (time > 24) {
     dayNum++;
     time = 9;

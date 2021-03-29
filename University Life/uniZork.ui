@@ -429,7 +429,7 @@ padding-left: 10;</string>
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="polaroidLabel">
       <property name="geometry">
        <rect>
         <x>526</x>
@@ -445,7 +445,7 @@ padding-left: 10;</string>
      <zorder>lcdNumber</zorder>
      <zorder>frame</zorder>
      <zorder>tabWidget</zorder>
-     <zorder>label</zorder>
+     <zorder>polaroidLabel</zorder>
     </widget>
     <widget class="QWidget" name="mainMenu">
      <widget class="QPushButton" name="goToExplore">
