@@ -10,5 +10,6 @@
     <qresource prefix="/">
         <file>barbies-jalous-sisters.handwriting.ttf</file>
         <file>images/watch.png</file>
+        <file>images/main.png</file>
     </qresource>
 </RCC>

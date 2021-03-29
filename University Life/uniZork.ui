@@ -60,7 +60,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
@@ -273,6 +273,9 @@ padding-left: 10;</string>
            <property name="text">
             <string>East</string>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="0" column="0">
@@ -294,6 +297,9 @@ padding-left: 10;</string>
            </property>
            <property name="text">
             <string>Put</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -317,6 +323,9 @@ padding-left: 10;</string>
            <property name="text">
             <string>Quit</string>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="2" column="1">
@@ -338,6 +347,9 @@ padding-left: 10;</string>
            </property>
            <property name="text">
             <string>South</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -361,6 +373,9 @@ padding-left: 10;</string>
            <property name="text">
             <string>North</string>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="2" column="0">
@@ -382,6 +397,9 @@ padding-left: 10;</string>
            </property>
            <property name="text">
             <string>Info</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -405,6 +423,9 @@ padding-left: 10;</string>
            <property name="text">
             <string>West</string>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="0" column="2">
@@ -427,6 +448,9 @@ padding-left: 10;</string>
            <property name="text">
             <string>Take</string>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="1">
@@ -448,6 +472,9 @@ padding-left: 10;</string>
            </property>
            <property name="text">
             <string>Map</string>
+           </property>
+           <property name="default">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -485,14 +512,14 @@ padding-left: 10;</string>
      <widget class="QPushButton" name="goToExplore">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>240</y>
+        <x>369</x>
+        <y>287</y>
         <width>80</width>
         <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string>Go to explore</string>
+       <string>New Game</string>
       </property>
      </widget>
     </widget>
@@ -568,6 +595,33 @@ color: rgb(170, 0, 0);
      <enum>QLCDNumber::Flat</enum>
     </property>
    </widget>
+   <widget class="QLabel" name="mainMenuScreen">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>846</width>
+      <height>385</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/resources.qrc">:/images/main.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <zorder>mainMenuScreen</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>spiral</zorder>
+   <zorder>watch</zorder>
+   <zorder>lcdNumber</zorder>
   </widget>
  </widget>
  <resources>
