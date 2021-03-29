@@ -172,6 +172,14 @@ padding-left: 10;</string>
         <height>343</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Jalous Sisters&quot;;\ncolor: rgb(85, 85, 85);
+}
+QPushButton:disabled{color: rgba(255, 132, 24,0);\n}
+
+</string>
+      </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <property name="leftMargin">
         <number>0</number>
@@ -223,7 +231,7 @@ padding-left: 10;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
+          <pixmap>:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -264,12 +272,6 @@ padding-left: 10;</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
-           </property>
            <property name="text">
             <string>East</string>
            </property>
@@ -288,12 +290,6 @@ color: rgb(85, 85, 85);</string>
              <italic>false</italic>
              <bold>false</bold>
             </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Put</string>
@@ -314,12 +310,6 @@ color: rgb(85, 85, 85);</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
-           </property>
            <property name="text">
             <string>Quit</string>
            </property>
@@ -338,12 +328,6 @@ color: rgb(85, 85, 85);</string>
              <italic>false</italic>
              <bold>false</bold>
             </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>South</string>
@@ -364,12 +348,6 @@ color: rgb(85, 85, 85);</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
-           </property>
            <property name="text">
             <string>North</string>
            </property>
@@ -388,12 +366,6 @@ color: rgb(85, 85, 85);</string>
              <italic>false</italic>
              <bold>false</bold>
             </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Info</string>
@@ -414,11 +386,8 @@ color: rgb(85, 85, 85);</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
+           <property name="autoFillBackground">
+            <bool>false</bool>
            </property>
            <property name="text">
             <string>West</string>
@@ -439,12 +408,6 @@ color: rgb(85, 85, 85);</string>
              <bold>false</bold>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
-           </property>
            <property name="text">
             <string>Take</string>
            </property>
@@ -463,12 +426,6 @@ color: rgb(85, 85, 85);</string>
              <italic>false</italic>
              <bold>false</bold>
             </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
-
-	font:25pt &quot;Barbies Jalous Sisters&quot;;
-color: rgb(85, 85, 85);</string>
            </property>
            <property name="text">
             <string>Map</string>
@@ -601,7 +558,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
+     <pixmap>:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -623,7 +580,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/watch.png</pixmap>
+     <pixmap>:/images/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -675,7 +632,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/main.png</pixmap>
+     <pixmap>:/images/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -688,8 +645,6 @@ color: rgb(170, 0, 0);
    <zorder>lcdNumber</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="../resources/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
