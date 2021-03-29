@@ -512,11 +512,20 @@ padding-left: 10;</string>
      <widget class="QPushButton" name="goToExplore">
       <property name="geometry">
        <rect>
-        <x>314</x>
+        <x>350</x>
         <y>287</y>
-        <width>191</width>
+        <width>121</width>
         <height>28</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
