@@ -42,6 +42,8 @@ private slots:
 
   void on_goToExplore_clicked();
 
+  void on_quitButton_2_clicked();
+
 private:
   Ui::Zork *ui;
   UniLife *uniLife;

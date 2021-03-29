@@ -513,7 +513,7 @@ padding-left: 10;</string>
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>287</y>
+        <y>270</y>
         <width>141</width>
         <height>28</height>
        </rect>
@@ -533,7 +533,7 @@ QPushButton{
       background-color: rgba(0, 0, 255, 0);
  border:0px;
 font:15pt &quot;Graduate&quot;;
-color: rgb(220, 85, 7);
+color: rgb(240, 100, 20);
 
 }
 QPushButton:hover{
@@ -544,6 +544,46 @@ color: rgb(255, 132, 24);
       </property>
       <property name="text">
        <string>New Game</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="quitButton_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>330</y>
+        <width>115</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Graduate</family>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton{
+      background-color: rgba(0, 0, 255, 0);
+ border:0px;
+font:15pt &quot;Graduate&quot;;
+color: rgb(240, 100, 20);
+
+}
+QPushButton:hover{
+      font:18pt &quot;Graduate&quot;;
+color: rgb(255, 132, 24);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Quit</string>
+      </property>
+      <property name="default">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>

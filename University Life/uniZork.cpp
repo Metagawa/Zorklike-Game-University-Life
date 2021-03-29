@@ -202,7 +202,13 @@ void Zork::on_putButton_clicked() {
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
+
 void Zork::on_goToExplore_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
   updateOnChangeStackPaneIndex();
+}
+
+void Zork::on_quitButton_2_clicked()
+{
+     QApplication::quit();
 }
