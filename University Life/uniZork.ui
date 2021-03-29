@@ -121,7 +121,7 @@ background-color: rgb(100, 255, 100);padding-bottom:8px;border-bottom: none;
         </property>
         <property name="geometry">
          <rect>
-          <x>25</x>
+          <x>26</x>
           <y>0</y>
           <width>426</width>
           <height>342</height>
