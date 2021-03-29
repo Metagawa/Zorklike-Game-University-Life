@@ -195,7 +195,7 @@ padding-left: 10;</string>
       <property name="geometry">
        <rect>
         <x>465</x>
-        <y>22</y>
+        <y>27</y>
         <width>352</width>
         <height>343</height>
        </rect>
@@ -251,7 +251,7 @@ padding-left: 10;</string>
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>:/new/images/images/gym-room.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -286,7 +286,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -295,7 +295,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -308,7 +308,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -317,7 +317,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -330,7 +330,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -339,7 +339,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -352,7 +352,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -361,7 +361,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -374,7 +374,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -383,7 +383,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -396,7 +396,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -405,7 +405,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -418,7 +418,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -427,7 +427,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -440,7 +440,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -449,7 +449,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -462,7 +462,7 @@ padding-left: 10;</string>
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
-             <pointsize>20</pointsize>
+             <pointsize>25</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
@@ -471,7 +471,7 @@ padding-left: 10;</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgba(0, 0, 255, 0); border:0px;
 
-	font:20pt &quot;Barbies Jalous Sisters&quot;;
+	font:25pt &quot;Barbies Jalous Sisters&quot;;
 </string>
            </property>
            <property name="text">
@@ -487,7 +487,7 @@ padding-left: 10;</string>
       <property name="geometry">
        <rect>
         <x>526</x>
-        <y>248</y>
+        <y>247</y>
         <width>232</width>
         <height>20</height>
        </rect>
@@ -539,7 +539,7 @@ padding-left: 10;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/images/spiral.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -547,6 +547,8 @@ padding-left: 10;</string>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
