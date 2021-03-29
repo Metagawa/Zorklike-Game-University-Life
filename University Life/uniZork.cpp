@@ -89,9 +89,11 @@ void Zork::updatePositionAfterMoving() {
     // the top
     ui->plainTextEdit->moveCursor(QTextCursor::End);
     ui->plainTextEdit->ensureCursorVisible();
-  } else if (false) {
+  } else {
     QPlainTextEdit *qpte =
-        qobject_cast<QPlainTextEdit *>(ui->tabWidget->currentWidget());
+        ui->tabWidget->currentWidget()->findChild<QPlainTextEdit *>();
+    // QPlainTextEdit *qpte =
+    // qobject_cast<QPlainTextEdit *>(ui->tabWidget->currentWidget());
     QString currentPlainText =
         qpte->toPlainText() + QString::fromStdString("\n") +
         QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
