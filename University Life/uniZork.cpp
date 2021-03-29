@@ -1,17 +1,26 @@
 #include "uniZork.h"
 #include "ui_uniZork.h"
+#include <QDesktopWidget>
 #include <QScrollBar>
+#include <QStringList>
+#include <QStyle>
 #include <QTabBar>
 #include <QTabWidget>
+#include <iostream>
+using namespace std;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("Univeristy Life");
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   uniLife->printWelcome();
+  time = new Times();
+  textDayList = new vector<string>({"", "", "", "", "", "", ""});
+
   string welcomeText = "start \ninfo for help\n\n" +
                        uniLife->currentRoom->longDescription() + "\n";
-  ui->plainTextEdit->setPlainText(QString::fromStdString(welcomeText));
+  (*textDayList)[0] = (welcomeText);
+  ui->plainTextEdit->setPlainText(QString::fromStdString((*textDayList)[0]));
   // ui->plainTextEdit->setStyleSheet("color: blue;");
   ui->plainTextEdit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   // change tab text to Day 1
@@ -20,13 +29,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   // ui->tabWidget->removeTab(1);
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
-  ui->lcdNumber->display("12:00");
-
-  // disable every tab except monday
-  for (int i = 1; i <= 6; i++) {
-    int tabIndex = i;
-    ui->tabWidget->setTabEnabled(tabIndex, false);
-  }
+  ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -43,16 +46,59 @@ void Zork::updateOnChangeStackPaneIndex() {
 Zork::~Zork() { delete ui; }
 
 void Zork::updatePositionAfterMoving() {
-  QString currentPlainText =
-      ui->plainTextEdit->toPlainText() + QString::fromStdString("\n") +
-      QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+  ui->tabWidget->setCurrentIndex(time->getDayNum());
+  bool itsABrandNewDay = time->advanceTime();
+  if (itsABrandNewDay) {
+    auto w = new QWidget;
+    QHBoxLayout *hlayout = new QHBoxLayout;
+    hlayout->setSpacing(0);
+    QSpacerItem *item =
+        new QSpacerItem(13, 0, QSizePolicy::Maximum, QSizePolicy::Maximum);
+    hlayout->addSpacerItem(item);
+    hlayout->setMargin(0);
+    // ui->tabWidget->widget(time->getDayNum())->show();
+    int tabIndex = time->getDayNum();
+    QPlainTextEdit *pte = new QPlainTextEdit();
 
-  ui->plainTextEdit->setPlainText(currentPlainText);
+    pte->setStyleSheet("border: 0;background-color: rgb(255, 255, "
+                       "255);background-image:url(:/new/images/images/"
+                       "lines.png);padding-left: 10;");
 
-  // Puts the scroll bar to the bottom as setting the text moves it back to the
-  // top
-  ui->plainTextEdit->moveCursor(QTextCursor::End);
-  ui->plainTextEdit->ensureCursorVisible();
+    pte->setFont(QFont("MV Boli", 12));
+    pte->setReadOnly(true);
+    pte->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // pte->setGeometry(25, 0, 426, 342);
+    //  pte->move(x() - ((25 - width()) / 2), y() - ((0 - height()) / 2));
+    hlayout->addSpacerItem(item);
+    hlayout->addWidget(pte);
+    w->setLayout(hlayout);
+    ui->tabWidget->insertTab(
+        tabIndex, w, QString::fromStdString(time->getDayString(tabIndex)));
+    // ui->tabWidget->widget(tabIndex)->hide();
+    ui->tabWidget->setCurrentIndex(time->getDayNum());
+  }
+  ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
+
+  if (time->getDayNum() == 0) {
+    QString currentPlainText =
+        ui->plainTextEdit->toPlainText() + QString::fromStdString("\n") +
+        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+
+    ui->plainTextEdit->setPlainText(currentPlainText);
+    // Puts the scroll bar to the bottom as setting the text moves it back to
+    // the top
+    ui->plainTextEdit->moveCursor(QTextCursor::End);
+    ui->plainTextEdit->ensureCursorVisible();
+  } else if (false) {
+    QPlainTextEdit *qpte =
+        qobject_cast<QPlainTextEdit *>(ui->tabWidget->currentWidget());
+    QString currentPlainText =
+        qpte->toPlainText() + QString::fromStdString("\n") +
+        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+    qpte->setPlainText(currentPlainText);
+    qpte->moveCursor(QTextCursor::End);
+    qpte->ensureCursorVisible();
+  }
 
   // Disables movement buttons based on if movement in that direction is
   // possible or not

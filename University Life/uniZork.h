@@ -1,9 +1,12 @@
 #ifndef UNIZORK_H
 #define UNIZORK_H
 
+#include "times.h"
 #include "uniLife.h"
 #include <QMainWindow>
-
+#include <QStringList>
+#include <string>
+using namespace std;
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Zork;
@@ -42,6 +45,8 @@ private slots:
 private:
   Ui::Zork *ui;
   UniLife *uniLife;
+  vector<string> *textDayList;
+  Times *time;
   void updatePositionAfterMoving();
   void updateOnChangeStackPaneIndex();
 };
