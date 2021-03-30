@@ -7,7 +7,8 @@
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   QPixmap pixmap(":/new/images/images/splash.png");
-  a.setOverrideCursor(QCursor(QPixmap(":/images/black-biro.png")));
+  a.setOverrideCursor(QCursor(
+      QPixmap(":/images/black-biro.png").scaled(32, 32, Qt::KeepAspectRatio)));
   QSplashScreen splash(pixmap);
   splash.show();
   QTimer::singleShot(1500, &splash,
