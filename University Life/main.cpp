@@ -7,8 +7,6 @@
 int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   QPixmap pixmap(":/new/images/images/splash.png");
-  a.setOverrideCursor(QCursor(
-      QPixmap(":/images/black-biro.png")));
   QSplashScreen splash(pixmap);
   splash.show();
   QTimer::singleShot(1500, &splash,
@@ -21,5 +19,7 @@ int main(int argc, char *argv[]) {
   mut.tryLock(1500);
   mut.unlock(); // I am not sure if this is a necessity
   w.show();
+  a.setOverrideCursor(QCursor(
+      QPixmap(":/images/black-biro.png")));
   return a.exec();
 }
