@@ -16,5 +16,6 @@
         <file>images/black-biro-scrape.png</file>
         <file>images/scratches-png-image.png</file>
         <file>images/MAP.png</file>
+        <file>images/lasso.png</file>
     </qresource>
 </RCC>
