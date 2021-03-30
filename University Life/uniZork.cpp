@@ -10,9 +10,12 @@
 #include <QtCore>
 #include <iostream>
 using namespace std;
+bool mapIsHidden = true;
+
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("University Life");
+  ui->map->hide();
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   uniLife->printWelcome();
@@ -188,6 +191,13 @@ void Zork::on_infoButton_clicked() {
 
 void Zork::on_mapButton_clicked() {
   Command *mapCommand = new Command("map", "");
+  if (mapIsHidden) {
+    ui->map->show();
+    mapIsHidden = false;
+  } else {
+    ui->map->hide();
+    mapIsHidden = true;
+  }
   uniLife->processCommand(*mapCommand);
 }
 
