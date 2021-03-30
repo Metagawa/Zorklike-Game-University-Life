@@ -222,6 +222,11 @@ void Zork::on_mapButton_clicked() {
           "url(:/new/images/images/lines.png);padding-left: 10; color: "
           "rgba(0,0,0,0)");
     }
+    QString tabStyle =
+        "QTabBar::tab{min-width: "
+        "0px;max-width: 0px; color: rgba(0,0,0,0);background-color: "
+        "rgba(0,0,0,0);border: none;}";
+    ui->tabWidget->setStyleSheet(tabStyle);
 
   } else {
     updateDisabledDirections();
