@@ -150,12 +150,21 @@ void Zork::updatePositionAfterMoving() {
   updateDisabledDirections();
 
   // update image for room
-  if (uniLife->currentRoom->shortDescription() == "a") {
-    ui->imageBackground->setPixmap(QPixmap(":/new/images/images/gym-room.png"));
-  } else if (uniLife->currentRoom->shortDescription() == "f") {
+  bool isRaining = time->isRaining();
+  if (time->isDayTime() && !isRaining) {
     ui->imageBackground->setPixmap(
-        QPixmap(":/new/images/images/business-room.png"));
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
+  } else if (time->isDayTime() && isRaining) {
+    ui->imageBackground->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayRain())));
+  } else if (!time->isDayTime() && !isRaining) {
+    ui->imageBackground->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
+  } else if (!time->isDayTime() && isRaining) {
+    ui->imageBackground->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightRain())));
   }
+
   ui->polaroidLabel->setText(
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
 }

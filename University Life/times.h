@@ -19,6 +19,8 @@ public:
   void setDayNum(int newDay);
   string getDayString(int i);
   string getDayString();
+  bool isDayTime();
+  bool isRaining();
 
 private:
   int dayNum;

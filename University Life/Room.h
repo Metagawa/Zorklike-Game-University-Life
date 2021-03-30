@@ -10,18 +10,25 @@ using std::vector;
 class Room {
 
 private:
-	string description;
-	map<string, Room*> exits;
-	string exitString();
-
-
+  string description;
+  string dayClear;
+  string dayRain;
+  string nightClear;
+  string nightRain;
+  map<string, Room *> exits;
+  string exitString();
 
 public:
-	Room(string description);
-	void setExits(Room *north, Room *east, Room *south, Room *west);
-	string shortDescription();
-	string longDescription();
-	Room* nextRoom(string direction);
+  Room(string description, string dayClear, string dayRain, string nightClear,
+       string nightRain);
+  void setExits(Room *north, Room *east, Room *south, Room *west);
+  string shortDescription();
+  string longDescription();
+  string getDayClear();
+  string getDayRain();
+  string getNightClear();
+  string getNightRain();
+  Room *nextRoom(string direction);
 };
 
 #endif

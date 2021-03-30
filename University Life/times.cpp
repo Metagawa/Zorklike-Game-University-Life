@@ -10,14 +10,15 @@ int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
 bool Times::advanceTime() {
   time += 2;
-  if (time > 24) {
+  if (time >= 24) {
     dayNum++;
     time = 9;
     return true;
   }
   return false;
 }
-
+bool Times::isDayTime() { return time < 18; }
+bool Times::isRaining() { return (rand() % 2) != 0; }
 string Times::getTimeString() {
   if (getTime() >= 9) {
     return "0" + to_string(getTime()) + ":00";
