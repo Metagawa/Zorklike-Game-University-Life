@@ -193,10 +193,17 @@ void Zork::on_mapButton_clicked() {
   Command *mapCommand = new Command("map", "");
   if (mapIsHidden) {
     ui->map->show();
+    ui->plainTextEdit->setStyleSheet(
+        "border: 0;background-color: rgb(255, 255, 255);background-image: "
+        "url(:/new/images/images/lines.png);padding-left: 10; color: "
+        "rgba(0,0,0,0)");
     mapIsHidden = false;
   } else {
     ui->map->hide();
     mapIsHidden = true;
+    ui->plainTextEdit->setStyleSheet(
+        "border: 0;background-color: rgb(255, 255, 255);background-image: "
+        "url(:/new/images/images/lines.png);padding-left: 10; color: ");
   }
   uniLife->processCommand(*mapCommand);
 }
