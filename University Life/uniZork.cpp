@@ -18,7 +18,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->map->hide();
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
-  uniLife->printWelcome();
   time = new Times();
   textDayList = new vector<string>({"", "", "", "", "", "", ""});
   QFontDatabase::addApplicationFont(":/barbies-jalous-sisters.handwriting.ttf");
@@ -180,17 +179,13 @@ void Zork::on_southButton_clicked() {
 }
 
 void Zork::on_takeButton_clicked() {
-  Command *takeCommand = new Command("take", "x");
-  uniLife->processCommand(*takeCommand);
 }
 
 void Zork::on_infoButton_clicked() {
-  Command *infoCommand = new Command("info", "");
-  uniLife->processCommand(*infoCommand);
+
 }
 
 void Zork::on_mapButton_clicked() {
-  Command *mapCommand = new Command("map", "");
   if (mapIsHidden) {
     ui->map->show();
     ui->plainTextEdit->setStyleSheet(
@@ -222,12 +217,9 @@ void Zork::on_mapButton_clicked() {
           "border: 0;background-color: rgb(255, 255, 255);background-image: "
           "url(:/new/images/images/lines.png);padding-left: 10; color: ");
     }
-    uniLife->processCommand(*mapCommand);
   }
 }
 void Zork::on_putButton_clicked() {
-  Command *putCommand = new Command("put", "x");
-  uniLife->processCommand(*putCommand);
 }
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }

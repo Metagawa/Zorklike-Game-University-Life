@@ -47,8 +47,6 @@ void UniLife::createRooms()  {
  *  Main play routine.  Loops until end of play.
  */
 void UniLife::play() {
-	printWelcome();
-
 	// Enter the main command loop.  Here we repeatedly read commands and
     // execute them until the UniLife game is over.
 
@@ -66,13 +64,6 @@ void UniLife::play() {
 	cout << "end" << endl;
 }
 
-void UniLife::printWelcome() {
-	cout << "start"<< endl;
-	cout << "info for help"<< endl;
-	cout << endl;
-	cout << currentRoom->longDescription() << endl;
-}
-
 /**
  * Given a command, process (that is: execute) the command.
  * If this command ends the UniLife game, true is returned, otherwise false is
@@ -85,78 +76,17 @@ bool UniLife::processCommand(Command command) {
 	}
 
 	string commandWord = command.getCommandWord();
-	if (commandWord.compare("info") == 0)
-		printHelp();
 
-	else if (commandWord.compare("map") == 0)
-		{
-        cout << "[h] --- [f] --- [g] --- [j]" << endl;
-		cout << "         |         " << endl;
-        cout << "         |         " << endl;
-		cout << "[c] --- [a] --- [b]" << endl;
-		cout << "         |         " << endl;
-		cout << "         |         " << endl;
-		cout << "[i] --- [d] --- [e]" << endl;
-		}
-
-	else if (commandWord.compare("go") == 0)
+     if (commandWord.compare("go") == 0)
 		goRoom(command);
 
-    else if (commandWord.compare("take") == 0)
-    {
-       	if (!command.hasSecondWord()) {
-		cout << "incomplete input"<< endl;
-        }
-        else
-         if (command.hasSecondWord()) {
-        cout << "you're trying to take " + command.getSecondWord() << endl;
-        int location = currentRoom->isItemInRoom(command.getSecondWord());
-        if (location  < 0 )
-            cout << "item is not in room" << endl;
-        else
-            cout << "item is in room" << endl;
-            cout << "index number " << + location << endl;
-            cout << endl;
-            cout << currentRoom->longDescription() << endl;
-        }
-    }
-
-    else if (commandWord.compare("put") == 0)
-    {
-
-    }
-    /*
-    {
-    if (!command.hasSecondWord()) {
-		cout << "incomplete input"<< endl;
-        }
-        else
-            if (command.hasSecondWord()) {
-            cout << "you're adding " + command.getSecondWord() << endl;
-            itemsInRoom.push_Back;
-        }
-    }
-*/
     else if (commandWord.compare("quit") == 0) {
-		if (command.hasSecondWord())
-			cout << "overdefined input"<< endl;
-		else
 			return true; /**signal to quit*/
 	}
 	return false;
 }
-/** COMMANDS **/
-void UniLife::printHelp() {
-	cout << "valid inputs are; " << endl;
-	parser.showCommands();
-
-}
 
 void UniLife::goRoom(Command command) {
-	if (!command.hasSecondWord()) {
-		cout << "incomplete input"<< endl;
-		return;
-	}
 
 	string direction = command.getSecondWord();
 
@@ -167,7 +97,6 @@ void UniLife::goRoom(Command command) {
 		cout << "underdefined input"<< endl;
 	else {
 		currentRoom = nextRoom;
-		cout << currentRoom->longDescription() << endl;
 	}
 }
 
