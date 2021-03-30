@@ -51,6 +51,7 @@ private:
   Times *time;
   void updatePositionAfterMoving();
   void updateOnChangeStackPaneIndex();
+  void updateDisabledDirections();
   string getRoomName(string s);
 };
 #endif // UNIZORK_H

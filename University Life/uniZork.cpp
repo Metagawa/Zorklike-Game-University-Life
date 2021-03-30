@@ -40,24 +40,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->polaroidLabel->setText(
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
 
-  ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
-  // get exits
-  ui->northButton->setDisabled(false);
-  ui->southButton->setDisabled(false);
-  ui->eastButton->setDisabled(false);
-  ui->westButton->setDisabled(false);
-  if (uniLife->currentRoom->nextRoom("north") == NULL) {
-    ui->northButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("south") == NULL) {
-    ui->southButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("east") == NULL) {
-    ui->eastButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("west") == NULL) {
-    ui->westButton->setDisabled(true);
-  }
+  // update disable buttons
+  updateDisabledDirections();
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -75,6 +59,27 @@ void Zork::updateOnChangeStackPaneIndex() {
     ui->centralwidget->setStyleSheet("");
     ui->watch->hide();
     ui->lcdNumber->hide();
+  }
+}
+
+void Zork::updateDisabledDirections() {
+  ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
+  // get exits
+  ui->northButton->setDisabled(false);
+  ui->southButton->setDisabled(false);
+  ui->eastButton->setDisabled(false);
+  ui->westButton->setDisabled(false);
+  if (uniLife->currentRoom->nextRoom("north") == NULL) {
+    ui->northButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("south") == NULL) {
+    ui->southButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("east") == NULL) {
+    ui->eastButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("west") == NULL) {
+    ui->westButton->setDisabled(true);
   }
 }
 
@@ -142,22 +147,7 @@ void Zork::updatePositionAfterMoving() {
 
   // Disables movement buttons based on if movement in that direction is
   // possible or not
-  ui->northButton->setDisabled(false);
-  ui->southButton->setDisabled(false);
-  ui->eastButton->setDisabled(false);
-  ui->westButton->setDisabled(false);
-  if (uniLife->currentRoom->nextRoom("north") == NULL) {
-    ui->northButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("south") == NULL) {
-    ui->southButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("east") == NULL) {
-    ui->eastButton->setDisabled(true);
-  }
-  if (uniLife->currentRoom->nextRoom("west") == NULL) {
-    ui->westButton->setDisabled(true);
-  }
+  updateDisabledDirections();
 
   // update image for room
   if (uniLife->currentRoom->shortDescription() == "a") {
@@ -200,6 +190,14 @@ void Zork::on_infoButton_clicked() {}
 
 void Zork::on_mapButton_clicked() {
   if (mapIsHidden) {
+    ui->northButton->setDisabled(true);
+    ui->southButton->setDisabled(true);
+    ui->eastButton->setDisabled(true);
+    ui->westButton->setDisabled(true);
+    ui->putButton->setDisabled(true);
+    ui->takeButton->setDisabled(true);
+    ui->quitButton->setDisabled(true);
+    ui->infoButton->setDisabled(true);
     ui->map->show();
     ui->plainTextEdit->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
@@ -217,6 +215,12 @@ void Zork::on_mapButton_clicked() {
     }
 
   } else {
+    updateDisabledDirections();
+    ui->putButton->setDisabled(false);
+    ui->takeButton->setDisabled(false);
+    ui->quitButton->setDisabled(false);
+    ui->infoButton->setDisabled(false);
+
     ui->map->hide();
     mapIsHidden = true;
     ui->plainTextEdit->setStyleSheet(
