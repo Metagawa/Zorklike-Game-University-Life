@@ -44,10 +44,10 @@ void UniLife::createRooms() {
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png");
-  j = new Room("Main Building", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+  j = new Room("Main Building", ":/new/images/images/business-room.png",
+               ":/new/images/images/business-room.png",
+               ":/new/images/images/business-room.png",
+               ":/new/images/images/business-room.png");
   k = new Room("Shopping Area", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
