@@ -109,7 +109,7 @@ void Zork::updatePositionAfterMoving() {
     pte->setReadOnly(true);
     pte->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // pte->setGeometry(25, 0, 426, 342);
-    //  pte->move(x() - ((25 - width()) / 2), y() - ((0 - height()) / 2));
+    //  pte->move(x()-((25-width()) / 2), y()-((0-height()) / 2));
     pte->setTextInteractionFlags(Qt::NoTextInteraction);
 
     hlayout->addSpacerItem(item);
@@ -225,7 +225,8 @@ void Zork::on_mapButton_clicked() {
     QString tabStyle =
         "QTabBar::tab{min-width: "
         "0px;max-width: 0px; color: rgba(0,0,0,0);background-color: "
-        "rgba(0,0,0,0);border: none;}";
+        "rgba(0,0,0,0);border: none;"
+        "padding-bottom:14px;}";
     ui->tabWidget->setStyleSheet(tabStyle);
 
   } else {
@@ -248,39 +249,39 @@ void Zork::on_mapButton_clicked() {
           "border: 0;background-color: rgb(255, 255, 255);background-image: "
           "url(:/new/images/images/lines.png);padding-left: 10; color: ");
     }
-    QString tabStyle = "QTabBar::tab {"
-                       " background - color : rgb(255, 255, 127);border -"
+    QString tabStyle = "QTabBar::tab{"
+                       " background-color : rgb(255, 255, 127);border -"
                        "bottom : 1px dotted Grey;"
-                       "border - top : 1px solid LightGrey;"
-                       "border - left : 1px solid LightGrey;"
-                       "border - right : 1px solid LightGrey;"
+                       "border-top : 1px solid LightGrey;"
+                       "border-left : 1px solid LightGrey;"
+                       "border-right : 1px solid LightGrey;"
                        "color:"
                        "rgb(0, 0, 0);"
-                       "margin - right : 2px;"
-                       "padding - top : 5px;"
-                       "padding - bottom : 5px;"
-                       "padding - right : 10px;"
-                       " padding - left : 10px;"
+                       "margin-right : 2px;"
+                       "padding-top : 5px;"
+                       "padding-bottom : 5px;"
+                       "padding-right : 10px;"
+                       " padding-left : 10px;"
                        "}"
 
-                       "QTabBar::tab : enabled {"
-                       "background - color : rgb(255, 255, 127);"
-                       "border - bottom : 1px dotted Grey;"
-                       "border - top : 1px solid LightGrey;"
-                       " border - left : 1px solid LightGrey;"
-                       "border - right : 1px solid LightGrey;"
+                       "QTabBar::tab : enabled{"
+                       "background-color : rgb(255, 255, 127);"
+                       "border-bottom : 1px dotted Grey;"
+                       "border-top : 1px solid LightGrey;"
+                       "border-left : 1px solid LightGrey;"
+                       "border-right : 1px solid LightGrey;"
                        "color:"
                        "rgb(0, 0, 0);"
-                       "margin - right : 2px;"
-                       "padding - top : 5px;"
-                       "padding - bottom : 5px;"
-                       "padding - right : 10px;"
-                       "padding - left : 10px;"
+                       "margin-right : 2px;"
+                       "padding-top : 5px;"
+                       "padding-bottom : 5px;"
+                       "padding-right : 10px;"
+                       "padding-left : 10px;"
                        "}"
-                       "QTabBar::tab : selected {"
-                       "background - color : rgb(100, 255, 100);"
-                       "padding - bottom : 8px;"
-                       "border - bottom : none;"
+                       "QTabBar::tab : selected{"
+                       "background-color : rgb(100, 255, 100);"
+                       "padding-bottom : 8px;"
+                       "border-bottom : none;"
 
                        "}";
     ui->tabWidget->setStyleSheet(tabStyle);
