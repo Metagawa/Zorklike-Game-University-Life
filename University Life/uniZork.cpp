@@ -198,16 +198,33 @@ void Zork::on_mapButton_clicked() {
         "url(:/new/images/images/lines.png);padding-left: 10; color: "
         "rgba(0,0,0,0)");
     mapIsHidden = false;
+
+    for (int i = 1; i < ui->tabWidget->count(); i++) {
+      QPlainTextEdit *qpte =
+          ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
+      qpte->setStyleSheet(
+          "border: 0;background-color: rgb(255, 255, 255);background-image: "
+          "url(:/new/images/images/lines.png);padding-left: 10; color: "
+          "rgba(0,0,0,0)");
+    }
+
   } else {
     ui->map->hide();
     mapIsHidden = true;
     ui->plainTextEdit->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
         "url(:/new/images/images/lines.png);padding-left: 10; color: ");
-  }
-  uniLife->processCommand(*mapCommand);
-}
 
+    for (int i = 1; i < ui->tabWidget->count(); i++) {
+      QPlainTextEdit *qpte =
+          ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
+      qpte->setStyleSheet(
+          "border: 0;background-color: rgb(255, 255, 255);background-image: "
+          "url(:/new/images/images/lines.png);padding-left: 10; color: ");
+    }
+    uniLife->processCommand(*mapCommand);
+  }
+}
 void Zork::on_putButton_clicked() {
   Command *putCommand = new Command("put", "x");
   uniLife->processCommand(*putCommand);
