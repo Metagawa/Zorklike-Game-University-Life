@@ -13,5 +13,7 @@
         <file>images/main.png</file>
         <file>fonts/Graduate-Regular.ttf</file>
         <file>images/black-biro.png</file>
+        <file>images/black-biro-scrape.png</file>
+        <file>images/scratches-png-image.png</file>
     </qresource>
 </RCC>

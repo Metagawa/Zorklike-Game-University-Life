@@ -179,8 +179,10 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
 }
 QPushButton:disabled{color: rgba(255, 132, 24,0);\n}
 
-QPushButton:hover{
-color:green}</string>
+QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35, 35); 
+    background-image: url(&quot;:/images/scratches-png-image.png&quot;);}
+
+</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <property name="leftMargin">
