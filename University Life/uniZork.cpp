@@ -12,7 +12,7 @@
 using namespace std;
 bool mapIsHidden = true;
 
-Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
+Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("University Life");
   ui->map->hide();
@@ -250,38 +250,38 @@ void Zork::on_mapButton_clicked() {
           "url(:/new/images/images/lines.png);padding-left: 10; color: ");
     }
     QString tabStyle = "QTabBar::tab{"
-                       " background-color : rgb(255, 255, 127);border -"
-                       "bottom : 1px dotted Grey;"
-                       "border-top : 1px solid LightGrey;"
-                       "border-left : 1px solid LightGrey;"
-                       "border-right : 1px solid LightGrey;"
+                       "background-color:rgb(255, 255, 127);border -"
+                       "bottom:1px dotted Grey;"
+                       "border-top:1px solid LightGrey;"
+                       "border-left:1px solid LightGrey;"
+                       "border-right:1px solid LightGrey;"
                        "color:"
                        "rgb(0, 0, 0);"
-                       "margin-right : 2px;"
-                       "padding-top : 5px;"
-                       "padding-bottom : 5px;"
-                       "padding-right : 10px;"
-                       " padding-left : 10px;"
+                       "margin-right:2px;"
+                       "padding-top:5px;"
+                       "padding-bottom:5px;"
+                       "padding-right:10px;"
+                       " padding-left:10px;"
                        "}"
 
-                       "QTabBar::tab : enabled{"
-                       "background-color : rgb(255, 255, 127);"
-                       "border-bottom : 1px dotted Grey;"
-                       "border-top : 1px solid LightGrey;"
-                       "border-left : 1px solid LightGrey;"
-                       "border-right : 1px solid LightGrey;"
+                       "QTabBar::tab:enabled{"
+                       "background-color:rgb(255, 255, 127);"
+                       "border-bottom:1px dotted Grey;"
+                       "border-top:1px solid LightGrey;"
+                       "border-left:1px solid LightGrey;"
+                       "border-right:1px solid LightGrey;"
                        "color:"
                        "rgb(0, 0, 0);"
-                       "margin-right : 2px;"
-                       "padding-top : 5px;"
-                       "padding-bottom : 5px;"
-                       "padding-right : 10px;"
-                       "padding-left : 10px;"
+                       "margin-right:2px;"
+                       "padding-top:5px;"
+                       "padding-bottom:5px;"
+                       "padding-right:10px;"
+                       "padding-left:10px;"
                        "}"
-                       "QTabBar::tab : selected{"
-                       "background-color : rgb(100, 255, 100);"
-                       "padding-bottom : 8px;"
-                       "border-bottom : none;"
+                       "QTabBar::tab:selected{"
+                       "background-color:rgb(100, 255, 100);"
+                       "padding-bottom:8px;"
+                       "border-bottom:none;"
 
                        "}";
     ui->tabWidget->setStyleSheet(tabStyle);
