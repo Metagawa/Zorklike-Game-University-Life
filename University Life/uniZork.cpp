@@ -248,6 +248,42 @@ void Zork::on_mapButton_clicked() {
           "border: 0;background-color: rgb(255, 255, 255);background-image: "
           "url(:/new/images/images/lines.png);padding-left: 10; color: ");
     }
+    QString tabStyle = "QTabBar::tab {"
+                       " background - color : rgb(255, 255, 127);border -"
+                       "bottom : 1px dotted Grey;"
+                       "border - top : 1px solid LightGrey;"
+                       "border - left : 1px solid LightGrey;"
+                       "border - right : 1px solid LightGrey;"
+                       "color:"
+                       "rgb(0, 0, 0);"
+                       "margin - right : 2px;"
+                       "padding - top : 5px;"
+                       "padding - bottom : 5px;"
+                       "padding - right : 10px;"
+                       " padding - left : 10px;"
+                       "}"
+
+                       "QTabBar::tab : enabled {"
+                       "background - color : rgb(255, 255, 127);"
+                       "border - bottom : 1px dotted Grey;"
+                       "border - top : 1px solid LightGrey;"
+                       " border - left : 1px solid LightGrey;"
+                       "border - right : 1px solid LightGrey;"
+                       "color:"
+                       "rgb(0, 0, 0);"
+                       "margin - right : 2px;"
+                       "padding - top : 5px;"
+                       "padding - bottom : 5px;"
+                       "padding - right : 10px;"
+                       "padding - left : 10px;"
+                       "}"
+                       "QTabBar::tab : selected {"
+                       "background - color : rgb(100, 255, 100);"
+                       "padding - bottom : 8px;"
+                       "border - bottom : none;"
+
+                       "}";
+    ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
 void Zork::on_putButton_clicked() {}
