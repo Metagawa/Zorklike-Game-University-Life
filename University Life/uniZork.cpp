@@ -41,6 +41,23 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
 
   ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
+  // get exits
+  ui->northButton->setDisabled(false);
+  ui->southButton->setDisabled(false);
+  ui->eastButton->setDisabled(false);
+  ui->westButton->setDisabled(false);
+  if (uniLife->currentRoom->nextRoom("north") == NULL) {
+    ui->northButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("south") == NULL) {
+    ui->southButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("east") == NULL) {
+    ui->eastButton->setDisabled(true);
+  }
+  if (uniLife->currentRoom->nextRoom("west") == NULL) {
+    ui->westButton->setDisabled(true);
+  }
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -177,12 +194,9 @@ void Zork::on_southButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {
-}
+void Zork::on_takeButton_clicked() {}
 
-void Zork::on_infoButton_clicked() {
-
-}
+void Zork::on_infoButton_clicked() {}
 
 void Zork::on_mapButton_clicked() {
   if (mapIsHidden) {
@@ -218,8 +232,7 @@ void Zork::on_mapButton_clicked() {
     }
   }
 }
-void Zork::on_putButton_clicked() {
-}
+void Zork::on_putButton_clicked() {}
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
