@@ -642,11 +642,31 @@ color: rgb(170, 0, 0);
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="map">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>63</y>
+      <width>421</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/resources.qrc">:/images/MAP.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>mainMenuScreen</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>spiral</zorder>
    <zorder>watch</zorder>
    <zorder>lcdNumber</zorder>
+   <zorder>map</zorder>
   </widget>
  </widget>
  <resources>
