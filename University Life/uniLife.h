@@ -4,7 +4,6 @@
 #include "Command.h"
 #include "Parser.h"
 #include "Room.h"
-#include "item.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -24,8 +23,6 @@ public:
     void createRooms();
     void printHelp();
     void goRoom(Command command);
-    void createItems();
-    void displayItems();
 };
 
 #endif /*UNILIFE_H_*/

@@ -25,8 +25,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
   QFont graduate("Graduate", 14, QFont::Normal);
 
-  string welcomeText = "start \ninfo for help\n\n" +
-                       uniLife->currentRoom->longDescription() + "\n";
+  string welcomeText = "Welcome to University Life!\n\n";
   (*textDayList)[0] = (welcomeText);
   ui->plainTextEdit->setPlainText(QString::fromStdString((*textDayList)[0]));
   // ui->plainTextEdit->setStyleSheet("color: blue;");

@@ -9,10 +9,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Character.cpp \
     Command.cpp \
     CommandWords.cpp \
-    item.cpp \
     Parser.cpp \
     Room.cpp \
     main.cpp \
@@ -21,10 +19,8 @@ SOURCES += \
     uniZork.cpp
 
 HEADERS += \
-    Character.h \
     Command.h \
     CommandWords.h \
-    item.h \
     Parser.cpp \
     Room.h \
     times.h \
