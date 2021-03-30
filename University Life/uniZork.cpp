@@ -36,8 +36,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->stackedWidget->setCurrentIndex(1);
   updateOnChangeStackPaneIndex();
   ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
-  ui->polaroidLabel->setText(QString::fromStdString(
-      getRoomName(uniLife->currentRoom->shortDescription())));
+  ui->polaroidLabel->setText(
+      QString::fromStdString(uniLife->currentRoom->shortDescription()));
 
   ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
 }
@@ -58,16 +58,6 @@ void Zork::updateOnChangeStackPaneIndex() {
     ui->watch->hide();
     ui->lcdNumber->hide();
   }
-}
-
-string Zork::getRoomName(string s) {
-
-  if (s == "a") {
-    return "Gym";
-  } else if (s == "f") {
-    return "Business room";
-  }
-  return "Unknown";
 }
 
 Zork::~Zork() { delete ui; }
@@ -158,8 +148,8 @@ void Zork::updatePositionAfterMoving() {
     ui->imageBackground->setPixmap(
         QPixmap(":/new/images/images/business-room.png"));
   }
-  ui->polaroidLabel->setText(QString::fromStdString(
-      getRoomName(uniLife->currentRoom->shortDescription())));
+  ui->polaroidLabel->setText(
+      QString::fromStdString(uniLife->currentRoom->shortDescription()));
 }
 
 void Zork::on_northButton_clicked() {
