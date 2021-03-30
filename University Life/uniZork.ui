@@ -179,7 +179,8 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
 }
 QPushButton:disabled{color: rgba(255, 132, 24,0);\n}
 
-</string>
+QPushButton:hover{
+color:green}</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <property name="leftMargin">
