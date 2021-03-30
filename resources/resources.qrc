@@ -12,5 +12,6 @@
         <file>images/watch.png</file>
         <file>images/main.png</file>
         <file>fonts/Graduate-Regular.ttf</file>
+        <file>images/black-biro.png</file>
     </qresource>
 </RCC>

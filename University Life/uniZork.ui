@@ -146,7 +146,8 @@ background-color: rgb(100, 255, 100);padding-bottom:8px;border-bottom: none;
          <string notr="true">border: 0;
 background-color: rgb(255, 255, 255);
 background-image: url(:/new/images/images/lines.png);
-padding-left: 10;</string>
+padding-left: 10;
+</string>
         </property>
         <property name="lineWrapMode">
          <enum>QPlainTextEdit::WidgetWidth</enum>
@@ -231,7 +232,7 @@ QPushButton:disabled{color: rgba(255, 132, 24,0);\n}
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>:/new/images/images/gym-room.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -558,7 +559,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/images/spiral.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -580,7 +581,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/watch.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -632,7 +633,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/main.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -645,6 +646,8 @@ color: rgb(170, 0, 0);
    <zorder>lcdNumber</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
