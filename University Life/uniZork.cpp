@@ -2,20 +2,24 @@
 #include "ui_uniZork.h"
 #include <QDesktopWidget>
 #include <QScrollBar>
+#include <QSound>
 #include <QStringList>
 #include <QStyle>
 #include <QTabBar>
 #include <QTabWidget>
 #include <Qt>
 #include <QtCore>
-#include<QSound>
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
 
-Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
+Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("University Life");
+  ui->quitOverlay->hide();
+  // ui->quitButton->hide();
+  // ui->quitButton_2->hide();
+  ui->quitSheet->hide();
   ui->map->hide();
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
@@ -25,7 +29,6 @@ Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
   QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
   QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
   QFont graduate("Graduate", 14, QFont::Normal);
-
 
   string welcomeText = "Welcome to University Life!\n\n";
   (*textDayList)[0] = (welcomeText);
@@ -172,43 +175,39 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
- QSound::play(":/sfx/scratch.wav");
+  QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_eastButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
+  QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
+  QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
+  QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
-}
+void Zork::on_takeButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
 
-void Zork::on_infoButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
-}
+void Zork::on_infoButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
 
 void Zork::on_mapButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
+  QSound::play(":/sfx/scratch.wav");
   if (mapIsHidden) {
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
@@ -298,16 +297,27 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() {
-     QSound::play(":/sfx/scratch.wav");
-}
+void Zork::on_putButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
 
-void Zork::on_quitButton_clicked() { QApplication::quit(); }
+void Zork::on_quitButton_clicked() {
+  // disable all buttons
+  ui->northButton->setDisabled(true);
+  ui->southButton->setDisabled(true);
+  ui->eastButton->setDisabled(true);
+  ui->westButton->setDisabled(true);
+  ui->putButton->setDisabled(true);
+  ui->takeButton->setDisabled(true);
+  ui->quitButton->setDisabled(true);
+  ui->infoButton->setDisabled(true);
+  ui->mapButton->setDisabled(true);
+  ui->quitOverlay->show();
+
+  ui->quitSheet->show();
+}
 
 void Zork::on_goToExplore_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
   updateOnChangeStackPaneIndex();
 }
 
-void Zork::on_quitButton_2_clicked() {
-    QApplication::quit(); }
+void Zork::on_quitButton_2_clicked() { QApplication::quit(); }
