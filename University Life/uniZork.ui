@@ -661,12 +661,91 @@ color: rgb(170, 0, 0);
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="quitSheet">
+    <property name="geometry">
+     <rect>
+      <x>196</x>
+      <y>40</y>
+      <width>461</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/resources.qrc">:/images/quit.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="quitOverlay">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>189</y>
+      <width>168</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Jalous Sisters&quot;;color: rgb(85, 85, 85);
+}</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="quitCancel">
+       <property name="font">
+        <font>
+         <family>Barbies Jalous Sisters</family>
+         <pointsize>25</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="quitConfirm">
+       <property name="font">
+        <font>
+         <family>Barbies Jalous Sisters</family>
+         <pointsize>25</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Quit</string>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <zorder>mainMenuScreen</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>spiral</zorder>
    <zorder>watch</zorder>
    <zorder>lcdNumber</zorder>
    <zorder>map</zorder>
+   <zorder>quitCancel</zorder>
+   <zorder>quitConfirm</zorder>
+   <zorder>quitSheet</zorder>
+   <zorder>splitter</zorder>
+   <zorder>quitOverlay</zorder>
   </widget>
  </widget>
  <resources>

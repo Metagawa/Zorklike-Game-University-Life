@@ -18,5 +18,6 @@
         <file>images/MAP.png</file>
         <file>images/lasso.png</file>
         <file>sfx/scratch.wav</file>
+        <file>images/quit.png</file>
     </qresource>
 </RCC>
