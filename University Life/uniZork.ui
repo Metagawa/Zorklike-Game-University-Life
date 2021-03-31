@@ -235,7 +235,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>:/new/images/images/gym-room.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/new/images/images/gym-room.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -562,7 +562,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/new/images/images/spiral.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/new/images/images/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -584,7 +584,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/watch.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -636,7 +636,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/main.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -655,7 +655,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/MAP.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/MAP.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -664,17 +664,17 @@ color: rgb(170, 0, 0);
    <widget class="QLabel" name="quitSheet">
     <property name="geometry">
      <rect>
-      <x>164</x>
-      <y>-11</y>
-      <width>541</width>
-      <height>421</height>
+      <x>0</x>
+      <y>0</y>
+      <width>846</width>
+      <height>385</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/quit.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/quit.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -751,6 +751,8 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
    <zorder>quitOverlay</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
