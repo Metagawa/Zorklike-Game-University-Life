@@ -8,6 +8,7 @@
 #include <QTabWidget>
 #include <Qt>
 #include <QtCore>
+#include<QSoundEffect>
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
@@ -24,6 +25,10 @@ Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
   QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
   QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
   QFont graduate("Graduate", 14, QFont::Normal);
+  QSoundEffect effect;
+  effect.setSource(QUrl::fromLocalFile(":/sfx/scratch.mp3"));
+  effect.setVolume(1.00f);
+effect.play();
 
   string welcomeText = "Welcome to University Life!\n\n";
   (*textDayList)[0] = (welcomeText);
@@ -170,6 +175,8 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
+    effect.play();
+
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();

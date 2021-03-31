@@ -17,5 +17,6 @@
         <file>images/scratches-png-image.png</file>
         <file>images/MAP.png</file>
         <file>images/lasso.png</file>
+        <file>sfx/scratch.mp3</file>
     </qresource>
 </RCC>
