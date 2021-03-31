@@ -744,7 +744,6 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
    <zorder>quitCancel</zorder>
    <zorder>quitConfirm</zorder>
    <zorder>quitSheet</zorder>
-   <zorder>splitter</zorder>
    <zorder>quitOverlay</zorder>
   </widget>
  </widget>
