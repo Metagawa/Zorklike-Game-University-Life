@@ -11,15 +11,15 @@ void UniLife::createRooms() {
   a = new Room("Bus Stop", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 100, 250);
+               ":/new/images/images/gym-room.png", 160, 285);
   b = new Room("Dorms", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 0, 0);
+               ":/new/images/images/gym-room.png", 232, 302);
   c = new Room("Gym", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 0, 0);
+               ":/new/images/images/gym-room.png", 370, 295);
   d = new Room("Library", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
