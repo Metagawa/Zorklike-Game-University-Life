@@ -44,8 +44,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   updateDisabledDirections();
 
   // ui->eastButton->setCursor(QCursor(QPixmap(":/images/black-biro.png")));
-  ui->eastButton->setCursor(QCursor(
-                                            QPixmap(":/images/black-biro-scrape.png")));
+  ui->eastButton->setCursor(Qt::IBeamCursor);
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
