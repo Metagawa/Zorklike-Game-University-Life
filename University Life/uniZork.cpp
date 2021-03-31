@@ -8,7 +8,7 @@
 #include <QTabWidget>
 #include <Qt>
 #include <QtCore>
-#include<QSoundEffect>
+#include<QSound>
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
@@ -25,10 +25,7 @@ Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
   QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
   QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
   QFont graduate("Graduate", 14, QFont::Normal);
-  QSoundEffect effect;
-  effect.setSource(QUrl::fromLocalFile(":/sfx/scratch.mp3"));
-  effect.setVolume(1.00f);
-effect.play();
+
 
   string welcomeText = "Welcome to University Life!\n\n";
   (*textDayList)[0] = (welcomeText);
@@ -175,36 +172,43 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
-    effect.play();
-
+ QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_eastButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {}
+void Zork::on_takeButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
+}
 
-void Zork::on_infoButton_clicked() {}
+void Zork::on_infoButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
+}
 
 void Zork::on_mapButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
   if (mapIsHidden) {
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
@@ -294,7 +298,9 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() {}
+void Zork::on_putButton_clicked() {
+     QSound::play(":/sfx/scratch.wav");
+}
 
 void Zork::on_quitButton_clicked() { QApplication::quit(); }
 
@@ -303,4 +309,5 @@ void Zork::on_goToExplore_clicked() {
   updateOnChangeStackPaneIndex();
 }
 
-void Zork::on_quitButton_2_clicked() { QApplication::quit(); }
+void Zork::on_quitButton_2_clicked() {
+    QApplication::quit(); }
