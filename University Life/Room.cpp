@@ -2,7 +2,9 @@
 #include "Command.h"
 
 Room::Room(string description, string dayClear, string dayRain,
-           string nightClear, string nightRain) {
+           string nightClear, string nightRain, int lassoX, int lassoY) {
+  this->lassoX = lassoX;
+  this->lassoY = lassoY;
   this->description = description;
   this->dayClear = dayClear;
   this->dayRain = dayRain;
@@ -30,6 +32,8 @@ string Room::getNightClear() { return nightClear; }
 string Room::getDayRain() { return dayRain; }
 string Room::getNightRain() { return nightRain; }
 
+int Room::getLassoX() { return this->lassoX; }
+int Room::getLassoY() { return this->lassoY; }
 string Room::exitString() {
   string returnString = "\nexits =";
   for (map<string, Room *>::iterator i = exits.begin(); i != exits.end(); i++)

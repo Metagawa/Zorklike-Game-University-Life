@@ -17,10 +17,12 @@ private:
   string nightRain;
   map<string, Room *> exits;
   string exitString();
+  int lassoX;
+  int lassoY;
 
 public:
   Room(string description, string dayClear, string dayRain, string nightClear,
-       string nightRain);
+       string nightRain, int lassoX, int lassoY);
   void setExits(Room *north, Room *east, Room *south, Room *west);
   string shortDescription();
   string longDescription();
@@ -28,6 +30,8 @@ public:
   string getDayRain();
   string getNightClear();
   string getNightRain();
+  int getLassoX();
+  int getLassoY();
   Room *nextRoom(string direction);
 };
 

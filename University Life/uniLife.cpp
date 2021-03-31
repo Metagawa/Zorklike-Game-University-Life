@@ -11,55 +11,55 @@ void UniLife::createRooms() {
   a = new Room("Bus Stop", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   b = new Room("Dorms", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   c = new Room("Gym", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   d = new Room("Library", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   e = new Room("Student Union", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   f = new Room("Relax Area", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   g = new Room("Pub", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   h = new Room("Computer Science", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   i = new Room("The Quad", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   j = new Room("Main Building", ":/new/images/images/business-room.png",
                ":/new/images/images/business-room.png",
                ":/new/images/images/business-room.png",
-               ":/new/images/images/business-room.png");
+               ":/new/images/images/business-room.png", 0, 0);
   k = new Room("Shopping Area", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   l = new Room("Raps", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
   m = new Room("Campus Outlet", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png");
+               ":/new/images/images/gym-room.png", 0, 0);
 
   //             (N, E, S, W)
   a->setExits(e, b, NULL, NULL);
