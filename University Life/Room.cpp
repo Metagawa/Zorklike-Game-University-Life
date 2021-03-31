@@ -23,7 +23,7 @@ void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
 
 string Room::shortDescription() { return description; }
 
-string Room::longDescription() { return "room = " + description; }
+string Room::longDescription() { return "I went to the " + description; }
 
 string Room::getDayClear() { return dayClear; }
 string Room::getNightClear() { return nightClear; }
