@@ -232,7 +232,8 @@ void Zork::on_mapButton_clicked() {
 
   if (mapIsHidden) {
     ui->lasso->show();
-
+    ui->lasso->setGeometry(0, 0, uniLife->currentRoom->getLassoX(),
+                           uniLife->currentRoom->getLassoY());
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
     ui->eastButton->setDisabled(true);
@@ -328,8 +329,8 @@ void Zork::on_putButton_clicked() {
 }
 
 void Zork::on_quitButton_clicked() {
-    crumpleSfx.stop();
-    crumpleSfx.play();
+  crumpleSfx.stop();
+  crumpleSfx.play();
   // disable all buttons
   ui->northButton->setDisabled(true);
   ui->southButton->setDisabled(true);
@@ -351,15 +352,15 @@ void Zork::on_goToExplore_clicked() {
 }
 
 void Zork::on_quitButton_2_clicked() {
-    crumpleSfx.stop();
-    crumpleSfx.play();
+  crumpleSfx.stop();
+  crumpleSfx.play();
   ui->quitOverlay->show();
   ui->quitSheet->show();
 }
 
 void Zork::on_quitCancel_clicked() {
-    crumpleSfx.stop();
-    crumpleSfx.play();
+  crumpleSfx.stop();
+  crumpleSfx.play();
   updateDisabledDirections();
   ui->putButton->setDisabled(false);
   ui->takeButton->setDisabled(false);

@@ -11,7 +11,7 @@ void UniLife::createRooms() {
   a = new Room("Bus Stop", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 0, 0);
+               ":/new/images/images/gym-room.png", 100, 250);
   b = new Room("Dorms", ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
                ":/new/images/images/gym-room.png",
