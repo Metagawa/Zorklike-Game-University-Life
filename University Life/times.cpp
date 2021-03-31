@@ -1,16 +1,19 @@
 #include "times.h"
 #include <string>
 using namespace std;
-Times::Times() {
+Times::Times()
+{
   setTime(9);
   setDayNum(0);
 }
 
 int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
-bool Times::advanceTime() {
+bool Times::advanceTime()
+{
   time += 2;
-  if (time >= 24) {
+  if (time >= 24)
+  {
     dayNum++;
     time = 9;
     return true;
@@ -19,16 +22,22 @@ bool Times::advanceTime() {
 }
 bool Times::isDayTime() { return time < 18; }
 bool Times::isRaining() { return (rand() % 2) != 0; }
-string Times::getTimeString() {
-  if (getTime() >= 9) {
+string Times::getTimeString()
+{
+  if (getTime() >= 9)
+  {
     return "0" + to_string(getTime()) + ":00";
-  } else {
+  }
+  else
+  {
     return to_string(getTime()) + ":00";
   }
 }
 
-string Times::getDayString(int i) {
-  switch (i) {
+string Times::getDayString(int i)
+{
+  switch (i)
+  {
   case 0:
     return "Monday";
   case 1:

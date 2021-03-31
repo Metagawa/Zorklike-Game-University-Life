@@ -4,7 +4,8 @@
 #include <QSplashScreen>
 #include <QTimer>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
   QApplication a(argc, argv);
   QPixmap pixmap(":/images/misc/splash.png");
   QSplashScreen splash(pixmap);

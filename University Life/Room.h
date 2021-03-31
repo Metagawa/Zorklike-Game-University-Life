@@ -7,7 +7,8 @@
 using namespace std;
 using std::vector;
 
-class Room {
+class Room
+{
 
 private:
   string description;

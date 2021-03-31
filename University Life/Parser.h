@@ -4,13 +4,14 @@
 #include "Command.h"
 #include "CommandWords.h"
 
-class Parser {
+class Parser
+{
 private:
 	CommandWords *commands;
 
 public:
 	Parser();
-	Command* getCommand();
+	Command *getCommand();
 	void showCommands();
 };
 

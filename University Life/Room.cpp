@@ -2,7 +2,8 @@
 #include "Command.h"
 
 Room::Room(string description, string dayClear, string dayRain,
-           string nightClear, string nightRain, int lassoX, int lassoY) {
+           string nightClear, string nightRain, int lassoX, int lassoY)
+{
   this->lassoX = lassoX;
   this->lassoY = lassoY;
   this->description = description;
@@ -12,7 +13,8 @@ Room::Room(string description, string dayClear, string dayRain,
   this->nightRain = nightRain;
 }
 
-void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
+void Room::setExits(Room *north, Room *east, Room *south, Room *west)
+{
   if (north != NULL)
     exits["north"] = north;
   if (east != NULL)
@@ -34,7 +36,8 @@ string Room::getNightRain() { return nightRain; }
 
 int Room::getLassoX() { return this->lassoX; }
 int Room::getLassoY() { return this->lassoY; }
-string Room::exitString() {
+string Room::exitString()
+{
   string returnString = "\nexits =";
   for (map<string, Room *>::iterator i = exits.begin(); i != exits.end(); i++)
     // Loop through map
@@ -43,7 +46,8 @@ string Room::exitString() {
   return returnString;
 }
 
-Room *Room::nextRoom(string direction) {
+Room *Room::nextRoom(string direction)
+{
   map<string, Room *>::iterator next =
       exits.find(direction); // returns an iterator for the "pair"
   if (next == exits.end())

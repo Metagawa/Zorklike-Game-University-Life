@@ -8,15 +8,14 @@
 #include <string>
 using namespace std;
 
-class UniLife {
+class UniLife
+{
 private:
-
-
 public:
-	UniLife();
+    UniLife();
     void printWelcome();
-	void play();
-	string go(string direction);
+    void play();
+    string go(string direction);
     bool processCommand(Command command);
     Parser parser;
     Room *currentRoom;
