@@ -320,7 +320,10 @@ void Zork::on_goToExplore_clicked() {
   updateOnChangeStackPaneIndex();
 }
 
-void Zork::on_quitButton_2_clicked() { QApplication::quit(); }
+void Zork::on_quitButton_2_clicked() {
+  ui->quitOverlay->show();
+  ui->quitSheet->show();
+}
 
 void Zork::on_quitCancel_clicked() {
   updateDisabledDirections();
