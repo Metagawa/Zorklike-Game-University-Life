@@ -321,3 +321,15 @@ void Zork::on_goToExplore_clicked() {
 }
 
 void Zork::on_quitButton_2_clicked() { QApplication::quit(); }
+
+void Zork::on_quitCancel_clicked() {
+  updateDisabledDirections();
+  ui->putButton->setDisabled(false);
+  ui->takeButton->setDisabled(false);
+  ui->quitButton->setDisabled(false);
+  ui->infoButton->setDisabled(false);
+  ui->quitOverlay->hide();
+  ui->quitSheet->hide();
+}
+
+void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
