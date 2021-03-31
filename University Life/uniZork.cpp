@@ -18,6 +18,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("University Life");
   ui->quitOverlay->hide();
+  ui->lasso->hide();
   // ui->quitButton->hide();
   // ui->quitButton_2->hide();
   ui->quitSheet->hide();
@@ -176,8 +177,8 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
-    scratchSfx.stop();   scratchSfx.play();
-
+  scratchSfx.stop();
+  scratchSfx.play();
 
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
@@ -185,8 +186,8 @@ void Zork::on_northButton_clicked() {
 }
 
 void Zork::on_eastButton_clicked() {
-      scratchSfx.stop();   scratchSfx.play();
-
+  scratchSfx.stop();
+  scratchSfx.play();
 
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
@@ -194,8 +195,8 @@ void Zork::on_eastButton_clicked() {
 }
 
 void Zork::on_westButton_clicked() {
-      scratchSfx.stop();   scratchSfx.play();
-
+  scratchSfx.stop();
+  scratchSfx.play();
 
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
@@ -203,29 +204,34 @@ void Zork::on_westButton_clicked() {
 }
 
 void Zork::on_southButton_clicked() {
-      scratchSfx.stop();   scratchSfx.play();
-
+  scratchSfx.stop();
+  scratchSfx.play();
 
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
+void Zork::on_takeButton_clicked() {
+  scratchSfx.stop();
+  scratchSfx.play();
+}
 
+void Zork::on_infoButton_clicked() {
+  scratchSfx.stop();
+  scratchSfx.play();
 
- }
-
-void Zork::on_infoButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
-
-
-; }
+  ;
+}
 
 void Zork::on_mapButton_clicked() {
-      scratchSfx.stop();   scratchSfx.play();
 
+  scratchSfx.stop();
+  scratchSfx.play();
 
   if (mapIsHidden) {
+    ui->lasso->show();
+
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
     ui->eastButton->setDisabled(true);
@@ -257,6 +263,7 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
 
   } else {
+    ui->lasso->hide();
     updateDisabledDirections();
     ui->putButton->setDisabled(false);
     ui->takeButton->setDisabled(false);
@@ -314,8 +321,10 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
- }
+void Zork::on_putButton_clicked() {
+  scratchSfx.stop();
+  scratchSfx.play();
+}
 
 void Zork::on_quitButton_clicked() {
   // disable all buttons
