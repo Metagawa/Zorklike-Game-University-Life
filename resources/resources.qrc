@@ -19,5 +19,6 @@
         <file>images/lasso.png</file>
         <file>sfx/scratch.wav</file>
         <file>images/quit.png</file>
+        <file>sfx/crumple.wav</file>
     </qresource>
 </RCC>

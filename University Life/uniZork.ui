@@ -771,6 +771,25 @@ QPushButton:hover{
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="lasso">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>80</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources/resources.qrc">:/images/lasso.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>mainMenuScreen</zorder>
    <zorder>stackedWidget</zorder>
    <zorder>spiral</zorder>
@@ -779,6 +798,7 @@ QPushButton:hover{
    <zorder>map</zorder>
    <zorder>quitSheet</zorder>
    <zorder>quitOverlay</zorder>
+   <zorder>lasso</zorder>
   </widget>
  </widget>
  <resources>
