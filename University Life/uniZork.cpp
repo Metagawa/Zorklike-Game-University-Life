@@ -12,7 +12,7 @@
 using namespace std;
 bool mapIsHidden = true;
 
-Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
+Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
   this->setWindowTitle("University Life");
   ui->map->hide();
@@ -42,6 +42,9 @@ Zork::Zork(QWidget *parent):QMainWindow(parent), ui(new Ui::Zork) {
 
   // update disable buttons
   updateDisabledDirections();
+
+  // ui->eastButton->setCursor(QCursor(QPixmap(":/images/black-biro.png")));
+  ui->eastButton->setCursor(Qt::IBeamCursor);
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
