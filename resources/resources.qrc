@@ -22,5 +22,6 @@
         <file>images/bg/day/sunny/riverside.jpg</file>
         <file>images/people/Matt.png</file>
         <file>images/people/Sarah.png</file>
+        <file>images/bg/day/sunny/bus-stop.png</file>
     </qresource>
 </RCC>
