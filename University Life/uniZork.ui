@@ -235,7 +235,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/gym-room.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/bus-stop.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>

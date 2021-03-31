@@ -41,14 +41,14 @@ void UniLife::createRooms()
                ":/images/bg/day/rainy/pub.png",
                ":/images/bg/night/sunny/pub.png",
                ":/images/bg/night/rainy/pub.png", 310, 230);
-  h = new Room("Computer Science", ":/images/bg/day/sunny/computer-science.png",
-               ":/images/bg/day/rainy/computer-science.png",
-               ":/images/bg/night/sunny/computer-science.png",
-               ":/images/bg/night/rainy/computer-science.png", 98, 125);
-  i = new Room("The Quad", ":/images/bg/day/sunny/the-quad.png",
-               ":/images/bg/day/rainy/the-quad.png",
-               ":/images/bg/night/sunny/the-quad.png",
-               ":/images/bg/night/rainy/the-quad.png", 170, 150);
+  h = new Room("Computer Science Building", ":/images/bg/day/sunny/computer-science-building.png",
+               ":/images/bg/day/rainy/computer-science-building.png",
+               ":/images/bg/night/sunny/computer-science-building.png",
+               ":/images/bg/night/rainy/computer-science-building.png", 98, 125);
+  i = new Room("Quad", ":/images/bg/day/sunny/quad.png",
+               ":/images/bg/day/rainy/quad.png",
+               ":/images/bg/night/sunny/quad.png",
+               ":/images/bg/night/rainy/quad.png", 170, 150);
   j = new Room("Main Building", ":/images/bg/day/sunny/main-building.png",
                ":/images/bg/day/rainy/main-building.png",
                ":/images/bg/night/sunny/main-building.png",
@@ -57,10 +57,10 @@ void UniLife::createRooms()
                ":/images/bg/day/rainy/shopping-area.png",
                ":/images/bg/night/sunny/shopping-area.png",
                ":/images/bg/night/rainy/shopping-area.png", 235, 130);
-  l = new Room("Raps", ":/images/bg/day/sunny/raps.png",
-               ":/images/bg/day/rainy/raps.png",
-               ":/images/bg/night/sunny/raps.png",
-               ":/images/bg/night/rainy/raps.png", 235, 85);
+  l = new Room("Raps Shop", ":/images/bg/day/sunny/raps-shop.png",
+               ":/images/bg/day/rainy/raps-shop.png",
+               ":/images/bg/night/sunny/raps-shop.png",
+               ":/images/bg/night/rainy/raps-shop.png", 235, 85);
   m = new Room("Campus Outlet", ":/images/bg/day/sunny/campus-outlet.png",
                ":/images/bg/day/rainy/campus-outlet.png",
                ":/images/bg/night/sunny/campus-outlet.png",
