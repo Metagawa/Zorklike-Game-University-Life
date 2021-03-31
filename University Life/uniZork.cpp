@@ -232,8 +232,8 @@ void Zork::on_mapButton_clicked() {
 
   if (mapIsHidden) {
     ui->lasso->show();
-    ui->lasso->setGeometry(0, 0, uniLife->currentRoom->getLassoX(),
-                           uniLife->currentRoom->getLassoY());
+    ui->lasso->setGeometry(uniLife->currentRoom->getLassoX(),
+                           uniLife->currentRoom->getLassoY(),50,50);
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
     ui->eastButton->setDisabled(true);
