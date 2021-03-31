@@ -176,41 +176,55 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
-  scratchSfx.play();
+    scratchSfx.stop();   scratchSfx.play();
+
+
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_eastButton_clicked() {
-    scratchSfx.play();
+      scratchSfx.stop();   scratchSfx.play();
+
+
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked() {
-    scratchSfx.play();
+      scratchSfx.stop();   scratchSfx.play();
+
+
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked() {
-    scratchSfx.play();
+      scratchSfx.stop();   scratchSfx.play();
+
+
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {     scratchSfx.play();
+void Zork::on_takeButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
+
+
  }
 
-void Zork::on_infoButton_clicked() {     scratchSfx.play();
+void Zork::on_infoButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
+
+
 ; }
 
 void Zork::on_mapButton_clicked() {
-    scratchSfx.play();
+      scratchSfx.stop();   scratchSfx.play();
+
+
   if (mapIsHidden) {
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
@@ -300,7 +314,7 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() {     scratchSfx.play();
+void Zork::on_putButton_clicked() {       scratchSfx.stop();   scratchSfx.play();
  }
 
 void Zork::on_quitButton_clicked() {
