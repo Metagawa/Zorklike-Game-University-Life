@@ -12,7 +12,7 @@
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
-QSound scratch(":/sfx/scratch.wav");
+QSound scratchSfx(":/sfx/scratch.wav");
 
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->setupUi(this);
@@ -176,39 +176,41 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
-  scratch.play();
+  scratchSfx.play();
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_eastButton_clicked() {
-    scratch.play();
+    scratchSfx.play();
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked() {
-    scratch.play();
+    scratchSfx.play();
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_southButton_clicked() {
-    scratch.play();
+    scratchSfx.play();
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
+void Zork::on_takeButton_clicked() {     scratchSfx.play();
+ }
 
-void Zork::on_infoButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
+void Zork::on_infoButton_clicked() {     scratchSfx.play();
+; }
 
 void Zork::on_mapButton_clicked() {
-    scratch.play();
+    scratchSfx.play();
   if (mapIsHidden) {
     ui->northButton->setDisabled(true);
     ui->southButton->setDisabled(true);
@@ -298,7 +300,8 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() { QSound::play(":/sfx/scratch.wav"); }
+void Zork::on_putButton_clicked() {     scratchSfx.play();
+ }
 
 void Zork::on_quitButton_clicked() {
   // disable all buttons
