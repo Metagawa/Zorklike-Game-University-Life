@@ -44,7 +44,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   updateDisabledDirections();
 
   // ui->eastButton->setCursor(QCursor(QPixmap(":/images/black-biro.png")));
-  ui->eastButton->setCursor(QCursor(QPixmap(":/images/black-biro-scrape.png")));
+  ui->eastButton->setCursor(QCursor(
+                                            QPixmap(":/images/black-biro-scrape.png")));
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -66,7 +67,6 @@ void Zork::updateOnChangeStackPaneIndex() {
 }
 
 void Zork::updateDisabledDirections() {
-
   ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
   // get exits
   ui->northButton->setDisabled(false);
@@ -85,9 +85,6 @@ void Zork::updateDisabledDirections() {
   if (uniLife->currentRoom->nextRoom("west") == NULL) {
     ui->westButton->setDisabled(true);
   }
-  QPoint p = QCursor::pos();
-  QCursor::setPos(QPoint(0, 0));
-  QCursor::setPos(p);
 }
 
 Zork::~Zork() { delete ui; }
