@@ -8,58 +8,58 @@ UniLife::UniLife() { createRooms(); }
 void UniLife::createRooms() {
   Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
-  a = new Room("Bus Stop", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 160, 285);
-  b = new Room("Dorms", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 232, 302);
-  c = new Room("Gym", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 370, 295);
-  d = new Room("Library", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 90, 225);
-  e = new Room("Student Union", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 160, 233);
-  f = new Room("Relax Area", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 230, 230);
-  g = new Room("Pub", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 310, 230);
-  h = new Room("Computer Science", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 98, 125);
-  i = new Room("The Quad", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 170, 150);
-  j = new Room("Main Building", ":/new/images/images/business-room.png",
-               ":/new/images/images/business-room.png",
-               ":/new/images/images/business-room.png",
-               ":/new/images/images/business-room.png", 130, 69);
-  k = new Room("Shopping Area", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 235, 130);
-  l = new Room("Raps", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 235, 85);
-  m = new Room("Campus Outlet", ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png",
-               ":/new/images/images/gym-room.png", 235, 176);
+  a = new Room("Bus Stop", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 160, 285);
+  b = new Room("Dorms", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 232, 302);
+  c = new Room("Gym", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 370, 295);
+  d = new Room("Library", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 90, 225);
+  e = new Room("Student Union", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 160, 233);
+  f = new Room("Relax Area", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 230, 230);
+  g = new Room("Pub", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 310, 230);
+  h = new Room("Computer Science", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 98, 125);
+  i = new Room("The Quad", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 170, 150);
+  j = new Room("Main Building", ":/images/bg/day/sunny/business-room.png",
+               ":/images/bg/day/sunny/business-room.png",
+               ":/images/bg/day/sunny/business-room.png",
+               ":/images/bg/day/sunny/business-room.png", 130, 69);
+  k = new Room("Shopping Area", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 235, 130);
+  l = new Room("Raps", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 235, 85);
+  m = new Room("Campus Outlet", ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png",
+               ":/images/bg/day/sunny/gym-room.png", 235, 176);
 
   //             (N, E, S, W)
   a->setExits(e, b, NULL, NULL);

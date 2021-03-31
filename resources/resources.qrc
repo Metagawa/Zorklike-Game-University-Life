@@ -1,24 +1,26 @@
 <RCC>
-    <qresource prefix="/new/images">
-        <file>images/gym-room.png</file>
-        <file>images/business-room.png</file>
-        <file>images/splash.png</file>
-        <file>images/spiral.png</file>
-        <file>images/lines.png</file>
-        <file>images/desktop.png</file>
-    </qresource>
+    <qresource prefix="/new/images"/>
     <qresource prefix="/">
         <file>barbies-jalous-sisters.handwriting.ttf</file>
-        <file>images/watch.png</file>
-        <file>images/main.png</file>
         <file>fonts/Graduate-Regular.ttf</file>
-        <file>images/black-biro.png</file>
-        <file>images/black-biro-scrape.png</file>
-        <file>images/scratches-png-image.png</file>
-        <file>images/MAP.png</file>
-        <file>images/lasso.png</file>
         <file>sfx/scratch.wav</file>
-        <file>images/quit.png</file>
         <file>sfx/crumple.wav</file>
+        <file>images/misc/black-biro.png</file>
+        <file>images/misc/black-biro-scrape.png</file>
+        <file>images/misc/desktop.png</file>
+        <file>images/misc/lasso.png</file>
+        <file>images/misc/lines.png</file>
+        <file>images/misc/main.png</file>
+        <file>images/misc/MAP.png</file>
+        <file>images/misc/quit.png</file>
+        <file>images/misc/scratches-png-image.png</file>
+        <file>images/misc/spiral.png</file>
+        <file>images/misc/splash.png</file>
+        <file>images/misc/watch.png</file>
+        <file>images/bg/day/sunny/business-room.png</file>
+        <file>images/bg/day/sunny/gym-room.png</file>
+        <file>images/bg/day/sunny/riverside.jpg</file>
+        <file>images/people/Matt.png</file>
+        <file>images/people/Sarah.png</file>
     </qresource>
 </RCC>

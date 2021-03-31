@@ -55,7 +55,7 @@ void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
     ui->centralwidget->setStyleSheet(
         "QWidget #centralwidget {\n	background-image: "
-        "url(:/new/images/images/desktop.png);\n\n}");
+        "url(:/images/misc/desktop.png);\n\n}");
     ui->spiral->show();
     ui->watch->show();
     ui->lcdNumber->show();
@@ -110,8 +110,7 @@ void Zork::updatePositionAfterMoving() {
     QPlainTextEdit *pte = new QPlainTextEdit();
 
     pte->setStyleSheet("border: 0;background-color: rgb(255, 255, "
-                       "255);background-image:url(:/new/images/images/"
-                       "lines.png);padding-left: 10;");
+                       "255);background-image:url(:/images/misc/lines.png);padding-left: 10;");
 
     pte->setFont(QFont("MV Boli", 12));
     pte->setReadOnly(true);
@@ -245,7 +244,7 @@ void Zork::on_mapButton_clicked() {
     ui->map->show();
     ui->plainTextEdit->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
-        "url(:/new/images/images/lines.png);padding-left: 10; color: "
+        "url(:/images/misc/lines.png);padding-left: 10; color: "
         "rgba(0,0,0,0)");
     mapIsHidden = false;
 
@@ -254,7 +253,7 @@ void Zork::on_mapButton_clicked() {
           ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
       qpte->setStyleSheet(
           "border: 0;background-color: rgb(255, 255, 255);background-image: "
-          "url(:/new/images/images/lines.png);padding-left: 10; color: "
+          "url(:/images/misc/lines.png);padding-left: 10; color: "
           "rgba(0,0,0,0)");
     }
     QString tabStyle =
@@ -276,14 +275,14 @@ void Zork::on_mapButton_clicked() {
     mapIsHidden = true;
     ui->plainTextEdit->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
-        "url(:/new/images/images/lines.png);padding-left: 10; color: ");
+        "url(:/images/misc/lines.png);padding-left: 10; color: ");
 
     for (int i = 1; i < ui->tabWidget->count(); i++) {
       QPlainTextEdit *qpte =
           ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
       qpte->setStyleSheet(
           "border: 0;background-color: rgb(255, 255, 255);background-image: "
-          "url(:/new/images/images/lines.png);padding-left: 10; color: ");
+          "url(:/images/misc/lines.png);padding-left: 10; color: ");
     }
     QString tabStyle = "QTabBar::tab{"
                        "background-color:rgb(255, 255, 127);border -"
