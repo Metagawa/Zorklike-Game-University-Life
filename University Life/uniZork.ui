@@ -664,10 +664,10 @@ color: rgb(170, 0, 0);
    <widget class="QLabel" name="quitSheet">
     <property name="geometry">
      <rect>
-      <x>196</x>
-      <y>40</y>
-      <width>461</width>
-      <height>351</height>
+      <x>164</x>
+      <y>-11</y>
+      <width>541</width>
+      <height>421</height>
      </rect>
     </property>
     <property name="text">
@@ -684,7 +684,7 @@ color: rgb(170, 0, 0);
     <property name="geometry">
      <rect>
       <x>345</x>
-      <y>189</y>
+      <y>196</y>
       <width>168</width>
       <height>37</height>
      </rect>
@@ -699,12 +699,15 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
       <widget class="QPushButton" name="quitCancel">
        <property name="font">
         <font>
-         <family>Barbies Jalous Sisters</family>
-         <pointsize>25</pointsize>
+         <family>MV Boli</family>
+         <pointsize>16</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 85, 0);</string>
        </property>
        <property name="text">
         <string>Cancel</string>
@@ -718,12 +721,15 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
       <widget class="QPushButton" name="quitConfirm">
        <property name="font">
         <font>
-         <family>Barbies Jalous Sisters</family>
-         <pointsize>25</pointsize>
+         <family>MV Boli</family>
+         <pointsize>16</pointsize>
          <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(170, 0, 0);</string>
        </property>
        <property name="text">
         <string>Quit</string>
@@ -741,8 +747,6 @@ background-color: rgba(0, 0, 255, 0); border:0px;\n\n	font:25pt &quot;Barbies Ja
    <zorder>watch</zorder>
    <zorder>lcdNumber</zorder>
    <zorder>map</zorder>
-   <zorder>quitCancel</zorder>
-   <zorder>quitConfirm</zorder>
    <zorder>quitSheet</zorder>
    <zorder>quitOverlay</zorder>
   </widget>
