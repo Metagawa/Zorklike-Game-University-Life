@@ -93,6 +93,7 @@ void Zork::updateDisabledDirections() {
   }
 }
 void Zork::eventStart(){
+    //for debug ONLY/ add more functionality to determine what event
   ui->stackedWidget->setCurrentIndex(2);
   updateOnChangeStackPaneIndex();
 }
@@ -220,7 +221,7 @@ void Zork::on_southButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_takeButton_clicked() {
+void Zork::on_examineButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
 }
@@ -228,7 +229,7 @@ void Zork::on_takeButton_clicked() {
 void Zork::on_infoButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
-  eventStart();
+
 }
 
 void Zork::on_mapButton_clicked() {
@@ -244,8 +245,8 @@ void Zork::on_mapButton_clicked() {
     ui->southButton->setDisabled(true);
     ui->eastButton->setDisabled(true);
     ui->westButton->setDisabled(true);
-    ui->putButton->setDisabled(true);
-    ui->takeButton->setDisabled(true);
+    ui->actButton->setDisabled(true);
+    ui->examineButton->setDisabled(true);
     ui->quitButton->setDisabled(true);
     ui->infoButton->setDisabled(true);
     ui->map->show();
@@ -273,8 +274,8 @@ void Zork::on_mapButton_clicked() {
   } else {
     ui->lasso->hide();
     updateDisabledDirections();
-    ui->putButton->setDisabled(false);
-    ui->takeButton->setDisabled(false);
+    ui->actButton->setDisabled(false);
+    ui->examineButton->setDisabled(false);
     ui->quitButton->setDisabled(false);
     ui->infoButton->setDisabled(false);
 
@@ -329,9 +330,10 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
-void Zork::on_putButton_clicked() {
+void Zork::on_actButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
+  eventStart();
 }
 
 void Zork::on_quitButton_clicked() {
@@ -342,8 +344,8 @@ void Zork::on_quitButton_clicked() {
   ui->southButton->setDisabled(true);
   ui->eastButton->setDisabled(true);
   ui->westButton->setDisabled(true);
-  ui->putButton->setDisabled(true);
-  ui->takeButton->setDisabled(true);
+  ui->actButton->setDisabled(true);
+  ui->examineButton->setDisabled(true);
   ui->quitButton->setDisabled(true);
   ui->infoButton->setDisabled(true);
   ui->mapButton->setDisabled(true);
@@ -368,8 +370,8 @@ void Zork::on_quitCancel_clicked() {
   crumpleSfx.stop();
   crumpleSfx.play();
   updateDisabledDirections();
-  ui->putButton->setDisabled(false);
-  ui->takeButton->setDisabled(false);
+  ui->actButton->setDisabled(false);
+  ui->examineButton->setDisabled(false);
   ui->quitButton->setDisabled(false);
   ui->infoButton->setDisabled(false);
   ui->quitOverlay->hide();
@@ -377,3 +379,13 @@ void Zork::on_quitCancel_clicked() {
 }
 
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
+
+
+//for debug ONLY/ replace with a call to an event outcome
+void Zork::on_option_1_clicked() {
+//dummied out
+}
+void Zork::on_option_2_clicked() {
+    ui->stackedWidget->setCurrentIndex(0);
+    updateOnChangeStackPaneIndex();
+}

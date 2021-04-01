@@ -30,13 +30,13 @@ private slots:
 
   void on_southButton_clicked();
 
-  void on_takeButton_clicked();
+  void on_examineButton_clicked();
 
   void on_infoButton_clicked();
 
   void on_mapButton_clicked();
 
-  void on_putButton_clicked();
+  void on_actButton_clicked();
 
   void on_quitButton_clicked();
 
@@ -47,6 +47,10 @@ private slots:
   void on_quitCancel_clicked();
 
   void on_quitConfirm_clicked();
+
+  void on_option_1_clicked();
+
+  void on_option_2_clicked();
 
 private:
   Ui::Zork *ui;

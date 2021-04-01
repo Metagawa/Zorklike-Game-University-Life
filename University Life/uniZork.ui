@@ -285,7 +285,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="QPushButton" name="putButton">
+          <widget class="QPushButton" name="actButton">
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
@@ -296,7 +296,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
             </font>
            </property>
            <property name="text">
-            <string>Put</string>
+            <string>Interact</string>
            </property>
            <property name="default">
             <bool>false</bool>
@@ -402,7 +402,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           </widget>
          </item>
          <item row="0" column="2">
-          <widget class="QPushButton" name="takeButton">
+          <widget class="QPushButton" name="examineButton">
            <property name="font">
             <font>
              <family>Barbies Jalous Sisters</family>
@@ -413,7 +413,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
             </font>
            </property>
            <property name="text">
-            <string>Take</string>
+            <string>Examine</string>
            </property>
            <property name="default">
             <bool>false</bool>
@@ -610,7 +610,7 @@ color: rgb(255, 132, 24);
 </string>
       </property>
       <property name="text">
-       <string>Option 2</string>
+       <string>I gotta go</string>
       </property>
       <property name="default">
        <bool>false</bool>
@@ -650,7 +650,7 @@ color: rgb(255, 132, 24);
 </string>
       </property>
       <property name="text">
-       <string>Option 1</string>
+       <string>Introduce yourself</string>
       </property>
      </widget>
      <widget class="QLabel" name="imageBackground_2">
@@ -866,7 +866,7 @@ color: rgb(170, 0, 0);
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>141</width>
+      <width>846</width>
       <height>385</height>
      </rect>
     </property>
@@ -883,7 +883,7 @@ color: rgb(170, 0, 0);
    <widget class="QFrame" name="quitOverlay">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>302</x>
       <y>194</y>
       <width>241</width>
       <height>101</height>
