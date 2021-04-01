@@ -43,5 +43,14 @@
         <file>images/bg/day/rainy/student-union.gif</file>
         <file>images/bg/day/rainy/library.gif</file>
         <file>images/misc/black-overlay.png</file>
+        <file>images/bg/night/sunny/bus-stop.jpg</file>
+        <file>images/bg/night/sunny/computer-science-building.jpg</file>
+        <file>images/bg/night/sunny/dorms.jpg</file>
+        <file>images/bg/night/sunny/gym.jpg</file>
+        <file>images/bg/night/sunny/library.jpg</file>
+        <file>images/bg/night/sunny/main-building.jpg</file>
+        <file>images/bg/night/sunny/quad.jpg</file>
+        <file>images/bg/night/sunny/raps.jpg</file>
+        <file>images/bg/night/sunny/student-union.jpg</file>
     </qresource>
 </RCC>
