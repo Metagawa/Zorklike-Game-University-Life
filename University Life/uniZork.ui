@@ -60,7 +60,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
@@ -446,7 +446,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
      <widget class="QLabel" name="polaroidLabel">
       <property name="geometry">
        <rect>
-        <x>526</x>
+        <x>536</x>
         <y>257</y>
         <width>232</width>
         <height>20</height>
