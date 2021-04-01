@@ -54,9 +54,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
-    ui->centralwidget->setStyleSheet(
-        "QWidget #centralwidget {\n	background-image: "
-        "url(:/images/misc/desktop.png);\n\n}");
     ui->spiral->show();
     ui->watch->show();
     ui->lcdNumber->show();
@@ -65,13 +62,11 @@ void Zork::updateOnChangeStackPaneIndex() {
   } else if (ui->stackedWidget->currentIndex() == 1) {
     ui->mainMenuScreen->show();
     ui->spiral->hide();
-    ui->centralwidget->setStyleSheet("");
     ui->watch->hide();
     ui->lcdNumber->hide();
   } else if (ui->stackedWidget->currentIndex() == 2) {
           ui->mainMenuScreen->hide();
           ui->spiral->hide();
-          ui->centralwidget->setStyleSheet("");
           ui->watch->hide();
           ui->lcdNumber->hide();
   }
