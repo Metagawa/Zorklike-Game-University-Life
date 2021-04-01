@@ -42,5 +42,6 @@
         <file>images/bg/day/rainy/raps.gif</file>
         <file>images/bg/day/rainy/student-union.gif</file>
         <file>images/bg/day/rainy/library.gif</file>
+        <file>images/misc/black-overlay.png</file>
     </qresource>
 </RCC>

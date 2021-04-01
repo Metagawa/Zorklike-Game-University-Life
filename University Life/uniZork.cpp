@@ -68,6 +68,12 @@ void Zork::updateOnChangeStackPaneIndex() {
     ui->centralwidget->setStyleSheet("");
     ui->watch->hide();
     ui->lcdNumber->hide();
+  } else if (ui->stackedWidget->currentIndex() == 2) {
+          ui->mainMenuScreen->hide();
+          ui->spiral->hide();
+          ui->centralwidget->setStyleSheet("");
+          ui->watch->hide();
+          ui->lcdNumber->hide();
   }
 }
 
@@ -91,7 +97,10 @@ void Zork::updateDisabledDirections() {
     ui->westButton->setDisabled(true);
   }
 }
-
+void Zork::eventStart(){
+  ui->stackedWidget->setCurrentIndex(2);
+  updateOnChangeStackPaneIndex();
+}
 Zork::~Zork() { delete ui; }
 
 void Zork::updatePositionAfterMoving() {
@@ -224,8 +233,7 @@ void Zork::on_takeButton_clicked() {
 void Zork::on_infoButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
-
-  ;
+  eventStart();
 }
 
 void Zork::on_mapButton_clicked() {
