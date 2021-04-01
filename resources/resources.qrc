@@ -17,12 +17,21 @@
         <file>images/misc/spiral.png</file>
         <file>images/misc/splash.png</file>
         <file>images/misc/watch.png</file>
-        <file>images/bg/day/sunny/riverside.jpg</file>
         <file>images/people/Matt.png</file>
         <file>images/people/Sarah.png</file>
         <file>images/bg/day/sunny/bus-stop.png</file>
         <file>images/bg/day/sunny/gym.png</file>
         <file>images/bg/day/sunny/main-building.png</file>
         <file>images/bg/day/sunny/raps-shop.png</file>
+        <file>images/bg/day/sunny/campus-store.png</file>
+        <file>images/bg/day/sunny/computer-science-building.png</file>
+        <file>images/bg/day/sunny/dorms.png</file>
+        <file>images/bg/day/sunny/library.png</file>
+        <file>images/bg/day/sunny/pub.png</file>
+        <file>images/bg/day/sunny/quad.png</file>
+        <file>images/bg/day/sunny/relax-area.png</file>
+        <file>images/bg/day/sunny/riverside.png</file>
+        <file>images/bg/day/sunny/shopping-area.png</file>
+        <file>images/bg/day/sunny/student-union.png</file>
     </qresource>
 </RCC>
