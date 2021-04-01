@@ -1,6 +1,7 @@
 #include "uniZork.h"
 #include "ui_uniZork.h"
 #include <QDesktopWidget>
+#include <QMovie>
 #include <QScrollBar>
 #include <QSound>
 #include <QStringList>
@@ -163,8 +164,10 @@ void Zork::updatePositionAfterMoving() {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
   } else if (time->isDayTime() && isRaining) {
-    ui->imageBackground->setPixmap(
-        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayRain())));
+    QMovie *movie =
+        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    ui->imageBackground->setMovie(movie);
+    movie->start();
   } else if (!time->isDayTime() && !isRaining) {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
@@ -172,9 +175,6 @@ void Zork::updatePositionAfterMoving() {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightRain())));
   }
-  // temporary for testing
-  ui->imageBackground->setPixmap(
-      QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
 
   ui->polaroidLabel->setText(
       QString::fromStdString(uniLife->currentRoom->shortDescription()));

@@ -11,57 +11,57 @@ void UniLife::createRooms() {
   // Room(string description, string dayClear, string dayRain, string
   // nightClear, string nightRain, int lassoX, int lassoY);
   a = new Room("Bus Stop", ":/images/bg/day/sunny/bus-stop.png",
-               ":/images/bg/day/rainy/bus-stop.png",
+               ":/images/bg/day/rainy/bus-stop.gif",
                ":/images/bg/night/sunny/bus-stop.png",
                ":/images/bg/night/rainy/bus-stop.png", 160, 285);
   b = new Room("Dorms", ":/images/bg/day/sunny/dorms.png",
-               ":/images/bg/day/rainy/dorms.png",
+               ":/images/bg/day/rainy/dorms.gif",
                ":/images/bg/night/sunny/dorms.png",
                ":/images/bg/night/rainy/dorms.png", 232, 302);
   c = new Room("Gym", ":/images/bg/day/sunny/gym.png",
-               ":/images/bg/day/rainy/gym.png",
+               ":/images/bg/day/rainy/gym.gif",
                ":/images/bg/night/sunny/gym.png",
                ":/images/bg/night/rainy/gym.png", 370, 295);
   d = new Room("Library", ":/images/bg/day/sunny/library.png",
-               ":/images/bg/day/rainy/library.png",
+               ":/images/bg/day/rainy/library.gif",
                ":/images/bg/night/sunny/library.png",
                ":/images/bg/night/rainy/library.png", 90, 225);
   e = new Room("Student Union", ":/images/bg/day/sunny/student-union.png",
-               ":/images/bg/day/rainy/student-union.png",
+               ":/images/bg/day/rainy/student-union.gif",
                ":/images/bg/night/sunny/student-union.png",
                ":/images/bg/night/rainy/student-union.png", 160, 233);
   f = new Room("Relax Area", ":/images/bg/day/sunny/relax-area.png",
-               ":/images/bg/day/rainy/relax-area.png",
+               ":/images/bg/day/sunny/relax-area.png",
                ":/images/bg/night/sunny/relax-area.png",
                ":/images/bg/night/rainy/relax-area.png", 230, 230);
   g = new Room("Pub", ":/images/bg/day/sunny/pub.png",
-               ":/images/bg/day/rainy/pub.png",
+               ":/images/bg/day/sunny/pub.png",
                ":/images/bg/night/sunny/pub.png",
                ":/images/bg/night/rainy/pub.png", 310, 230);
   h = new Room("Computer Science Building",
                ":/images/bg/day/sunny/computer-science-building.png",
-               ":/images/bg/day/rainy/computer-science-building.png",
+               ":/images/bg/day/rainy/computer-science-building.gif",
                ":/images/bg/night/sunny/computer-science-building.png",
                ":/images/bg/night/rainy/computer-science-building.png", 98,
                125);
   i = new Room("Quad", ":/images/bg/day/sunny/quad.png",
-               ":/images/bg/day/rainy/quad.png",
+               ":/images/bg/day/rainy/quad.gif",
                ":/images/bg/night/sunny/quad.png",
                ":/images/bg/night/rainy/quad.png", 170, 150);
   j = new Room("Main Building", ":/images/bg/day/sunny/main-building.png",
-               ":/images/bg/day/rainy/main-building.png",
+               ":/images/bg/day/rainy/main-building.gif",
                ":/images/bg/night/sunny/main-building.png",
                ":/images/bg/night/rainy/main-building.png", 130, 69);
   k = new Room("Shopping Area", ":/images/bg/day/sunny/shopping-area.png",
-               ":/images/bg/day/rainy/shopping-area.png",
+               ":/images/bg/day/sunny/shopping-area.png",
                ":/images/bg/night/sunny/shopping-area.png",
                ":/images/bg/night/rainy/shopping-area.png", 235, 130);
   l = new Room("Raps Shop", ":/images/bg/day/sunny/raps-shop.png",
-               ":/images/bg/day/rainy/raps-shop.png",
+               ":/images/bg/day/rainy/raps.gif",
                ":/images/bg/night/sunny/raps-shop.png",
                ":/images/bg/night/rainy/raps-shop.png", 235, 85);
   m = new Room("Campus Outlet", ":/images/bg/day/sunny/campus-outlet.png",
-               ":/images/bg/day/rainy/campus-outlet.png",
+               ":/images/bg/day/sunny/campus-outlet.png",
                ":/images/bg/night/sunny/campus-outlet.png",
                ":/images/bg/night/rainy/campus-outlet.png", 235, 176);
 

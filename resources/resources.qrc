@@ -33,5 +33,14 @@
         <file>images/bg/day/sunny/riverside.png</file>
         <file>images/bg/day/sunny/shopping-area.png</file>
         <file>images/bg/day/sunny/student-union.png</file>
+        <file>images/bg/day/rainy/bus-stop.gif</file>
+        <file>images/bg/day/rainy/computer-science-building.gif</file>
+        <file>images/bg/day/rainy/dorms.gif</file>
+        <file>images/bg/day/rainy/gym.gif</file>
+        <file>images/bg/day/rainy/main-building.gif</file>
+        <file>images/bg/day/rainy/quad.gif</file>
+        <file>images/bg/day/rainy/raps.gif</file>
+        <file>images/bg/day/rainy/student-union.gif</file>
+        <file>images/bg/day/rainy/library.gif</file>
     </qresource>
 </RCC>
