@@ -169,16 +169,14 @@ void Zork::updatePositionAfterMoving() {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
   } else if (time->isDayTime() && isRaining) {
-    QMovie *movie =
-        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
-
+    QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    ui->imageBackground->setMovie(movie);
     movie->start();
   } else if (!time->isDayTime() && !isRaining) {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
   } else if (!time->isDayTime() && isRaining) {
-    QMovie *movie = new QMovie(
-        QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getNightRain()));
     ui->imageBackground->setMovie(movie);
     movie->start();
   }
