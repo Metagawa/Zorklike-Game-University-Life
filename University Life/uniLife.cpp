@@ -3,16 +3,13 @@
 using namespace std;
 #include "uniLife.h"
 
-UniLife::UniLife()
-{
-  createRooms();
-}
+UniLife::UniLife() { createRooms(); }
 
-void UniLife::createRooms()
-{
+void UniLife::createRooms() {
   Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
-  //Room(string description, string dayClear, string dayRain, string nightClear, string nightRain, int lassoX, int lassoY);
+  // Room(string description, string dayClear, string dayRain, string
+  // nightClear, string nightRain, int lassoX, int lassoY);
   a = new Room("Bus Stop", ":/images/bg/day/sunny/bus-stop.png",
                ":/images/bg/day/rainy/bus-stop.png",
                ":/images/bg/night/sunny/bus-stop.png",
@@ -34,17 +31,19 @@ void UniLife::createRooms()
                ":/images/bg/night/sunny/student-union.png",
                ":/images/bg/night/rainy/student-union.png", 160, 233);
   f = new Room("Relax Area", ":/images/bg/day/sunny/relax-area.png",
-               ":/images/bg/day/rainy/student-union.png",
-               ":/images/bg/night/sunny/student-union.png",
-               ":/images/bg/night/rainy/student-union.png", 230, 230);
+               ":/images/bg/day/rainy/relax-area.png",
+               ":/images/bg/night/sunny/relax-area.png",
+               ":/images/bg/night/rainy/relax-area.png", 230, 230);
   g = new Room("Pub", ":/images/bg/day/sunny/pub.png",
                ":/images/bg/day/rainy/pub.png",
                ":/images/bg/night/sunny/pub.png",
                ":/images/bg/night/rainy/pub.png", 310, 230);
-  h = new Room("Computer Science Building", ":/images/bg/day/sunny/computer-science-building.png",
+  h = new Room("Computer Science Building",
+               ":/images/bg/day/sunny/computer-science-building.png",
                ":/images/bg/day/rainy/computer-science-building.png",
                ":/images/bg/night/sunny/computer-science-building.png",
-               ":/images/bg/night/rainy/computer-science-building.png", 98, 125);
+               ":/images/bg/night/rainy/computer-science-building.png", 98,
+               125);
   i = new Room("Quad", ":/images/bg/day/sunny/quad.png",
                ":/images/bg/day/rainy/quad.png",
                ":/images/bg/night/sunny/quad.png",
@@ -87,14 +86,12 @@ void UniLife::createRooms()
 /**
  *  Main play routine.  Loops until end of play.
  */
-void UniLife::play()
-{
+void UniLife::play() {
   // Enter the main command loop.  Here we repeatedly read commands and
   // execute them until the UniLife game is over.
 
   bool finished = false;
-  while (!finished)
-  {
+  while (!finished) {
     // Create pointer to command and give it a command.
     Command *command = parser.getCommand();
     // Pass dereferenced command and check for end of game.
@@ -112,10 +109,8 @@ void UniLife::play()
  * If this command ends the UniLife game, true is returned, otherwise false is
  * returned.
  */
-bool UniLife::processCommand(Command command)
-{
-  if (command.isUnknown())
-  {
+bool UniLife::processCommand(Command command) {
+  if (command.isUnknown()) {
     cout << "invalid input" << endl;
     return false;
   }
@@ -125,15 +120,13 @@ bool UniLife::processCommand(Command command)
   if (commandWord.compare("go") == 0)
     goRoom(command);
 
-  else if (commandWord.compare("quit") == 0)
-  {
+  else if (commandWord.compare("quit") == 0) {
     return true; /**signal to quit*/
   }
   return false;
 }
 
-void UniLife::goRoom(Command command)
-{
+void UniLife::goRoom(Command command) {
 
   string direction = command.getSecondWord();
 
@@ -142,22 +135,19 @@ void UniLife::goRoom(Command command)
 
   if (nextRoom == NULL)
     cout << "underdefined input" << endl;
-  else
-  {
+  else {
     currentRoom = nextRoom;
   }
 }
 
-string UniLife::go(string direction)
-{
+string UniLife::go(string direction) {
   // Make the direction lowercase
   // transform(direction.begin(), direction.end(), direction.begin(),::
   // tolower); Move to the next room
   Room *nextRoom = currentRoom->nextRoom(direction);
   if (nextRoom == NULL)
     return ("direction null");
-  else
-  {
+  else {
     currentRoom = nextRoom;
     return currentRoom->longDescription();
   }
