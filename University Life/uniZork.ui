@@ -60,14 +60,14 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
+        <x>15</x>
+        <y>9</y>
         <width>458</width>
         <height>372</height>
        </rect>
@@ -167,8 +167,8 @@ padding-left: 10;
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>465</x>
-        <y>27</y>
+        <x>477</x>
+        <y>37</y>
         <width>352</width>
         <height>343</height>
        </rect>
@@ -447,7 +447,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
       <property name="geometry">
        <rect>
         <x>526</x>
-        <y>247</y>
+        <y>257</y>
         <width>232</width>
         <height>20</height>
        </rect>
@@ -470,26 +470,41 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
      <zorder>polaroidLabel</zorder>
     </widget>
     <widget class="QWidget" name="mainMenu">
-     <widget class="QPushButton" name="goToExplore">
+     <widget class="QFrame" name="mainMenuFrame">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>338</x>
         <y>270</y>
-        <width>141</width>
-        <height>28</height>
+        <width>170</width>
+        <height>78</height>
        </rect>
       </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="goToExplore">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
 QPushButton{
       background-color: rgba(0, 0, 255, 0);
  border:0px;
@@ -502,31 +517,25 @@ QPushButton:hover{
 color: rgb(255, 132, 24);
 }
 </string>
-      </property>
-      <property name="text">
-       <string>New Game</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="quitButton_2">
-      <property name="geometry">
-       <rect>
-        <x>350</x>
-        <y>330</y>
-        <width>115</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Graduate</family>
-        <pointsize>15</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
+         </property>
+         <property name="text">
+          <string>New Game</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="quitButton_2">
+         <property name="font">
+          <font>
+           <family>Graduate</family>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
 QPushButton{
       background-color: rgba(0, 0, 255, 0);
  border:0px;
@@ -539,13 +548,16 @@ QPushButton:hover{
 color: rgb(255, 132, 24);
 }
 </string>
-      </property>
-      <property name="text">
-       <string>Quit</string>
-      </property>
-      <property name="default">
-       <bool>false</bool>
-      </property>
+         </property>
+         <property name="text">
+          <string>Quit</string>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="eventScene">
@@ -864,7 +876,7 @@ color: rgb(170, 0, 0);
    <widget class="QLabel" name="quitSheet">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>846</x>
       <y>0</y>
       <width>846</width>
       <height>385</height>
