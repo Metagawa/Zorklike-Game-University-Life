@@ -51,10 +51,10 @@ void UniLife::createRooms() {
                ":/images/bg/day/rainy/main-building.gif",
                ":/images/bg/night/sunny/main-building.jpg",
                ":/images/bg/night/rainy/main-building.gif", 130, 69);
-  k = new Room("Shopping Area", ":/images/bg/day/sunny/shopping-area.png",
-               ":/images/bg/day/sunny/shopping-area.png",
-               ":/images/bg/day/sunny/shopping-area.png",
-               ":/images/bg/day/sunny/shopping-area.png", 235, 130);
+  k = new Room("Shopping Area", ":/images/bg/day/sunny/shopping-area.jpg",
+               ":/images/bg/day/sunny/shopping-area.jpg",
+               ":/images/bg/day/sunny/shopping-area.jpg",
+               ":/images/bg/day/sunny/shopping-area.jpg", 235, 130);
   l = new Room("Raps Shop", ":/images/bg/day/sunny/raps-shop.png",
                ":/images/bg/day/rainy/raps.gif",
                ":/images/bg/night/sunny/raps.jpg",
