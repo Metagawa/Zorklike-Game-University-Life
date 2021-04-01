@@ -65,10 +65,10 @@ void Zork::updateOnChangeStackPaneIndex() {
     ui->watch->hide();
     ui->lcdNumber->hide();
   } else if (ui->stackedWidget->currentIndex() == 2) {
-          ui->mainMenuScreen->hide();
-          ui->spiral->hide();
-          ui->watch->hide();
-          ui->lcdNumber->hide();
+    ui->mainMenuScreen->hide();
+    ui->spiral->hide();
+    ui->watch->hide();
+    ui->lcdNumber->hide();
   }
 }
 
@@ -92,8 +92,8 @@ void Zork::updateDisabledDirections() {
     ui->westButton->setDisabled(true);
   }
 }
-void Zork::eventStart(){
-    //for debug ONLY/ add more functionality to determine what event
+void Zork::eventStart() {
+  // for debug ONLY/ add more functionality to determine what event
   ui->stackedWidget->setCurrentIndex(2);
   updateOnChangeStackPaneIndex();
 }
@@ -171,14 +171,16 @@ void Zork::updatePositionAfterMoving() {
   } else if (time->isDayTime() && isRaining) {
     QMovie *movie =
         new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
-    ui->imageBackground->setMovie(movie);
+
     movie->start();
   } else if (!time->isDayTime() && !isRaining) {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
   } else if (!time->isDayTime() && isRaining) {
-    ui->imageBackground->setPixmap(
-        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightRain())));
+    QMovie *movie = new QMovie(
+        QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    ui->imageBackground->setMovie(movie);
+    movie->start();
   }
 
   ui->polaroidLabel->setText(
@@ -229,7 +231,6 @@ void Zork::on_examineButton_clicked() {
 void Zork::on_infoButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
-
 }
 
 void Zork::on_mapButton_clicked() {
@@ -380,12 +381,11 @@ void Zork::on_quitCancel_clicked() {
 
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
-
-//for debug ONLY/ replace with a call to an event outcome
+// for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {
-//dummied out
+  // dummied out
 }
 void Zork::on_option_2_clicked() {
-    ui->stackedWidget->setCurrentIndex(0);
-    updateOnChangeStackPaneIndex();
+  ui->stackedWidget->setCurrentIndex(0);
+  updateOnChangeStackPaneIndex();
 }

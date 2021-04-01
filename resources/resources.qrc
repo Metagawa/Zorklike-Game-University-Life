@@ -52,5 +52,14 @@
         <file>images/bg/night/sunny/quad.jpg</file>
         <file>images/bg/night/sunny/raps.jpg</file>
         <file>images/bg/night/sunny/student-union.jpg</file>
+        <file>images/bg/night/rainy/bus-stop.gif</file>
+        <file>images/bg/night/rainy/computer-science-building.gif</file>
+        <file>images/bg/night/rainy/dorms.gif</file>
+        <file>images/bg/night/rainy/gym.gif</file>
+        <file>images/bg/night/rainy/library.gif</file>
+        <file>images/bg/night/rainy/main-building.gif</file>
+        <file>images/bg/night/rainy/quad.gif</file>
+        <file>images/bg/night/rainy/raps.gif</file>
+        <file>images/bg/night/rainy/student-union.gif</file>
     </qresource>
 </RCC>
