@@ -461,17 +461,14 @@ void Zork::on_option_2_clicked() {
     return;
   }
 
-  currentEvent = currentEvent->rightOption;
-  /*
-  QString currentEventText = QString::fromStdString(currentEvent->text);
+  Event *now = currentEvent->rightOption;
+
+  QString currentEventText = QString::fromStdString(now->text);
   ui->eventText->setPlainText(currentEventText);
 
-  QString currentEventOption1 =
-      QString::fromStdString(currentEvent->leftOptiontext);
+  QString currentEventOption1 = QString::fromStdString(now->leftOptiontext);
   ui->option_1->setText(currentEventOption1);
 
-  QString currentEventOption2 =
-      QString::fromStdString(currentEvent->rightOptiontext);
+  QString currentEventOption2 = QString::fromStdString(now->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
-*/
 }
