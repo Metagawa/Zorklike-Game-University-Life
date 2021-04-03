@@ -63,5 +63,6 @@ private:
   void eventStart();
   string getRoomName(string s);
   EventList *eventList;
+  Event *currentEvent;
 };
 #endif // UNIZORK_H

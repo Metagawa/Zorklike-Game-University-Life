@@ -15,7 +15,6 @@
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
-Event *currentEvent;
 QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 
@@ -143,11 +142,6 @@ void Zork::eventStart() {
   // calls updateOnChangeStackPaneIndex so that ui elements are hidden
   // correctly.
   updateOnChangeStackPaneIndex();
-
-  // scene end
-  /*
-ui->stackedWidget->setCurrentIndex(0);
-updateOnChangeStackPaneIndex();*/
 }
 Zork::~Zork() { delete ui; }
 
@@ -436,7 +430,10 @@ void Zork::on_quitCancel_clicked() {
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
-void Zork::on_option_1_clicked() {}
+void Zork::on_option_1_clicked() {
+  ui->stackedWidget->setCurrentIndex(0);
+  updateOnChangeStackPaneIndex();
+}
 
 void Zork::on_option_2_clicked() {
   if (currentEvent == NULL || currentEvent->rightOption == NULL) {
@@ -445,17 +442,16 @@ void Zork::on_option_2_clicked() {
     return;
   }
 
-  Event *nextEvent = currentEvent->rightOption;
   currentEvent = currentEvent->rightOption;
 
-  QString currentEventText = QString::fromStdString(nextEvent->text);
+  QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
 
   QString currentEventOption1 =
-      QString::fromStdString(nextEvent->leftOptiontext);
+      QString::fromStdString(currentEvent->leftOptiontext);
   ui->option_1->setText(currentEventOption1);
 
   QString currentEventOption2 =
-      QString::fromStdString(nextEvent->rightOptiontext);
+      QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 }
