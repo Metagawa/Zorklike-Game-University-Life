@@ -13,6 +13,7 @@ SOURCES += \
     CommandWords.cpp \
     Parser.cpp \
     Room.cpp \
+    event.cpp \
     main.cpp \
     times.cpp \
     uniLife.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     CommandWords.h \
     Parser.cpp \
     Room.h \
+    event.h \
     times.h \
     uniLife.h \
     uniZork.h
