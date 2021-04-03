@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 event::event(string text, string leftOptiontext, string rightOptiontext,
-             event leftOption, event rightOption, string eventOverText,
+             event leftOption, event rightOption, string eventOverText, string eventBeginText,
              int location, string pixmapCharacterResource) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
@@ -10,9 +10,20 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
   this->leftOption = &leftOption;
   this->rightOption = &rightOption;
   this->eventOverText = eventOverText;
+  this->eventBeginText=eventBeginText;
   this->location = location;
   this->pixmapCharacterResource = pixmapCharacterResource;
 }
+
+event::event(string text, string leftOptiontext, string rightOptiontext,
+             event leftOption, event rightOption) {
+  this->text = text;
+  this->leftOptiontext = leftOptiontext;
+  this->rightOptiontext = rightOptiontext;
+  this->leftOption = &leftOption;
+  this->rightOption = &rightOption;
+}
+
 string event::getLocation(int location) {
   switch (location) {
   case -1:

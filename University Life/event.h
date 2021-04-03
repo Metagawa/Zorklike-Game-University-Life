@@ -6,9 +6,10 @@ using namespace std;
 class event {
 public:
   event(string text, string leftOptiontext, string rightOptiontext,
-        event leftOption, event rightOption, string eventOverText, int location,
+        event leftOption, event rightOption, string eventOverText,string eventBeginText, int location,
         string pixmapCharacterResource);
-
+  event(string text, string leftOptiontext, string rightOptiontext,
+               event leftOption, event rightOption);
   string getLocation(int location);
   string text;
   string leftOptiontext;
@@ -16,6 +17,7 @@ public:
   event *leftOption;
   event *rightOption;
   string eventOverText;
+  string eventBeginText;
   int location;
   string pixmapCharacterResource;
 };
