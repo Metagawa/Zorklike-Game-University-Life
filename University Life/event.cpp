@@ -5,7 +5,7 @@ using namespace std;
 Event::Event(string text, string leftOptiontext, string rightOptiontext,
              Event leftOption, Event rightOption, string eventOverText,
              string eventBeginText, int location,
-             string pixmapCharacterResource) {
+             string pixmapCharacterResource, bool isEnd) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
@@ -15,22 +15,26 @@ Event::Event(string text, string leftOptiontext, string rightOptiontext,
   this->eventBeginText = eventBeginText;
   this->location = location;
   this->pixmapCharacterResource = pixmapCharacterResource;
+  this->isEnd = isEnd;
 }
 
 // childnode constructor
 Event::Event(string text, string leftOptiontext, string rightOptiontext,
-             Event leftOption, Event rightOption) {
+             Event leftOption, Event rightOption, bool isEnd) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
   this->leftOption = &leftOption;
   this->rightOption = &rightOption;
+  this->isEnd = isEnd;
 }
 
-Event::Event(string text, string leftOptiontext, string rightOptiontext) {
+Event::Event(string text, string leftOptiontext, string rightOptiontext,
+             bool isEnd) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
+  this->isEnd = isEnd;
 }
 
 string Event::getLocation(int location) {

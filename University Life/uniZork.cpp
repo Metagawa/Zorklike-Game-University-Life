@@ -431,12 +431,28 @@ void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {
-  ui->stackedWidget->setCurrentIndex(0);
-  updateOnChangeStackPaneIndex();
+  if (currentEvent->isEnd) {
+    ui->stackedWidget->setCurrentIndex(0);
+    updateOnChangeStackPaneIndex();
+    return;
+  }
+
+  currentEvent = currentEvent->leftOption;
+
+  QString currentEventText = QString::fromStdString(currentEvent->text);
+  ui->eventText->setPlainText(currentEventText);
+
+  QString currentEventOption1 =
+      QString::fromStdString(currentEvent->leftOptiontext);
+  ui->option_1->setText(currentEventOption1);
+
+  QString currentEventOption2 =
+      QString::fromStdString(currentEvent->rightOptiontext);
+  ui->option_2->setText(currentEventOption2);
 }
 
 void Zork::on_option_2_clicked() {
-  if (currentEvent == NULL || currentEvent->rightOption == NULL) {
+  if (currentEvent->isEnd) {
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
     return;
