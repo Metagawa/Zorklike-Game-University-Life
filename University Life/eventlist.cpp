@@ -10,3 +10,8 @@ EventList::EventList() {
       *child1, *child2, "This event is now over", "There is an event", 5, "");
   events.push_back(*head1);
 }
+
+event EventList::getRandomEvent() {
+  int randomNumber = (rand() % events.size());
+  return events[randomNumber];
+}

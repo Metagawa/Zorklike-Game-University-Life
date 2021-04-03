@@ -8,6 +8,7 @@ class EventList {
 public:
   EventList();
   vector<event> events;
+  event getRandomEvent();
 };
 
 #endif // EVENTLIST_H
