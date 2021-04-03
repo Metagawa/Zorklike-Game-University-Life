@@ -455,12 +455,14 @@ void Zork::on_option_1_clicked() {
 }
 
 void Zork::on_option_2_clicked() {
-  if (currentEvent->rightOption == NULL) {
+  if (currentEvent == NULL || currentEvent->rightOption == NULL) {
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
     return;
   }
+
   currentEvent = currentEvent->rightOption;
+  /*
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
 
@@ -471,4 +473,5 @@ void Zork::on_option_2_clicked() {
   QString currentEventOption2 =
       QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
+*/
 }
