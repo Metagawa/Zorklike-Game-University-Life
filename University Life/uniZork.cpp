@@ -99,24 +99,24 @@ void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
   Event currentEvent = eventList->getRandomEvent();
   // sets the event scene stacked widget page
+
   ui->stackedWidget->setCurrentIndex(2);
 
   // sets the eventText box equal to the event dialogue.
   // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
   // code and needs to be replaced for proper functionality.
-  QString currentEventText =
-      QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+  QString currentEventText = QString::fromStdString(currentEvent.text);
   ui->eventText->setPlainText(currentEventText);
 
   // sets options equal to event options
   // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
   // code and needs to be replaced for proper functionality.
   QString currentEventOption1 =
-      QString::fromStdString(uniLife->currentRoom->longDescription());
+      QString::fromStdString(currentEvent.leftOptiontext);
   ui->option_1->setText(currentEventOption1);
 
   QString currentEventOption2 =
-      QString::fromStdString(uniLife->currentRoom->longDescription());
+      QString::fromStdString(currentEvent.rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 
   // update background image based on room
