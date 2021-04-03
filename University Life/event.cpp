@@ -1,6 +1,7 @@
 #include "event.h"
 #include <string>
 using namespace std;
+//headnode constructor
 event::event(string text, string leftOptiontext, string rightOptiontext,
              event leftOption, event rightOption, string eventOverText, string eventBeginText,
              int location, string pixmapCharacterResource) {
@@ -15,6 +16,7 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
   this->pixmapCharacterResource = pixmapCharacterResource;
 }
 
+//childnode constructor
 event::event(string text, string leftOptiontext, string rightOptiontext,
              event leftOption, event rightOption) {
   this->text = text;
