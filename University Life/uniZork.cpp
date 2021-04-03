@@ -15,6 +15,7 @@
 #include <iostream>
 using namespace std;
 bool mapIsHidden = true;
+Event *currentEvent;
 QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 
@@ -435,24 +436,7 @@ void Zork::on_quitCancel_clicked() {
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
-void Zork::on_option_1_clicked() {
-  if (currentEvent->leftOption == NULL) {
-    ui->stackedWidget->setCurrentIndex(0);
-    updateOnChangeStackPaneIndex();
-    return;
-  }
-  currentEvent = currentEvent->leftOption;
-  QString currentEventText = QString::fromStdString(currentEvent->text);
-  ui->eventText->setPlainText(currentEventText);
-
-  QString currentEventOption1 =
-      QString::fromStdString(currentEvent->leftOptiontext);
-  ui->option_1->setText(currentEventOption1);
-
-  QString currentEventOption2 =
-      QString::fromStdString(currentEvent->rightOptiontext);
-  ui->option_2->setText(currentEventOption2);
-}
+void Zork::on_option_1_clicked() {}
 
 void Zork::on_option_2_clicked() {
   if (currentEvent == NULL || currentEvent->rightOption == NULL) {
@@ -461,14 +445,17 @@ void Zork::on_option_2_clicked() {
     return;
   }
 
-  Event *now = currentEvent->rightOption;
+  Event *nextEvent = currentEvent->rightOption;
+  currentEvent = currentEvent->rightOption;
 
-  QString currentEventText = QString::fromStdString(now->text);
+  QString currentEventText = QString::fromStdString(nextEvent->text);
   ui->eventText->setPlainText(currentEventText);
 
-  QString currentEventOption1 = QString::fromStdString(now->leftOptiontext);
+  QString currentEventOption1 =
+      QString::fromStdString(nextEvent->leftOptiontext);
   ui->option_1->setText(currentEventOption1);
 
-  QString currentEventOption2 = QString::fromStdString(now->rightOptiontext);
+  QString currentEventOption2 =
+      QString::fromStdString(nextEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 }
