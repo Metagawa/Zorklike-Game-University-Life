@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 // headnode constructor
-event::event(string text, string leftOptiontext, string rightOptiontext,
-             event leftOption, event rightOption, string eventOverText,
+Event::Event(string text, string leftOptiontext, string rightOptiontext,
+             Event leftOption, Event rightOption, string eventOverText,
              string eventBeginText, int location,
              string pixmapCharacterResource) {
   this->text = text;
@@ -18,8 +18,8 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
 }
 
 // childnode constructor
-event::event(string text, string leftOptiontext, string rightOptiontext,
-             event leftOption, event rightOption) {
+Event::Event(string text, string leftOptiontext, string rightOptiontext,
+             Event leftOption, Event rightOption) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
@@ -27,13 +27,13 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
   this->rightOption = &rightOption;
 }
 
-event::event(string text, string leftOptiontext, string rightOptiontext) {
+Event::Event(string text, string leftOptiontext, string rightOptiontext) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
 }
 
-string event::getLocation(int location) {
+string Event::getLocation(int location) {
   switch (location) {
   case -1:
     return "";

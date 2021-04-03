@@ -97,7 +97,7 @@ void Zork::updateDisabledDirections() {
 }
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
-  event currentEvent = eventList->getRandomEvent();
+  Event currentEvent = eventList->getRandomEvent();
   // sets the event scene stacked widget page
   ui->stackedWidget->setCurrentIndex(2);
 

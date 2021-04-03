@@ -7,8 +7,8 @@ using std::vector;
 class EventList {
 public:
   EventList();
-  vector<event> events;
-  event getRandomEvent();
+  vector<Event> events;
+  Event getRandomEvent();
 };
 
 #endif // EVENTLIST_H

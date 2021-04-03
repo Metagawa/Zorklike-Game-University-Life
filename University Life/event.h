@@ -3,20 +3,20 @@
 #define EVENT_H
 using namespace std;
 
-class event {
+class Event {
 public:
-  event(string text, string leftOptiontext, string rightOptiontext,
-        event leftOption, event rightOption, string eventOverText,
+  Event(string text, string leftOptiontext, string rightOptiontext,
+        Event leftOption, Event rightOption, string eventOverText,
         string eventBeginText, int location, string pixmapCharacterResource);
-  event(string text, string leftOptiontext, string rightOptiontext,
-        event leftOption, event rightOption);
-  event(string text, string leftOptiontext, string rightOptiontext);
+  Event(string text, string leftOptiontext, string rightOptiontext,
+        Event leftOption, Event rightOption);
+  Event(string text, string leftOptiontext, string rightOptiontext);
   string getLocation(int location);
   string text;
   string leftOptiontext;
   string rightOptiontext;
-  event *leftOption;
-  event *rightOption;
+  Event *leftOption;
+  Event *rightOption;
   string eventOverText;
   string eventBeginText;
   int location;
