@@ -7,8 +7,8 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
-  this->leftOption = leftOption;
-  this->rightOption = rightOption;
+  this->leftOption = &leftOption;
+  this->rightOption = &rightOption;
   this->eventOverText = eventOverText;
   this->location = location;
   this->pixmapCharacterResource = pixmapCharacterResource;
