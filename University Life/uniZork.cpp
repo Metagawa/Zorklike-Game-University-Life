@@ -394,6 +394,7 @@ void Zork::on_quitButton_clicked() {
 
 void Zork::on_goToExplore_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
+  updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
 }
 
