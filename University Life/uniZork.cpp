@@ -94,8 +94,29 @@ void Zork::updateDisabledDirections() {
 }
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
+
+
+  //sets the event scene stacked widget page
   ui->stackedWidget->setCurrentIndex(2);
+
+
+  //sets the eventText box equal to the event dialogue.
+  //QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy code and needs to be replaced for proper functionality.
+  QString currentEventText = QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+      ui->eventText->setPlainText(currentEventText);
+
+  //sets options equal to event options
+  //QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy code and needs to be replaced for proper functionality.
+  QString currentEventOption1= QString::fromStdString(uniLife->currentRoom->longDescription());
+      ui->option_1->setText(currentEventOption1);
+
+  QString currentEventOption2 = QString::fromStdString(uniLife->currentRoom->longDescription());
+      ui->option_2->setText(currentEventOption2);
+
+
+  //calls updateOnChangeStackPaneIndex so that ui elements are hidden correctly.
   updateOnChangeStackPaneIndex();
+
 }
 Zork::~Zork() { delete ui; }
 
@@ -329,6 +350,7 @@ void Zork::on_mapButton_clicked() {
     ui->tabWidget->setStyleSheet(tabStyle);
   }
 }
+
 void Zork::on_actButton_clicked() {
   scratchSfx.stop();
   scratchSfx.play();
@@ -377,12 +399,14 @@ void Zork::on_quitCancel_clicked() {
   ui->quitSheet->hide();
 }
 
-void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
+void Zork::on_quitConfirm_clicked() {
+    QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {
   // dummied out
 }
+
 void Zork::on_option_2_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
   updateOnChangeStackPaneIndex();

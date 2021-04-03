@@ -60,7 +60,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
@@ -582,10 +582,57 @@ QPushButton:hover{	background-image: url(:/images/misc/black-overlay.png);}
         <height>111</height>
        </rect>
       </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string notr="true"/>
+      </property>
+      <property name="statusTip">
+       <string notr="true"/>
+      </property>
+      <property name="whatsThis">
+       <string notr="true"/>
+      </property>
+      <property name="accessibleName">
+       <string notr="true"/>
+      </property>
+      <property name="accessibleDescription">
+       <string notr="true"/>
+      </property>
       <property name="styleSheet">
        <string notr="true">border: 0;
 background-color: rgba(255, 255, 255,0);
-background-image: url(:/images/misc/black-overlay.png);</string>
+background-image: url(:/images/misc/black-overlay.png);
+font:10pt &quot;Graduate&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="documentTitle">
+       <string notr="true"/>
+      </property>
+      <property name="undoRedoEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="plainText">
+       <string notr="true"/>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::NoTextInteraction</set>
+      </property>
+      <property name="placeholderText">
+       <string notr="true"/>
       </property>
      </widget>
      <widget class="QPushButton" name="option_2">
