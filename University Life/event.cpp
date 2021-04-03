@@ -1,22 +1,23 @@
 #include "event.h"
 #include <string>
 using namespace std;
-//headnode constructor
+// headnode constructor
 event::event(string text, string leftOptiontext, string rightOptiontext,
-             event leftOption, event rightOption, string eventOverText, string eventBeginText,
-             int location, string pixmapCharacterResource) {
+             event leftOption, event rightOption, string eventOverText,
+             string eventBeginText, int location,
+             string pixmapCharacterResource) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
   this->leftOption = &leftOption;
   this->rightOption = &rightOption;
   this->eventOverText = eventOverText;
-  this->eventBeginText=eventBeginText;
+  this->eventBeginText = eventBeginText;
   this->location = location;
   this->pixmapCharacterResource = pixmapCharacterResource;
 }
 
-//childnode constructor
+// childnode constructor
 event::event(string text, string leftOptiontext, string rightOptiontext,
              event leftOption, event rightOption) {
   this->text = text;
@@ -24,6 +25,12 @@ event::event(string text, string leftOptiontext, string rightOptiontext,
   this->rightOptiontext = rightOptiontext;
   this->leftOption = &leftOption;
   this->rightOption = &rightOption;
+}
+
+event::event(string text, string leftOptiontext, string rightOptiontext) {
+  this->text = text;
+  this->leftOptiontext = leftOptiontext;
+  this->rightOptiontext = rightOptiontext;
 }
 
 string event::getLocation(int location) {

@@ -14,6 +14,7 @@ SOURCES += \
     Parser.cpp \
     Room.cpp \
     event.cpp \
+    eventlist.cpp \
     main.cpp \
     times.cpp \
     uniLife.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     Parser.cpp \
     Room.h \
     event.h \
+    eventlist.h \
     times.h \
     uniLife.h \
     uniZork.h
