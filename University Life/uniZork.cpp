@@ -97,7 +97,8 @@ void Zork::updateDisabledDirections() {
 }
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
-  *currentEvent = eventList->getRandomEvent();
+  Event currentEvent = eventList->getRandomEvent();
+
   // sets the event scene stacked widget page
 
   ui->stackedWidget->setCurrentIndex(2);
@@ -105,18 +106,18 @@ void Zork::eventStart() {
   // sets the eventText box equal to the event dialogue.
   // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
   // code and needs to be replaced for proper functionality.
-  QString currentEventText = QString::fromStdString(currentEvent->text);
+  QString currentEventText = QString::fromStdString(currentEvent.text);
   ui->eventText->setPlainText(currentEventText);
 
   // sets options equal to event options
   // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
   // code and needs to be replaced for proper functionality.
   QString currentEventOption1 =
-      QString::fromStdString(currentEvent->leftOptiontext);
+      QString::fromStdString(currentEvent.leftOptiontext);
   ui->option_1->setText(currentEventOption1);
 
   QString currentEventOption2 =
-      QString::fromStdString(currentEvent->rightOptiontext);
+      QString::fromStdString(currentEvent.rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 
   // update background image based on room
@@ -434,6 +435,9 @@ void Zork::on_quitCancel_clicked() {
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
-void Zork::on_option_1_clicked() { currentEvent = currentEvent->leftOption; }
+void Zork::on_option_1_clicked() {}
 
-void Zork::on_option_2_clicked() { currentEvent = currentEvent->rightOption; }
+void Zork::on_option_2_clicked() {
+  ui->stackedWidget->setCurrentIndex(0);
+  updateOnChangeStackPaneIndex();
+}

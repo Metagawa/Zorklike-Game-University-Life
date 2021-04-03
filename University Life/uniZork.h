@@ -13,7 +13,6 @@ namespace Ui {
 class Zork;
 }
 QT_END_NAMESPACE
-
 class Zork : public QMainWindow {
   Q_OBJECT
 
@@ -64,6 +63,5 @@ private:
   void eventStart();
   string getRoomName(string s);
   EventList *eventList;
-  Event *currentEvent;
 };
 #endif // UNIZORK_H
