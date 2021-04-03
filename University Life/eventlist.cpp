@@ -8,6 +8,8 @@ EventList::EventList() {
   Event *head1 = new Event(
       "Welcome to the Library", "Say \'Bye\'", "Leave without saying anything",
       *child1, *child2, "This event is now over", "There is an event", 5, "");
+  head1->rightOption = new Event("some text", "left option", "right option");
+
   events.push_back(*head1);
 }
 
