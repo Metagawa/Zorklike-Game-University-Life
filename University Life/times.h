@@ -3,8 +3,7 @@
 #define TIMES_H
 using namespace std;
 
-class Times
-{
+class Times {
 public:
   Times();
   // monday = 0, tuesday = 1 etc
@@ -26,6 +25,7 @@ public:
 private:
   int dayNum;
   int time;
+  bool rain;
 };
 
 #endif // TIME_H
