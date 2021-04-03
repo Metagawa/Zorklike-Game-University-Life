@@ -1,22 +1,22 @@
 #include "event.h"
 #include <string>
 using namespace std;
-event::event(string text,
-             string leftOptiontext,
-             string rightOptiontext,
-             event leftOption,
-             event rightOption,
-             string eventOverText,
-             int location,
-             string pixmapCharacterResource
-)
-{
-
+event::event(string text, string leftOptiontext, string rightOptiontext,
+             event leftOption, event rightOption, string eventOverText,
+             int location, string pixmapCharacterResource) {
+  this->text = text;
+  this->leftOptiontext = leftOptiontext;
+  this->rightOptiontext = rightOptiontext;
+  this->leftOption = leftOption;
+  this->rightOption = rightOption;
+  this->eventOverText = eventOverText;
+  this->location = location;
+  this->pixmapCharacterResource = pixmapCharacterResource;
 }
 string event::getLocation(int location) {
-  switch (i) {
+  switch (location) {
   case -1:
-      return NULL;
+    return "";
   case 0:
     return "a";
   case 1:
@@ -32,25 +32,22 @@ string event::getLocation(int location) {
   case 6:
     return "g";
   case 7:
-      return "h";
+    return "h";
   case 8:
-      return "i";
+    return "i";
   case 9:
-      return "j";
+    return "j";
   case 10:
-      return "k";
+    return "k";
   case 11:
-      return "l";
+    return "l";
   case 12:
-      return "m";
+    return "m";
   case 13:
-      return "n";
+    return "n";
 
   // you can have any number of case statements.
   default: // Optional
-    return getLocation(i);
+    return "";
   }
 }
-string event::getDayString() { return getDayString(getDayNum()); }
-void event::setTime(int newtime) { this->time = newtime; }
-void event::setDayNum(int newday) { this->dayNum = newday; }
