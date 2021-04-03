@@ -16,6 +16,8 @@ bool Times::advanceTime() {
     dayNum++;
     time = 9;
     return true;
+  } else if (time >= 18) {
+    rain = (rand() % 2) != 0;
   }
   return false;
 }
