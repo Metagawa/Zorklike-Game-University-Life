@@ -1,4 +1,6 @@
 #include "uniZork.h"
+#include "event.h"
+#include "eventlist.h"
 #include "ui_uniZork.h"
 #include <QDesktopWidget>
 #include <QMovie>
@@ -17,6 +19,7 @@ QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
+  eventList = new EventList();
   ui->setupUi(this);
   this->setWindowTitle("University Life");
   ui->quitOverlay->hide();
@@ -94,46 +97,51 @@ void Zork::updateDisabledDirections() {
 }
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
-
-
-  //sets the event scene stacked widget page
+  event currentEvent = eventList->getRandomEvent();
+  // sets the event scene stacked widget page
   ui->stackedWidget->setCurrentIndex(2);
 
+  // sets the eventText box equal to the event dialogue.
+  // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
+  // code and needs to be replaced for proper functionality.
+  QString currentEventText =
+      QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+  ui->eventText->setPlainText(currentEventText);
 
-  //sets the eventText box equal to the event dialogue.
-  //QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy code and needs to be replaced for proper functionality.
-  QString currentEventText = QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
-      ui->eventText->setPlainText(currentEventText);
+  // sets options equal to event options
+  // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
+  // code and needs to be replaced for proper functionality.
+  QString currentEventOption1 =
+      QString::fromStdString(uniLife->currentRoom->longDescription());
+  ui->option_1->setText(currentEventOption1);
 
-  //sets options equal to event options
-  //QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy code and needs to be replaced for proper functionality.
-  QString currentEventOption1= QString::fromStdString(uniLife->currentRoom->longDescription());
-      ui->option_1->setText(currentEventOption1);
+  QString currentEventOption2 =
+      QString::fromStdString(uniLife->currentRoom->longDescription());
+  ui->option_2->setText(currentEventOption2);
 
-  QString currentEventOption2 = QString::fromStdString(uniLife->currentRoom->longDescription());
-      ui->option_2->setText(currentEventOption2);
+  // update background image based on room
+  bool isRaining = time->isRaining();
+  if (time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
+  } else if (time->isDayTime() && isRaining) {
+    QMovie *movie =
+        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  } else if (!time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
+  } else if (!time->isDayTime() && isRaining) {
+    QMovie *movie = new QMovie(
+        QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  }
 
-  //update background image based on room
-      bool isRaining = time->isRaining();
-      if (time->isDayTime() && !isRaining) {
-        ui->imageBackground_2->setPixmap(
-            QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
-      } else if (time->isDayTime() && isRaining) {
-        QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
-        ui->imageBackground_2->setMovie(movie);
-        movie->start();
-      } else if (!time->isDayTime() && !isRaining) {
-        ui->imageBackground_2->setPixmap(
-            QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
-      } else if (!time->isDayTime() && isRaining) {
-        QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getNightRain()));
-        ui->imageBackground_2->setMovie(movie);
-        movie->start();
-      }
-
-  //calls updateOnChangeStackPaneIndex so that ui elements are hidden correctly.
+  // calls updateOnChangeStackPaneIndex so that ui elements are hidden
+  // correctly.
   updateOnChangeStackPaneIndex();
-
 }
 Zork::~Zork() { delete ui; }
 
@@ -207,14 +215,16 @@ void Zork::updatePositionAfterMoving() {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
   } else if (time->isDayTime() && isRaining) {
-    QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    QMovie *movie =
+        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
     ui->imageBackground->setMovie(movie);
     movie->start();
   } else if (!time->isDayTime() && !isRaining) {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
   } else if (!time->isDayTime() && isRaining) {
-    QMovie *movie = new QMovie(QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    QMovie *movie = new QMovie(
+        QString::fromStdString(uniLife->currentRoom->getNightRain()));
     ui->imageBackground->setMovie(movie);
     movie->start();
   }
@@ -417,8 +427,7 @@ void Zork::on_quitCancel_clicked() {
   ui->quitSheet->hide();
 }
 
-void Zork::on_quitConfirm_clicked() {
-    QApplication::quit(); }
+void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {

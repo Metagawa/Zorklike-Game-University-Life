@@ -1,6 +1,7 @@
 #ifndef UNIZORK_H
 #define UNIZORK_H
 
+#include "eventlist.h"
 #include "times.h"
 #include "uniLife.h"
 #include <QMainWindow>
@@ -62,5 +63,6 @@ private:
   void updateDisabledDirections();
   void eventStart();
   string getRoomName(string s);
+  EventList *eventList;
 };
 #endif // UNIZORK_H
