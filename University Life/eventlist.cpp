@@ -11,7 +11,7 @@ EventList::EventList() {
   events.push_back(*head1);
 }
 
-Event EventList::getRandomEvent() {
+Event *EventList::getRandomEvent() {
   int randomNumber = (rand() % events.size());
-  return events[randomNumber];
+  return &events[randomNumber];
 }
