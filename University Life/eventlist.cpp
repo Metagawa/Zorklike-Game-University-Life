@@ -45,7 +45,7 @@ EventList::EventList()
 
 
 	//Mid level a's right option leads to...
-  	Event *BottomlevelSceneB = new Event(
+    Event *BottomlevelSceneB =
 	  new Event(" ",  //Text box content
 				" ",  //First choice  (leads to nothing)
 				" ",  //Second choice (leads to nothing)
@@ -75,19 +75,19 @@ EventList::EventList()
     ToplevelScene->leftOption = MidlevelSceneA;
   	//connects the top level's second option with MidLevelB
     ToplevelScene->rightOption = MidlevelSceneB;
------------------------------------------------------------
+//-----------------------------------------------------------
 
   //Midlevel connections to bottomlevel
 
-	//connects MidLevelA's first option with BottomLevelA
+    //connects MidLevelA's first option with BottomLevelA
     MidlevelSceneA->leftOption = BottomlevelSceneA;
-	//connects MidLevelA's second option with BottomLevelB
+    //connects MidLevelA's second option with BottomLevelB
     MidlevelSceneA->rightOption = BottomlevelSceneB;
-	//connects MidLevelB's first option with BottomLevelC
+    //connects MidLevelB's first option with BottomLevelC
     MidlevelSceneB->leftOption = BottomlevelSceneC;
-	//connects MidLevelB's second option with BottomLevelD
+    //connects MidLevelB's second option with BottomLevelD
     MidlevelSceneB->rightOption = BottomlevelSceneD;
------------------------------------------------------------
+//-----------------------------------------------------------
 
   //puts the event into the list of events.
   	events.push_back(*ToplevelScene);
@@ -98,6 +98,7 @@ EventList::EventList()
 	//Actual Events below
 	/*------------------------------------------------------------------------------------------------------------*/
 
+	//Event 1
 	//top level of an event
 	Event *ToplevelDogScene =
 		new Event("You see a small dog lying in the road",
@@ -163,9 +164,72 @@ EventList::EventList()
 	//puts the event into the list of events.
 	events.push_back(*ToplevelDogScene);
 
-    /*-----------------------------------------------------------------------------------*/
+	/*-----------------------------------------------------------------------------------*/
 
+	//Event 2
+	//top level of an event
 
+	Event *ToplevelDrinkScene =
+		new Event("A powerful thirst assails you out of nowhere. It feels as though a shard of the Sahara is lodged in your throat.", //Text box content
+				  "Go to the shopping zone for a sports drink",																		  //First choice  (leads to MidlevelSceneA)
+				  "Go to the pub for a pint",																						  //Second Choice (leads to MidlevelSceneB)
+				  "Ah that was refreshing! I gotta go there more often.",															  //EventOver Notebook text
+				  "The air felt quite dry.",																						  //EventBegin Notebook text
+				  0,																												  //Location flag
+				  " ",																												  //Character sprite flag
+				  false																												  //Is this the last scene?
+		);
+
+	//top level's left option leads to...
+	Event *MidlevelDrinkSceneA =
+		new Event("You got some Energade in one of the shops. It was on sale! \n1 for the price of 2.", //Text box content
+				  "Finish your drink",																	//First choice  (leads to BottomlevelSceneA)
+				  " ",																					//Second choice (leads to BottomlevelSceneB)
+				  true																					//Is this the last scene?
+		);
+
+	//top level's right option leads to...
+	Event *MidlevelDrinkSceneB =
+		new Event("Well, you are a college student after all. How could you resist an aul pint?", //Text box content
+				  "Buy some beer?",																  //First choice  (leads to BottomlevelSceneC)
+				  "Buy some cider?",															  //Second choice (leads to BottomlevelSceneD)
+				  false																			  //Is this the last scene?
+		);
+
+	//Mid level a's left option leads to...
+	Event *BottomlevelDrinkSceneC =
+		new Event("Can't beat the classics, the cheap beer they have here tastes like sewer water, but it quenches your thirst as good as anything.", //Text box content
+				  "Have another one?",																												  //First choice  (leads to nothing)
+				  "I'm a responsible adult.",																										  //Second choice (leads to nothing)
+                  true																																  //Is this the last scene?
+		);
+
+	//Mid level a's right option leads to...
+	Event *BottomlevelDrinkSceneD =
+		new Event("Ahhhh now that is refreshing. The cider they have here is pretty good, if a little pricey.", //Text box content
+				  "Have another one?",																			//First choice  (leads to nothing)
+				  "I'm a responsible adult.",																	//Second choice (leads to nothing)
+                  true																							//Is this the last scene?
+		);
+
+	//Toplevel connections to midlevel
+
+	//connects the top level's first option with MidLevelA
+    ToplevelDrinkScene->leftOption = MidlevelDrinkSceneA;
+	//connects the top level's second option with MidLevelB
+    ToplevelDrinkScene->rightOption = MidlevelDrinkSceneB;
+	//-----------------------------------------------------------
+
+	//Midlevel connections to bottomlevel
+
+	//connects MidLevelB's first option with BottomLevelC
+    MidlevelDrinkSceneB->leftOption = BottomlevelDrinkSceneC;
+	//connects MidLevelB's second option with BottomLevelD
+    MidlevelDrinkSceneB->rightOption = BottomlevelDrinkSceneD;
+	//-----------------------------------------------------------
+
+	//puts the event into the list of events.
+    events.push_back(*ToplevelDrinkScene);
 }
 
 Event *EventList::getRandomEvent()
