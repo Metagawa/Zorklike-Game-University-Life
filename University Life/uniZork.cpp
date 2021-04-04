@@ -505,9 +505,9 @@ void Zork::on_option_1_clicked()
 {
   if (currentEvent->isEnd)
   {
-    if (currentEvent->locationRight)
+    if (currentEvent->locationLeft)
     {
-      uniLife->setLocation(currentEvent->locationRight);
+      uniLife->setLocation(currentEvent->locationLeft);
       updateLocation();
       updatePositionAfterMoving();
     }

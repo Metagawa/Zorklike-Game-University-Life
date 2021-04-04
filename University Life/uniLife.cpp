@@ -107,42 +107,55 @@ void UniLife::setLocation(int location) {
     return;
     break;
   case 0:
+      //Bus Stop
     currentRoom = a;
     break;
   case 1:
+      //Dorms
     currentRoom = b;
     break;
   case 2:
+      //Gym
     currentRoom = c;
     break;
   case 3:
+      //Library
     currentRoom = d;
     break;
   case 4:
+      //Student Union
     currentRoom = e;
     break;
   case 5:
+      //Relax Area
     currentRoom = f;
     break;
   case 6:
+      //Pub
     currentRoom = g;
     break;
   case 7:
+      //Computer Science Building
     currentRoom = h;
     break;
   case 8:
+      //Quad
     currentRoom = i;
     break;
   case 9:
+      //Main Building
     currentRoom = j;
     break;
   case 10:
+      //Shopping Area
     currentRoom = k;
     break;
   case 11:
+      //Raps
     currentRoom = l;
     break;
   case 12:
+      //Campus Outlet
     currentRoom = m;
     break;
   }
