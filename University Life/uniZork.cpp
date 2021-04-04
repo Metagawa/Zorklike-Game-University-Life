@@ -19,7 +19,8 @@ QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 bool interactEnabled = false;
 bool examineClicked = false;
-Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
+Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork)
+{
   eventList = new EventList();
   ui->setupUi(this);
   this->setWindowTitle("University Life");
@@ -56,19 +57,24 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   // update disable buttons
   updateDisabledDirections();
 }
-void Zork::updateOnChangeStackPaneIndex() {
-  if (ui->stackedWidget->currentIndex() == 0) {
+void Zork::updateOnChangeStackPaneIndex()
+{
+  if (ui->stackedWidget->currentIndex() == 0)
+  {
     ui->spiral->show();
     ui->watch->show();
     ui->lcdNumber->show();
     ui->mainMenuScreen->hide();
-
-  } else if (ui->stackedWidget->currentIndex() == 1) {
+  }
+  else if (ui->stackedWidget->currentIndex() == 1)
+  {
     ui->mainMenuScreen->show();
     ui->spiral->hide();
     ui->watch->hide();
     ui->lcdNumber->hide();
-  } else if (ui->stackedWidget->currentIndex() == 2) {
+  }
+  else if (ui->stackedWidget->currentIndex() == 2)
+  {
     ui->mainMenuScreen->hide();
     ui->spiral->hide();
     ui->watch->hide();
@@ -76,27 +82,33 @@ void Zork::updateOnChangeStackPaneIndex() {
   }
 }
 
-void Zork::updateDisabledDirections() {
+void Zork::updateDisabledDirections()
+{
   ui->plainTextEdit->setTextInteractionFlags(Qt::NoTextInteraction);
   // get exits
   ui->northButton->setDisabled(false);
   ui->southButton->setDisabled(false);
   ui->eastButton->setDisabled(false);
   ui->westButton->setDisabled(false);
-  if (uniLife->currentRoom->nextRoom("north") == NULL) {
+  if (uniLife->currentRoom->nextRoom("north") == NULL)
+  {
     ui->northButton->setDisabled(true);
   }
-  if (uniLife->currentRoom->nextRoom("south") == NULL) {
+  if (uniLife->currentRoom->nextRoom("south") == NULL)
+  {
     ui->southButton->setDisabled(true);
   }
-  if (uniLife->currentRoom->nextRoom("east") == NULL) {
+  if (uniLife->currentRoom->nextRoom("east") == NULL)
+  {
     ui->eastButton->setDisabled(true);
   }
-  if (uniLife->currentRoom->nextRoom("west") == NULL) {
+  if (uniLife->currentRoom->nextRoom("west") == NULL)
+  {
     ui->westButton->setDisabled(true);
   }
 }
-void Zork::eventStart() {
+void Zork::eventStart()
+{
   // for debug ONLY/ add more functionality to determine what event
   currentEvent = eventList->getRandomEvent();
   updateNumberOfOptions();
@@ -125,18 +137,25 @@ void Zork::eventStart() {
 
   // update background image based on room
   bool isRaining = time->isRaining();
-  if (time->isDayTime() && !isRaining) {
+  if (time->isDayTime() && !isRaining)
+  {
     ui->imageBackground_2->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
-  } else if (time->isDayTime() && isRaining) {
+  }
+  else if (time->isDayTime() && isRaining)
+  {
     QMovie *movie =
         new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
     ui->imageBackground_2->setMovie(movie);
     movie->start();
-  } else if (!time->isDayTime() && !isRaining) {
+  }
+  else if (!time->isDayTime() && !isRaining)
+  {
     ui->imageBackground_2->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
-  } else if (!time->isDayTime() && isRaining) {
+  }
+  else if (!time->isDayTime() && isRaining)
+  {
     QMovie *movie = new QMovie(
         QString::fromStdString(uniLife->currentRoom->getNightRain()));
     ui->imageBackground_2->setMovie(movie);
@@ -148,13 +167,15 @@ void Zork::eventStart() {
 }
 Zork::~Zork() { delete ui; }
 
-void Zork::updatePositionAfterMoving() {
-    examineClicked=false;
-    ui->actButton->setDisabled(true);
-interactChance();
+void Zork::updatePositionAfterMoving()
+{
+  examineClicked = false;
+  ui->actButton->setDisabled(true);
+  interactChance();
   ui->tabWidget->setCurrentIndex(time->getDayNum());
   bool itsABrandNewDay = time->advanceTime();
-  if (itsABrandNewDay) {
+  if (itsABrandNewDay)
+  {
     auto w = new QWidget;
     QHBoxLayout *hlayout = new QHBoxLayout;
     hlayout->setSpacing(0);
@@ -187,7 +208,8 @@ interactChance();
   }
   ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
 
-  if (time->getDayNum() == 0) {
+  if (time->getDayNum() == 0)
+  {
     QString currentPlainText =
         ui->plainTextEdit->toPlainText() + QString::fromStdString("\n") +
         QString::fromStdString(uniLife->currentRoom->longDescription() + "\n" + eventExistsText);
@@ -197,7 +219,9 @@ interactChance();
     // the top
     ui->plainTextEdit->moveCursor(QTextCursor::End);
     ui->plainTextEdit->ensureCursorVisible();
-  } else {
+  }
+  else
+  {
     QPlainTextEdit *qpte =
         ui->tabWidget->currentWidget()->findChild<QPlainTextEdit *>();
     // QPlainTextEdit *qpte =
@@ -216,18 +240,25 @@ interactChance();
 
   // update image for room
   bool isRaining = time->isRaining();
-  if (time->isDayTime() && !isRaining) {
+  if (time->isDayTime() && !isRaining)
+  {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
-  } else if (time->isDayTime() && isRaining) {
+  }
+  else if (time->isDayTime() && isRaining)
+  {
     QMovie *movie =
         new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
     ui->imageBackground->setMovie(movie);
     movie->start();
-  } else if (!time->isDayTime() && !isRaining) {
+  }
+  else if (!time->isDayTime() && !isRaining)
+  {
     ui->imageBackground->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
-  } else if (!time->isDayTime() && isRaining) {
+  }
+  else if (!time->isDayTime() && isRaining)
+  {
     QMovie *movie = new QMovie(
         QString::fromStdString(uniLife->currentRoom->getNightRain()));
     ui->imageBackground->setMovie(movie);
@@ -238,7 +269,8 @@ interactChance();
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
 }
 
-void Zork::on_northButton_clicked() {
+void Zork::on_northButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
 
@@ -247,7 +279,8 @@ void Zork::on_northButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_eastButton_clicked() {
+void Zork::on_eastButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
 
@@ -256,7 +289,8 @@ void Zork::on_eastButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_westButton_clicked() {
+void Zork::on_westButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
 
@@ -265,7 +299,8 @@ void Zork::on_westButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_southButton_clicked() {
+void Zork::on_southButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
 
@@ -274,38 +309,44 @@ void Zork::on_southButton_clicked() {
   updatePositionAfterMoving();
 }
 
-void Zork::on_examineButton_clicked() {
-    if(!interactEnabled&&!examineClicked){
-        interactChance();
-          examineClicked=true;
-          if(!interactEnabled){
-          QString currentEventText="You look around but don't see anything interesting...";
-  updateNotebookDuringEvent(currentEventText);
-  ui->plainTextEdit->moveCursor(QTextCursor::End);
-          } else {
-              QString currentEventText="On closer inspection, It looked like something was happening...";
-              updateNotebookDuringEvent(currentEventText);
-              ui->plainTextEdit->moveCursor(QTextCursor::End);
-
+void Zork::on_examineButton_clicked()
+{
+  if (!interactEnabled && !examineClicked)
+  {
+    interactChance();
+    examineClicked = true;
+    if (!interactEnabled)
+    {
+      QString currentEventText = "You look around but don't see anything interesting...";
+      updateNotebookDuringEvent(currentEventText);
+      ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
+    else
+    {
+      QString currentEventText = "On closer inspection, It looked like something was happening...";
+      updateNotebookDuringEvent(currentEventText);
+      ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
+  }
 
   scratchSfx.stop();
   scratchSfx.play();
-
 }
 
-void Zork::on_infoButton_clicked() {
+void Zork::on_infoButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
 }
 
-void Zork::on_mapButton_clicked() {
+void Zork::on_mapButton_clicked()
+{
 
   scratchSfx.stop();
   scratchSfx.play();
 
-  if (mapIsHidden) {
+  if (mapIsHidden)
+  {
     ui->lasso->show();
     ui->lasso->setGeometry(uniLife->currentRoom->getLassoX(),
                            uniLife->currentRoom->getLassoY(), 50, 50);
@@ -324,7 +365,8 @@ void Zork::on_mapButton_clicked() {
         "rgba(0,0,0,0)");
     mapIsHidden = false;
 
-    for (int i = 1; i < ui->tabWidget->count(); i++) {
+    for (int i = 1; i < ui->tabWidget->count(); i++)
+    {
       QPlainTextEdit *qpte =
           ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
       qpte->setStyleSheet(
@@ -338,8 +380,9 @@ void Zork::on_mapButton_clicked() {
         "rgba(0,0,0,0);border: none;"
         "padding-bottom:14px;}";
     ui->tabWidget->setStyleSheet(tabStyle);
-
-  } else {
+  }
+  else
+  {
     ui->lasso->hide();
     updateDisabledDirections();
     ui->actButton->setDisabled(false);
@@ -353,7 +396,8 @@ void Zork::on_mapButton_clicked() {
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
         "url(:/images/misc/lines.png);padding-left: 10; color: ");
 
-    for (int i = 1; i < ui->tabWidget->count(); i++) {
+    for (int i = 1; i < ui->tabWidget->count(); i++)
+    {
       QPlainTextEdit *qpte =
           ui->tabWidget->widget(i)->findChild<QPlainTextEdit *>();
       qpte->setStyleSheet(
@@ -399,13 +443,15 @@ void Zork::on_mapButton_clicked() {
   }
 }
 
-void Zork::on_actButton_clicked() {
+void Zork::on_actButton_clicked()
+{
   scratchSfx.stop();
   scratchSfx.play();
   eventStart();
 }
 
-void Zork::on_quitButton_clicked() {
+void Zork::on_quitButton_clicked()
+{
   crumpleSfx.stop();
   crumpleSfx.play();
   // disable all buttons
@@ -423,20 +469,23 @@ void Zork::on_quitButton_clicked() {
   ui->quitSheet->show();
 }
 
-void Zork::on_goToExplore_clicked() {
+void Zork::on_goToExplore_clicked()
+{
   ui->stackedWidget->setCurrentIndex(0);
   updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
 }
 
-void Zork::on_quitButton_2_clicked() {
+void Zork::on_quitButton_2_clicked()
+{
   crumpleSfx.stop();
   crumpleSfx.play();
   ui->quitOverlay->show();
   ui->quitSheet->show();
 }
 
-void Zork::on_quitCancel_clicked() {
+void Zork::on_quitCancel_clicked()
+{
   crumpleSfx.stop();
   crumpleSfx.play();
   updateDisabledDirections();
@@ -452,9 +501,12 @@ void Zork::on_quitCancel_clicked() {
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 // for debug ONLY/ replace with a call to an event outcome
-void Zork::on_option_1_clicked() {
-  if (currentEvent->isEnd) {
-    if (currentEvent->locationRight) {
+void Zork::on_option_1_clicked()
+{
+  if (currentEvent->isEnd)
+  {
+    if (currentEvent->locationRight)
+    {
       uniLife->setLocation(currentEvent->locationRight);
       updateLocation();
       updatePositionAfterMoving();
@@ -478,44 +530,62 @@ void Zork::on_option_1_clicked() {
   ui->option_2->setText(currentEventOption2);
   updateNotebookDuringEvent(currentEventText);
 }
-void Zork::updateNumberOfOptions() {
-  if (currentEvent->isSolo) {
+void Zork::updateNumberOfOptions()
+{
+  if (currentEvent->isSolo)
+  {
     ui->option_2->hide();
-  } else {
+  }
+  else
+  {
     ui->option_2->show();
   }
 }
-void Zork::updateLocation() {
+void Zork::updateLocation()
+{
   bool isRaining = time->isRaining();
-  if (time->isDayTime() && !isRaining) {
+  if (time->isDayTime() && !isRaining)
+  {
     ui->imageBackground_2->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
-  } else if (time->isDayTime() && isRaining) {
+  }
+  else if (time->isDayTime() && isRaining)
+  {
     QMovie *movie =
         new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
     ui->imageBackground_2->setMovie(movie);
     movie->start();
-  } else if (!time->isDayTime() && !isRaining) {
+  }
+  else if (!time->isDayTime() && !isRaining)
+  {
     ui->imageBackground_2->setPixmap(
         QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
-  } else if (!time->isDayTime() && isRaining) {
+  }
+  else if (!time->isDayTime() && isRaining)
+  {
     QMovie *movie = new QMovie(
         QString::fromStdString(uniLife->currentRoom->getNightRain()));
     ui->imageBackground_2->setMovie(movie);
     movie->start();
   }
 }
-void Zork::interactChance(){
-    interactEnabled = (rand() % 100) < 25;
-    if (interactEnabled)
-    {    ui->actButton->setDisabled(false);
-        eventExistsText = "It looked like something was going on...\n";
-    }
-    else eventExistsText = "";
+void Zork::interactChance()
+{
+  interactEnabled = (rand() % 100) < 25;
+  if (interactEnabled)
+  {
+    ui->actButton->setDisabled(false);
+    eventExistsText = "It looked like something was going on...\n";
+  }
+  else
+    eventExistsText = "";
 }
-void Zork::on_option_2_clicked() {
-  if (currentEvent->isEnd) {
-    if (currentEvent->locationRight) {
+void Zork::on_option_2_clicked()
+{
+  if (currentEvent->isEnd)
+  {
+    if (currentEvent->locationRight)
+    {
       uniLife->setLocation(currentEvent->locationRight);
       updateLocation();
       updatePositionAfterMoving();
@@ -541,14 +611,17 @@ void Zork::on_option_2_clicked() {
   updateNotebookDuringEvent(currentEventText);
 }
 
-void Zork::updateNotebookDuringEvent(QString currentEventText) {
-  if (time->getDayNum() == 0) {
+void Zork::updateNotebookDuringEvent(QString currentEventText)
+{
+  if (time->getDayNum() == 0)
+  {
     QString currentPlainText = ui->plainTextEdit->toPlainText() +
                                QString::fromStdString("\n") + currentEventText;
 
     ui->plainTextEdit->setPlainText(currentPlainText);
-
-  } else {
+  }
+  else
+  {
     QPlainTextEdit *qpte =
         ui->tabWidget->currentWidget()->findChild<QPlainTextEdit *>();
 
