@@ -619,6 +619,9 @@ void Zork::updateNotebookDuringEvent(QString currentEventText)
                                QString::fromStdString("\n") + currentEventText;
 
     ui->plainTextEdit->setPlainText(currentPlainText);
+    ui->plainTextEdit->moveCursor(QTextCursor::End);
+
+
   }
   else
   {
@@ -628,5 +631,7 @@ void Zork::updateNotebookDuringEvent(QString currentEventText)
     QString currentPlainText =
         qpte->toPlainText() + QString::fromStdString("\n") + currentEventText;
     qpte->setPlainText(currentPlainText);
+    qpte->moveCursor(QTextCursor::End);
+
   }
 }
