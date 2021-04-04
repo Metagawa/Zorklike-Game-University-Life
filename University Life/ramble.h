@@ -3,7 +3,6 @@
 #define RAMBLE_H
 using namespace std;
 
-
 class Ramble
 {
 public:

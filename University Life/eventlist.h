@@ -4,7 +4,8 @@
 #include <vector>
 
 using std::vector;
-class EventList {
+class EventList
+{
 public:
   EventList();
   vector<Event> events;

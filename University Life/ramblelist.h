@@ -3,9 +3,9 @@
 #include "ramble.h"
 #include <vector>
 
-
 using std::vector;
-class RambleList {
+class RambleList
+{
 public:
   RambleList();
   vector<Ramble> rambles;

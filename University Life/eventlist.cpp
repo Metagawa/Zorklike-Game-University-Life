@@ -175,5 +175,3 @@ void EventList::createMissingDogEvent()
     //puts the event into the list of events.
     events.push_back(*ToplevelDogScene);
 }
-
-
