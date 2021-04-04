@@ -274,6 +274,9 @@ void Zork::on_southButton_clicked() {
 }
 
 void Zork::on_examineButton_clicked() {
+    if(!interactEnabled){
+        interactChance();
+    }
   scratchSfx.stop();
   scratchSfx.play();
 }
@@ -494,7 +497,6 @@ void Zork::interactChance(){
     {    ui->actButton->setDisabled(false);
     }
 }
-
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
     if (currentEvent->locationRight) {
