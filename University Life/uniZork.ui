@@ -235,7 +235,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/bus-stop.png</pixmap>
+          <pixmap>:/images/bg/day/sunny/bus-stop.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -501,17 +501,15 @@ font:15pt &quot;Graduate&quot;;
 color: rgb(240, 100, 20);
 
 }
-QPushButton:hover{
-      font:18pt &quot;Graduate&quot;;
-color: rgb(255, 132, 24);
-}
-</string>
+QPushButton:hover {
+     background-color: rgb(0, 255, 0);
+ }</string>
       </property>
       <property name="text">
        <string notr="true"/>
       </property>
       <property name="icon">
-       <iconset resource="../resources/resources.qrc">
+       <iconset>
         <normaloff>:/images/misc/scribble.png</normaloff>:/images/misc/scribble.png</iconset>
       </property>
       <property name="iconSize">
@@ -807,7 +805,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/bus-stop.png</pixmap>
+       <pixmap>:/images/bg/day/sunny/bus-stop.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -838,7 +836,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../resources/resources.qrc">:/images/people/Matt.png</pixmap>
+       <pixmap>:/images/people/Matt.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -857,7 +855,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="../resources/resources.qrc">:/images/people/Sarah.png</pixmap>
+       <pixmap>:/images/people/Sarah.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -884,7 +882,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/spiral.png</pixmap>
+     <pixmap>:/images/misc/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -906,7 +904,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/watch.png</pixmap>
+     <pixmap>:/images/misc/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -958,7 +956,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/main.png</pixmap>
+     <pixmap>:/images/misc/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -977,7 +975,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/MAP.png</pixmap>
+     <pixmap>:/images/misc/MAP.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -996,7 +994,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/quit.png</pixmap>
+     <pixmap>:/images/misc/quit.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1106,7 +1104,7 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../resources/resources.qrc">:/images/misc/lasso.png</pixmap>
+     <pixmap>:/images/misc/lasso.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1123,8 +1121,6 @@ QPushButton:hover{
    <zorder>lasso</zorder>
   </widget>
  </widget>
- <resources>
-  <include location="../resources/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
