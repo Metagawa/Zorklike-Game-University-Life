@@ -18,6 +18,7 @@ bool mapIsHidden = true;
 QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 QSound penSfx(":/sfx/pen.wav");
+QSound clickSfx(":/sfx/click.wav");
 bool interactEnabled = false;
 bool examineClicked = false;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork)
@@ -472,6 +473,8 @@ void Zork::on_quitButton_clicked()
 
 void Zork::on_goToExplore_clicked()
 {
+    clickSfx.stop();
+    clickSfx.play();
   ui->stackedWidget->setCurrentIndex(0);
   updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
@@ -512,9 +515,11 @@ void Zork::on_notebookButton_clicked()
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked()
-{
+{    clickSfx.stop();
+     clickSfx.play();
   if (currentEvent->isEnd)
-  {
+  {  penSfx.stop();
+      penSfx.play();
     if (currentEvent->locationLeft)
     {
       uniLife->setLocation(currentEvent->locationLeft);
@@ -592,8 +597,11 @@ void Zork::interactChance()
 }
 void Zork::on_option_2_clicked()
 {
+    clickSfx.stop();
+    clickSfx.play();
   if (currentEvent->isEnd)
-  {
+  {  penSfx.stop();
+      penSfx.play();
     if (currentEvent->locationRight)
     {
       uniLife->setLocation(currentEvent->locationRight);
