@@ -2,6 +2,7 @@
 #define UNIZORK_H
 
 #include "eventlist.h"
+#include "ramblelist.h"
 #include "times.h"
 #include "uniLife.h"
 #include <QMainWindow>
@@ -66,6 +67,8 @@ private:
   string getRoomName(string s);
   string eventExistsText;
   EventList *eventList;
+  RambleList *rambleList;
+  Ramble *currentRamble;
   Event *currentEvent;
   void updateNumberOfOptions();
   void updateLocation();

@@ -16,6 +16,8 @@ SOURCES += \
     event.cpp \
     eventlist.cpp \
     main.cpp \
+    ramble.cpp \
+    ramblelist.cpp \
     times.cpp \
     uniLife.cpp \
     uniZork.cpp
@@ -27,6 +29,8 @@ HEADERS += \
     Room.h \
     event.h \
     eventlist.h \
+    ramble.h \
+    ramblelist.h \
     times.h \
     uniLife.h \
     uniZork.h

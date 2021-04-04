@@ -1,6 +1,8 @@
 #include "uniZork.h"
 #include "event.h"
 #include "eventlist.h"
+#include "ramble.h"
+#include "ramblelist.h"
 #include "ui_uniZork.h"
 #include <QDesktopWidget>
 #include <QMovie>
@@ -21,9 +23,13 @@ QSound penSfx(":/sfx/pen.wav");
 QSound clickSfx(":/sfx/click.wav");
 bool interactEnabled = false;
 bool examineClicked = false;
+
+
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork)
 {
+
   eventList = new EventList();
+  rambleList = new RambleList();
   ui->setupUi(this);
   this->setWindowTitle("University Life");
   ui->quitOverlay->hide();
@@ -506,9 +512,9 @@ void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 
 void Zork::on_notebookButton_clicked()
 {
-      QString randomRamblings = "Note to self: buy more noodles.";
-      updateNotebookDuringEvent(randomRamblings);
-
+    currentRamble = rambleList->getRandomRambles();
+QString currentRambleText= QString::fromStdString(currentRamble->text);
+      updateNotebookDuringEvent(currentRambleText);
   penSfx.stop();
   penSfx.play();
 }
