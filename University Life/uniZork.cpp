@@ -325,7 +325,7 @@ void Zork::on_examineButton_clicked()
     examineClicked = true;
     if (!interactEnabled)
     {
-      QString currentEventText = "You look around but don't see anything interesting...";
+      QString currentEventText = "I looked around but didn't see anything interesting...";
       updateNotebookDuringEvent(currentEventText);
       ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
