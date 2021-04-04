@@ -433,6 +433,10 @@ void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {
   if (currentEvent->isEnd) {
+    if (currentEvent->locationRight) {
+      uniLife->setLocation(currentEvent->locationRight);
+      updateLocation();
+    }
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
     return;
@@ -440,7 +444,6 @@ void Zork::on_option_1_clicked() {
 
   currentEvent = currentEvent->leftOption;
   updateNumberOfOptions();
-  updateLocation();
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
 
@@ -459,30 +462,32 @@ void Zork::updateNumberOfOptions() {
     ui->option_2->show();
   }
 }
-void Zork::updateLocation(){
-    if (currentEvent->locationLeft!=-1||currentEvent->locationRight!=-1){
-    bool isRaining = time->isRaining();
-    if (time->isDayTime() && !isRaining) {
-      ui->imageBackground_2->setPixmap(
-          QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
-    } else if (time->isDayTime() && isRaining) {
-      QMovie *movie =
-          new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
-      ui->imageBackground_2->setMovie(movie);
-      movie->start();
-    } else if (!time->isDayTime() && !isRaining) {
-      ui->imageBackground_2->setPixmap(
-          QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
-    } else if (!time->isDayTime() && isRaining) {
-      QMovie *movie = new QMovie(
-          QString::fromStdString(uniLife->currentRoom->getNightRain()));
-      ui->imageBackground_2->setMovie(movie);
-      movie->start();
-    }
-    }
+void Zork::updateLocation() {
+  bool isRaining = time->isRaining();
+  if (time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
+  } else if (time->isDayTime() && isRaining) {
+    QMovie *movie =
+        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  } else if (!time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
+  } else if (!time->isDayTime() && isRaining) {
+    QMovie *movie = new QMovie(
+        QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  }
 }
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
+    if (currentEvent->locationRight) {
+      uniLife->setLocation(currentEvent->locationRight);
+      updateLocation();
+    }
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
     return;
@@ -490,7 +495,6 @@ void Zork::on_option_2_clicked() {
 
   currentEvent = currentEvent->rightOption;
   updateNumberOfOptions();
-  updateLocation();
 
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);

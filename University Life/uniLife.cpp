@@ -101,7 +101,7 @@ void UniLife::play() {
   cout << endl;
   cout << "end" << endl;
 }
-void UniLife::getLocation(int location) {
+void UniLife::setLocation(int location) {
   switch (location) {
   case -1:
     return;

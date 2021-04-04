@@ -23,7 +23,7 @@ public:
   void createRooms();
   void printHelp();
   void goRoom(Command command);
-  void getLocation(int location);
+  void setLocation(int location);
 };
 
 #endif /*UNILIFE_H_*/
