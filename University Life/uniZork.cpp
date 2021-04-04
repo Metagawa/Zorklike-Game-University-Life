@@ -436,9 +436,9 @@ void Zork::on_option_1_clicked() {
     updateOnChangeStackPaneIndex();
     return;
   }
-  updateNumberOfOptions();
 
   currentEvent = currentEvent->leftOption;
+  updateNumberOfOptions();
 
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
@@ -465,9 +465,9 @@ void Zork::on_option_2_clicked() {
     updateOnChangeStackPaneIndex();
     return;
   }
-  updateNumberOfOptions();
 
   currentEvent = currentEvent->rightOption;
+  updateNumberOfOptions();
 
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
