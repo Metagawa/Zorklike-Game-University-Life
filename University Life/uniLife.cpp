@@ -6,7 +6,6 @@ using namespace std;
 UniLife::UniLife() { createRooms(); }
 
 void UniLife::createRooms() {
-  Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
 
   // Room(string description, string dayClear, string dayRain, string
   // nightClear, string nightRain, int lassoX, int lassoY);
@@ -103,50 +102,49 @@ void UniLife::play() {
   cout << "end" << endl;
 }
 void UniLife::getLocation(int location) {
-    Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
   switch (location) {
   case -1:
-    currentRoom=currentRoom;
-      break;
+    return;
+    break;
   case 0:
-    currentRoom =a;
-          break;
+    currentRoom = a;
+    break;
   case 1:
-    currentRoom =b;
-          break;
+    currentRoom = b;
+    break;
   case 2:
-    currentRoom =c;
-          break;
+    currentRoom = c;
+    break;
   case 3:
-    currentRoom =d;
-          break;
+    currentRoom = d;
+    break;
   case 4:
-    currentRoom =e;
-          break;
+    currentRoom = e;
+    break;
   case 5:
-    currentRoom =f;
-          break;
+    currentRoom = f;
+    break;
   case 6:
-    currentRoom =g;
-          break;
+    currentRoom = g;
+    break;
   case 7:
-    currentRoom =h;
-          break;
+    currentRoom = h;
+    break;
   case 8:
-    currentRoom =i;
-          break;
+    currentRoom = i;
+    break;
   case 9:
-    currentRoom =j;
-          break;
+    currentRoom = j;
+    break;
   case 10:
-    currentRoom =k;
-          break;
+    currentRoom = k;
+    break;
   case 11:
-    currentRoom =l;
-          break;
+    currentRoom = l;
+    break;
   case 12:
-    currentRoom =m;
-          break;
+    currentRoom = m;
+    break;
   }
 }
 
