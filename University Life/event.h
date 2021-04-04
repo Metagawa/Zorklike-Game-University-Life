@@ -9,7 +9,6 @@ public:
         string eventOverText, string eventBeginText,
         string pixmapCharacterResource, bool isEnd, bool isSolo,
         int locationLeft, int locationRight);
-  string getLocation(int location);
   string text;
   string leftOptiontext;
   string rightOptiontext;

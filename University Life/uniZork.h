@@ -65,5 +65,6 @@ private:
   EventList *eventList;
   Event *currentEvent;
   void updateNumberOfOptions();
+  void updateLocation();
 };
 #endif // UNIZORK_H
