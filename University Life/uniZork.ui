@@ -471,10 +471,10 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
       </property>
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>412</x>
         <y>320</y>
-        <width>60</width>
-        <height>50</height>
+        <width>50</width>
+        <height>46</height>
        </rect>
       </property>
       <property name="toolTip">
