@@ -436,6 +436,7 @@ void Zork::on_option_1_clicked() {
     if (currentEvent->locationRight) {
       uniLife->setLocation(currentEvent->locationRight);
       updateLocation();
+      updatePositionAfterMoving();
     }
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
@@ -487,6 +488,7 @@ void Zork::on_option_2_clicked() {
     if (currentEvent->locationRight) {
       uniLife->setLocation(currentEvent->locationRight);
       updateLocation();
+      updatePositionAfterMoving();
     }
     ui->stackedWidget->setCurrentIndex(0);
     updateOnChangeStackPaneIndex();
