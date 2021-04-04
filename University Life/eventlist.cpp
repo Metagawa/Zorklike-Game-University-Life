@@ -189,26 +189,26 @@ void EventList::createMissingDogEvent() {
       new Event("You see a small dog lying in the road",
                 "Ignore it, it's not your problem.",
                 "Run over and see if it's ok", "I helped the doggy out.",
-                "Is there something in the road?", "", false, false, -1, -1);
+                "Is there something in the road?", "", false, false, 0, 1);
 
   // top level's left option
   Event *MidlevelDogSceneA =
       new Event("You ignore the dog, like a heartless monster. You hear him "
                 "whine softly.",
                 " Keep walking.", " He needs help go help him !", "", "", "",
-                false, false, -1, -1);
+                false, false, 2, 3);
 
   // top level's right option
   Event *MidlevelDogSceneB =
       new Event("You ran over and grabbed the dog, he's ok he's just hungry.",
                 "Take him to raps for some food?",
                 "Give him your lunch so you have an excuse to go to raps?", "",
-                "", "", false, false, -1, -1);
+                "", "", false, false, 4, 5);
 
   // Mid level a's left option
   Event *BottomlevelDogSceneA =
       new Event("You've walked out of earshot of the poor whimpering dog.",
-                "Go to raps", "", "", "", "", true, true, -1, -1);
+                "Go to raps", "", "", "", "", true, true, 6, 7);
 
   // Mid level a's right option
   Event *BottomlevelDogSceneB = new Event(

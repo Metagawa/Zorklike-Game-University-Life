@@ -99,6 +99,7 @@ void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
   currentEvent = eventList->getRandomEvent();
   updateNumberOfOptions();
+  updateLocation();
   // sets the event scene stacked widget page
 
   ui->stackedWidget->setCurrentIndex(2);
@@ -439,7 +440,7 @@ void Zork::on_option_1_clicked() {
 
   currentEvent = currentEvent->leftOption;
   updateNumberOfOptions();
-
+  updateLocation();
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
 
@@ -459,6 +460,7 @@ void Zork::updateNumberOfOptions() {
   }
 }
 void Zork::updateLocation(){
+    if (currentEvent->locationLeft!=-1||currentEvent->locationRight!=-1){
     bool isRaining = time->isRaining();
     if (time->isDayTime() && !isRaining) {
       ui->imageBackground_2->setPixmap(
@@ -477,6 +479,7 @@ void Zork::updateLocation(){
       ui->imageBackground_2->setMovie(movie);
       movie->start();
     }
+    }
 }
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
@@ -487,6 +490,7 @@ void Zork::on_option_2_clicked() {
 
   currentEvent = currentEvent->rightOption;
   updateNumberOfOptions();
+  updateLocation();
 
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
