@@ -366,6 +366,7 @@ void Zork::on_mapButton_clicked()
     ui->examineButton->setDisabled(true);
     ui->quitButton->setDisabled(true);
     ui->infoButton->setDisabled(true);
+    ui->notebookButton->hide();
     ui->map->show();
     ui->plainTextEdit->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, 255);background-image: "
@@ -397,6 +398,7 @@ void Zork::on_mapButton_clicked()
     ui->examineButton->setDisabled(false);
     ui->quitButton->setDisabled(false);
     ui->infoButton->setDisabled(false);
+    ui->notebookButton->show();
 
     ui->map->hide();
     mapIsHidden = true;
