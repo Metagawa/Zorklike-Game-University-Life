@@ -458,7 +458,26 @@ void Zork::updateNumberOfOptions() {
     ui->option_2->show();
   }
 }
-
+void Zork::updateLocation(){
+    bool isRaining = time->isRaining();
+    if (time->isDayTime() && !isRaining) {
+      ui->imageBackground_2->setPixmap(
+          QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
+    } else if (time->isDayTime() && isRaining) {
+      QMovie *movie =
+          new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+      ui->imageBackground_2->setMovie(movie);
+      movie->start();
+    } else if (!time->isDayTime() && !isRaining) {
+      ui->imageBackground_2->setPixmap(
+          QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
+    } else if (!time->isDayTime() && isRaining) {
+      QMovie *movie = new QMovie(
+          QString::fromStdString(uniLife->currentRoom->getNightRain()));
+      ui->imageBackground_2->setMovie(movie);
+      movie->start();
+    }
+}
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
     ui->stackedWidget->setCurrentIndex(0);

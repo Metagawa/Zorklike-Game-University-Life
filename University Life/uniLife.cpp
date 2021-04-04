@@ -102,6 +102,53 @@ void UniLife::play() {
   cout << endl;
   cout << "end" << endl;
 }
+void UniLife::getLocation(int location) {
+    Room *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m;
+  switch (location) {
+  case -1:
+    currentRoom=currentRoom;
+      break;
+  case 0:
+    currentRoom =a;
+          break;
+  case 1:
+    currentRoom =b;
+          break;
+  case 2:
+    currentRoom =c;
+          break;
+  case 3:
+    currentRoom =d;
+          break;
+  case 4:
+    currentRoom =e;
+          break;
+  case 5:
+    currentRoom =f;
+          break;
+  case 6:
+    currentRoom =g;
+          break;
+  case 7:
+    currentRoom =h;
+          break;
+  case 8:
+    currentRoom =i;
+          break;
+  case 9:
+    currentRoom =j;
+          break;
+  case 10:
+    currentRoom =k;
+          break;
+  case 11:
+    currentRoom =l;
+          break;
+  case 12:
+    currentRoom =m;
+          break;
+  }
+}
 
 /**
  * Given a command, process (that is: execute) the command.
