@@ -162,6 +162,43 @@ padding-left: 10;
          <bool>false</bool>
         </property>
        </widget>
+       <widget class="QPushButton" name="notebookButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>29</x>
+          <y>2</y>
+          <width>421</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+      background-color: rgba(0, 0, 255, 0);
+ border:0px;
+font:15pt &quot;Graduate&quot;;
+color: rgb(240, 100, 20);
+
+}
+QPushButton:hover{
+      font:18pt &quot;Graduate&quot;;
+color: rgb(255, 132, 24);
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QFrame" name="frame">

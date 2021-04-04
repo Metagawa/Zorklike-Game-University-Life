@@ -52,6 +52,8 @@ private slots:
 
   void on_option_2_clicked();
 
+  void on_notebookButton_clicked();
+
 private:
   Ui::Zork *ui;
   UniLife *uniLife;

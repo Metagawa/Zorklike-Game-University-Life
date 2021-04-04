@@ -61,5 +61,6 @@
         <file>images/bg/night/rainy/raps.gif</file>
         <file>images/bg/night/rainy/student-union.gif</file>
         <file>images/bg/day/sunny/shopping-area.jpg</file>
+        <file>sfx/pen.wav</file>
     </qresource>
 </RCC>

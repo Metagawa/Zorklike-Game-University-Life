@@ -17,6 +17,7 @@ using namespace std;
 bool mapIsHidden = true;
 QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
+QSound penSfx(":/sfx/pen.wav");
 bool interactEnabled = false;
 bool examineClicked = false;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork)
@@ -185,7 +186,7 @@ void Zork::updatePositionAfterMoving()
     hlayout->setMargin(0);
     // ui->tabWidget->widget(time->getDayNum())->show();
     int tabIndex = time->getDayNum();
-    QPlainTextEdit *pte = new QPlainTextEdit();
+    QPlainTextEdit *pte = new QPlainTextEdit(this);
 
     pte->setStyleSheet(
         "border: 0;background-color: rgb(255, 255, "
@@ -499,6 +500,15 @@ void Zork::on_quitCancel_clicked()
 }
 
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
+
+void Zork::on_notebookButton_clicked()
+{
+      QString randomRamblings = "Note to self: buy more noodles.";
+      updateNotebookDuringEvent(randomRamblings);
+
+  penSfx.stop();
+  penSfx.play();
+}
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked()
