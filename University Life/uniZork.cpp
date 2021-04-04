@@ -17,7 +17,8 @@ using namespace std;
 bool mapIsHidden = true;
 QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
-
+bool interactEnabled = false;
+bool examineClicked = false;
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   eventList = new EventList();
   ui->setupUi(this);
@@ -148,6 +149,7 @@ void Zork::eventStart() {
 Zork::~Zork() { delete ui; }
 
 void Zork::updatePositionAfterMoving() {
+    examineClicked=false;
     ui->actButton->setDisabled(true);
 interactChance();
   ui->tabWidget->setCurrentIndex(time->getDayNum());
@@ -273,12 +275,24 @@ void Zork::on_southButton_clicked() {
 }
 
 void Zork::on_examineButton_clicked() {
-    if(!interactEnabled){
+    if(!interactEnabled&&!examineClicked){
         interactChance();
+          examineClicked=true;
+          if(!interactEnabled){
+          QString currentEventText="You look around but don't see anything interesting...";
+  updateNotebookDuringEvent(currentEventText);
+  ui->plainTextEdit->moveCursor(QTextCursor::End);
+          } else {
+              QString currentEventText="On closer inspection, It looked like something was happening...";
+              updateNotebookDuringEvent(currentEventText);
+              ui->plainTextEdit->moveCursor(QTextCursor::End);
+
+    }
     }
 
   scratchSfx.stop();
   scratchSfx.play();
+
 }
 
 void Zork::on_infoButton_clicked() {
@@ -492,7 +506,7 @@ void Zork::updateLocation() {
   }
 }
 void Zork::interactChance(){
-    bool interactEnabled = (rand() % 100) < 25;
+    interactEnabled = (rand() % 100) < 25;
     if (interactEnabled)
     {    ui->actButton->setDisabled(false);
         eventExistsText = "It looked like something was going on...\n";
