@@ -3,25 +3,19 @@
 using namespace std;
 // headnode constructor
 Event::Event(string text, string leftOptiontext, string rightOptiontext,
-             string eventOverText, string eventBeginText, int location,
-             string pixmapCharacterResource, bool isEnd) {
+             string eventOverText, string eventBeginText,
+             string pixmapCharacterResource, bool isEnd, bool isSolo,
+             int locationLeft, int locationRight) {
   this->text = text;
   this->leftOptiontext = leftOptiontext;
   this->rightOptiontext = rightOptiontext;
   this->eventOverText = eventOverText;
   this->eventBeginText = eventBeginText;
-  this->location = location;
   this->pixmapCharacterResource = pixmapCharacterResource;
   this->isEnd = isEnd;
-}
-
-// childnode constructor
-Event::Event(string text, string leftOptiontext, string rightOptiontext,
-             bool isEnd) {
-  this->text = text;
-  this->leftOptiontext = leftOptiontext;
-  this->rightOptiontext = rightOptiontext;
-  this->isEnd = isEnd;
+  this->isSolo = isSolo;
+  this->locationLeft = locationLeft;
+  this->locationRight = locationRight;
 }
 
 string Event::getLocation(int location) {

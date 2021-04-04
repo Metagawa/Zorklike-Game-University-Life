@@ -9,6 +9,9 @@ public:
   EventList();
   vector<Event> events;
   Event *getRandomEvent();
+
+private:
+  void createMissingDogEvent();
 };
 
 #endif // EVENTLIST_H
