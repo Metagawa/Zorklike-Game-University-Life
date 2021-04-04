@@ -427,6 +427,7 @@ void Zork::on_quitCancel_clicked() {
   ui->infoButton->setDisabled(false);
   ui->quitOverlay->hide();
   ui->quitSheet->hide();
+  ui->mapButton->setDisabled(false);
 }
 
 void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
