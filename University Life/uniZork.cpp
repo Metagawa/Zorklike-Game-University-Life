@@ -98,11 +98,7 @@ void Zork::updateDisabledDirections() {
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
   currentEvent = eventList->getRandomEvent();
-  if (currentEvent->isSolo) {
-    ui->option_2->hide();
-  } else {
-    ui->option_2->show();
-  }
+  updateNumberOfOptions();
   // sets the event scene stacked widget page
 
   ui->stackedWidget->setCurrentIndex(2);
@@ -440,11 +436,7 @@ void Zork::on_option_1_clicked() {
     updateOnChangeStackPaneIndex();
     return;
   }
-  if (currentEvent->isSolo) {
-    ui->option_2->hide();
-  } else {
-    ui->option_2->show();
-  }
+  updateNumberOfOptions();
 
   currentEvent = currentEvent->leftOption;
 
@@ -459,6 +451,13 @@ void Zork::on_option_1_clicked() {
       QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 }
+void Zork::updateNumberOfOptions() {
+  if (currentEvent->isSolo) {
+    ui->option_2->hide();
+  } else {
+    ui->option_2->show();
+  }
+}
 
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
@@ -466,11 +465,8 @@ void Zork::on_option_2_clicked() {
     updateOnChangeStackPaneIndex();
     return;
   }
-  if (currentEvent->isSolo) {
-    ui->option_2->hide();
-  } else {
-    ui->option_2->show();
-  }
+  updateNumberOfOptions();
+
   currentEvent = currentEvent->rightOption;
 
   QString currentEventText = QString::fromStdString(currentEvent->text);
