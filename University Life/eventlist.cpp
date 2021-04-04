@@ -6,7 +6,7 @@ EventList::EventList() {
       new Event("You see a small dog lying in the road",
                 "Ignore it, it's not your problem.",
                 "Run over and see if it's ok", "I helped the doggy out.",
-                "Is there something in the road?", "", false, false, -1, -1);
+                "Is there something in the road?", "", false, true, -1, -1);
 
   // top level's left option
   Event *MidlevelDogSceneA =
@@ -25,7 +25,7 @@ EventList::EventList() {
   // Mid level a's left option
   Event *BottomlevelDogSceneA =
       new Event("You've walked out of earshot of the poor whimpering dog.",
-                "Go to raps", "", "", "", "", true, true, -1, -1);
+                "Go to raps", "", "", "", "", true, false, -1, -1);
 
   // Mid level a's right option
   Event *BottomlevelDogSceneB = new Event(
