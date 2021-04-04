@@ -14,7 +14,7 @@ EventList::EventList()
 				" ",  //EventOver Notebook text
 				" ",  //EventBegin Notebook text
 				0,    //Location flag
-				" ",  //
+                " ",  //Character sprite flag
 				false //Is this the last scene?
 				);
 
