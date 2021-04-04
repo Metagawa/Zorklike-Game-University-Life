@@ -54,7 +54,7 @@ EventList::EventList()
 
 
 	//Mid level b's left option leads to...
-  	Event *BottomlevelDogSceneC =
+    Event *BottomlevelSceneC =
 	  new Event(" ",  //Text box content
 				" ",  //First choice  (leads to nothing)
 				" ",  //Second choice (leads to nothing)
@@ -62,7 +62,7 @@ EventList::EventList()
 				);
 
 	//Mid level b's right option leads to...
-  	Event *BottomlevelDogSceneD =
+    Event *BottomlevelSceneD =
 	  new Event(" ",  //Text box content
 				" ",  //First choice  (leads to nothing)
 				" ",  //Second choice (leads to nothing)
@@ -72,21 +72,21 @@ EventList::EventList()
 //Toplevel connections to midlevel
 
   	//connects the top level's first option with MidLevelA
-  	ToplevelDogScene->leftOption = MidlevelDogSceneA;
+    ToplevelScene->leftOption = MidlevelSceneA;
   	//connects the top level's second option with MidLevelB
-  	ToplevelDogScene->rightOption = MidlevelDogSceneB;
+    ToplevelScene->rightOption = MidlevelSceneB;
 -----------------------------------------------------------
 
   //Midlevel connections to bottomlevel
 
 	//connects MidLevelA's first option with BottomLevelA
-  	MidlevelDogSceneA->leftOption = BottomlevelDogSceneA;
+    MidlevelSceneA->leftOption = BottomlevelSceneA;
 	//connects MidLevelA's second option with BottomLevelB
-  	MidlevelDogSceneA->rightOption = BottomlevelDogSceneB;
+    MidlevelSceneA->rightOption = BottomlevelSceneB;
 	//connects MidLevelB's first option with BottomLevelC
-  	MidlevelDogSceneB->leftOption = BottomlevelDogSceneC;
+    MidlevelSceneB->leftOption = BottomlevelSceneC;
 	//connects MidLevelB's second option with BottomLevelD
-  	MidlevelDogSceneB->rightOption = BottomlevelDogSceneD;
+    MidlevelSceneB->rightOption = BottomlevelSceneD;
 -----------------------------------------------------------
 
   //puts the event into the list of events.
@@ -162,6 +162,10 @@ EventList::EventList()
 
 	//puts the event into the list of events.
 	events.push_back(*ToplevelDogScene);
+
+    /*-----------------------------------------------------------------------------------*/
+
+
 }
 
 Event *EventList::getRandomEvent()
