@@ -66,5 +66,6 @@ private:
   Event *currentEvent;
   void updateNumberOfOptions();
   void updateLocation();
+  void updateNotebookDuringEvent(QString text);
 };
 #endif // UNIZORK_H

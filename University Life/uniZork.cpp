@@ -109,6 +109,7 @@ void Zork::eventStart() {
   // code and needs to be replaced for proper functionality.
   QString currentEventText = QString::fromStdString(currentEvent->text);
   ui->eventText->setPlainText(currentEventText);
+  updateNotebookDuringEvent(currentEventText);
 
   // sets options equal to event options
   // QString::fromStdString(uniLife->currentRoom->longDescription()); is dummy
@@ -455,6 +456,7 @@ void Zork::on_option_1_clicked() {
   QString currentEventOption2 =
       QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
+  updateNotebookDuringEvent(currentEventText);
 }
 void Zork::updateNumberOfOptions() {
   if (currentEvent->isSolo) {
@@ -508,4 +510,22 @@ void Zork::on_option_2_clicked() {
   QString currentEventOption2 =
       QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
+  updateNotebookDuringEvent(currentEventText);
+}
+
+void Zork::updateNotebookDuringEvent(QString currentEventText) {
+  if (time->getDayNum() == 0) {
+    QString currentPlainText = ui->plainTextEdit->toPlainText() +
+                               QString::fromStdString("\n") + currentEventText;
+
+    ui->plainTextEdit->setPlainText(currentPlainText);
+
+  } else {
+    QPlainTextEdit *qpte =
+        ui->tabWidget->currentWidget()->findChild<QPlainTextEdit *>();
+
+    QString currentPlainText =
+        qpte->toPlainText() + QString::fromStdString("\n") + currentEventText;
+    qpte->setPlainText(currentPlainText);
+  }
 }
