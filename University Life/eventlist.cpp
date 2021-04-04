@@ -176,6 +176,7 @@ MidlevelSceneB->rightOption = BottomlevelSceneD;
     // puts the event into the list of events.
 
     * /*/
+  createMissingDogEvent();
 }
 
 Event *EventList::getRandomEvent() {
