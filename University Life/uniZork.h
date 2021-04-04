@@ -62,6 +62,7 @@ private:
   void updateDisabledDirections();
   void eventStart();
   string getRoomName(string s);
+  string eventExistsText;
   EventList *eventList;
   Event *currentEvent;
   void updateNumberOfOptions();

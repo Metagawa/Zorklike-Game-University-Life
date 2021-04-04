@@ -150,7 +150,6 @@ Zork::~Zork() { delete ui; }
 void Zork::updatePositionAfterMoving() {
     ui->actButton->setDisabled(true);
 interactChance();
-
   ui->tabWidget->setCurrentIndex(time->getDayNum());
   bool itsABrandNewDay = time->advanceTime();
   if (itsABrandNewDay) {
@@ -189,7 +188,7 @@ interactChance();
   if (time->getDayNum() == 0) {
     QString currentPlainText =
         ui->plainTextEdit->toPlainText() + QString::fromStdString("\n") +
-        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n" + eventExistsText);
 
     ui->plainTextEdit->setPlainText(currentPlainText);
     // Puts the scroll bar to the bottom as setting the text moves it back to
@@ -203,7 +202,7 @@ interactChance();
     // qobject_cast<QPlainTextEdit *>(ui->tabWidget->currentWidget());
     QString currentPlainText =
         qpte->toPlainText() + QString::fromStdString("\n") +
-        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n");
+        QString::fromStdString(uniLife->currentRoom->longDescription() + "\n" + eventExistsText);
     qpte->setPlainText(currentPlainText);
     qpte->moveCursor(QTextCursor::End);
     qpte->ensureCursorVisible();
@@ -277,6 +276,7 @@ void Zork::on_examineButton_clicked() {
     if(!interactEnabled){
         interactChance();
     }
+
   scratchSfx.stop();
   scratchSfx.play();
 }
@@ -495,7 +495,9 @@ void Zork::interactChance(){
     bool interactEnabled = (rand() % 100) < 25;
     if (interactEnabled)
     {    ui->actButton->setDisabled(false);
+        eventExistsText = "It looked like something was going on...\n";
     }
+    else eventExistsText = "";
 }
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
