@@ -148,6 +148,8 @@ void Zork::eventStart() {
 Zork::~Zork() { delete ui; }
 
 void Zork::updatePositionAfterMoving() {
+    ui->actButton->setDisabled(true);
+interactChance();
 
   ui->tabWidget->setCurrentIndex(time->getDayNum());
   bool itsABrandNewDay = time->advanceTime();
@@ -486,6 +488,13 @@ void Zork::updateLocation() {
     movie->start();
   }
 }
+void Zork::interactChance(){
+    bool interactEnabled = (rand() % 100) < 25;
+    if (interactEnabled)
+    {    ui->actButton->setDisabled(false);
+    }
+}
+
 void Zork::on_option_2_clicked() {
   if (currentEvent->isEnd) {
     if (currentEvent->locationRight) {

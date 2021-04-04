@@ -67,5 +67,7 @@ private:
   void updateNumberOfOptions();
   void updateLocation();
   void updateNotebookDuringEvent(QString text);
+  void interactChance();
+  bool interactEnabled=false;
 };
 #endif // UNIZORK_H
