@@ -235,7 +235,7 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>:/images/bg/day/sunny/bus-stop.png</pixmap>
+          <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/bus-stop.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -471,9 +471,9 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
       </property>
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>400</x>
         <y>320</y>
-        <width>50</width>
+        <width>60</width>
         <height>50</height>
        </rect>
       </property>
@@ -495,14 +495,13 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
       <property name="styleSheet">
        <string notr="true">
 QPushButton{
-  border-image: url(:/images/bg/day/sunny/dorms.png) 0 0 0 0 stretch stretch;
+  border-image: url(:/images/misc/scribble.png) 0 0 0 0 stretch stretch;
  border:0px;
-font:15pt &quot;Graduate&quot;;
-color: rgb(240, 100, 20);
+	background-color: rgba(255, 255, 255, 0);
 
 }
 QPushButton:hover {
-     border-image: url(:/images/bg/day/sunny/bus-stop.png) 0 0 0 0 stretch stretch;
+     border-image: url(:/images/misc/scribble_hover.png) 0 0 0 0 stretch stretch;
  }</string>
       </property>
       <property name="text">
@@ -801,7 +800,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/images/bg/day/sunny/bus-stop.png</pixmap>
+       <pixmap resource="../resources/resources.qrc">:/images/bg/day/sunny/bus-stop.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -832,7 +831,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/images/people/Matt.png</pixmap>
+       <pixmap resource="../resources/resources.qrc">:/images/people/Matt.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -851,7 +850,7 @@ color: rgb(255, 132, 24);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/images/people/Sarah.png</pixmap>
+       <pixmap resource="../resources/resources.qrc">:/images/people/Sarah.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -878,7 +877,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/spiral.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/spiral.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -900,7 +899,7 @@ color: rgb(255, 132, 24);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/watch.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/watch.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -952,7 +951,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/main.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/main.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -971,7 +970,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/MAP.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/MAP.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -990,7 +989,7 @@ color: rgb(170, 0, 0);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/quit.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/quit.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1100,7 +1099,7 @@ QPushButton:hover{
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/images/misc/lasso.png</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/misc/lasso.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1117,6 +1116,8 @@ QPushButton:hover{
    <zorder>lasso</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

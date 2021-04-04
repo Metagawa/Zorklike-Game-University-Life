@@ -64,5 +64,6 @@
         <file>sfx/pen.wav</file>
         <file>sfx/click.wav</file>
         <file>images/misc/scribble.png</file>
+        <file>images/misc/scribble_hover.png</file>
     </qresource>
 </RCC>
