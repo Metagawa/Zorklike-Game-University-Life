@@ -10,6 +10,8 @@ public:
   RambleList();
   vector<Ramble> rambles;
   Ramble *getRandomRambles();
+  ~RambleList();
+
 
 private:
 };

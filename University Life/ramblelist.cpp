@@ -29,3 +29,6 @@ Ramble *RambleList::getRandomRambles()
     int randomNumber = (rand() % rambles.size());
     return &rambles[randomNumber];
 }
+
+RambleList::~RambleList() { rambles.clear(); }
+
