@@ -1,6 +1,7 @@
 #include "times.h"
 #include <string>
 #define NUM_HOURS_IN_DAY 24
+
 using namespace std;
 Times::Times() {
   setTime(9);

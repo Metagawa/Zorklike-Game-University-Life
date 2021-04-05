@@ -24,8 +24,8 @@ public:
   void operator++(int);
 
 private:
-  int dayNum;
-  int time;
+  unsigned int time:5;
+   unsigned int dayNum:3;
   bool rain;
 };
 
