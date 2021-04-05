@@ -11,6 +11,7 @@ Times::Times() {
 int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
 bool Times::advanceTime() {
+  time += 1;
   if (time >= NUM_HOURS_IN_DAY) {
     rain = (rand() % 2) != 0;
     dayNum++;
