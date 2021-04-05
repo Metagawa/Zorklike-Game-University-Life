@@ -12,14 +12,19 @@ public:
   string text;
   string leftOptiontext;
   string rightOptiontext;
-  Event *leftOption;
-  Event *rightOption;
+
   int locationLeft;
   int locationRight;
   bool isSolo;
   bool isEnd;
   string pixmapCharacterResource;
   ~Event();
+  friend class Zork;
+  friend class EventList;
+
+private:
+  Event *leftOption;
+  Event *rightOption;
 };
 
 #endif // EVENT_H

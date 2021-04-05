@@ -16,7 +16,6 @@ class Zork;
 QT_END_NAMESPACE
 class Zork : public QMainWindow {
   Q_OBJECT
-    friend Event *getRandomEvent();
 public:
   Zork(QWidget *parent = nullptr);
   ~Zork();
@@ -74,6 +73,6 @@ private:
   void updateLocation();
   void updateNotebookDuringEvent(QString text);
   void interactChance();
-  bool interactEnabled=false;
+  bool interactEnabled = false;
 };
 #endif // UNIZORK_H
