@@ -1,5 +1,6 @@
 #include "eventlist.h"
 #include "event.h"
+#include <algorithm>
 #include <vector>
 #define getRand(a) ((rand() % a))
 EventList::EventList() {
@@ -182,3 +183,9 @@ void EventList::createMissingDogEvent() {
 }
 
 EventList::~EventList() { events.clear(); }
+
+vector<Event> EventList::getShuffledDeepCopy() {
+  vector<Event> copy = events; // deep copy, unlike java, All Events copied
+  random_shuffle(copy.begin(), copy.end());
+  return copy;
+}

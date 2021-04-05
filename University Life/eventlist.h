@@ -10,6 +10,7 @@ public:
   vector<Event> events;
   Event *getRandomEvent();
   ~EventList();
+  vector<Event> getShuffledDeepCopy();
 
 private:
   void createMissingDogEvent();
