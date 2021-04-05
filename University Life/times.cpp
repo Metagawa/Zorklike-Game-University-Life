@@ -59,4 +59,4 @@ string Times::getDayString() { return getDayString(getDayNum()); }
 void Times::setTime(int newtime) { this->time = newtime; }
 void Times::setDayNum(int newday) { this->dayNum = newday; }
 
-void Times::operator++() { time += 1; }
+void Times::operator++(int) { time = time + 1; }

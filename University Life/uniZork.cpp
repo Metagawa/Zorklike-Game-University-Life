@@ -39,7 +39,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   updateOnChangeStackPaneIndex();
   uniLife = new UniLife();
   time = new Times();
-
   textDayList = new vector<string>({"", "", "", "", "", "", ""});
   QFontDatabase::addApplicationFont(":/barbies-jalous-sisters.handwriting.ttf");
   QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
