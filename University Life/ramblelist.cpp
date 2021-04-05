@@ -19,7 +19,7 @@ RambleList::RambleList()
     Ramble *ramble5 = new Ramble("I keep having nightmares that I'm looking for a room in the main building but I somehow keep ending up at Raps no matter which way I turn.");
     rambles.push_back(*ramble5);
 
-    Ramble *ramble6 = new Ramble("Raps is mad, you get in line with a coffee and a wrap then by the time you get to the till you have a bag of Gummis, a protein bar, a pack of mints and a bottle of coke.");
+    Ramble *ramble6 = new Ramble("Raps is mad, you get in line with a coffee and a wrap then by the time you get to the till you have a bag of Gummis, a protein bar, a pack of mints and a bottle of chocolate milk.");
     rambles.push_back(*ramble6);
 
 }
