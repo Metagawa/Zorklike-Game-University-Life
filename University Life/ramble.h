@@ -7,6 +7,7 @@ using namespace std;
 class Ramble {
 public:
   Ramble(string text);
+  Ramble(Ramble &sample);
   string text;
 };
 
