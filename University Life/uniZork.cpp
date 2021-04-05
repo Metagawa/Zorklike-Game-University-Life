@@ -1,4 +1,5 @@
 #include "uniZork.h"
+#include "character.h"
 #include "event.h"
 #include "eventlist.h"
 #include "ramble.h"
@@ -37,7 +38,7 @@ template <typename T> void debug(const T x) {
   debugMini(x);
 }
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
-
+  tim = new Character("Tim");
   eventList = new EventList();
   rambleList = new RambleList();
   ui->setupUi(this);

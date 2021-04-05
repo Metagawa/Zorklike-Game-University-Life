@@ -1,6 +1,7 @@
 #ifndef UNIZORK_H
 #define UNIZORK_H
 
+#include "character.h"
 #include "eventlist.h"
 #include "ramblelist.h"
 #include "times.h"
@@ -74,5 +75,6 @@ private:
   void updateNotebookDuringEvent(QString text);
   void interactChance();
   bool interactEnabled = false;
+  Character *tim;
 };
 #endif // UNIZORK_H
