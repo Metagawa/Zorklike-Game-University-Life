@@ -3,13 +3,12 @@
 #include "ramble.h"
 #include <iostream>
 
-class RambleList
-{
+class RambleList {
 public:
   RambleList();
   Ramble *getRandomRambles();
   ~RambleList();
-  Ramble *arrayrambles;
+  Ramble *arrayrambles[20];
 
 private:
 };
