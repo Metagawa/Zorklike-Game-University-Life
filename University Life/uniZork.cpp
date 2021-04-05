@@ -21,9 +21,18 @@ QSound scratchSfx(":/sfx/scratch.wav");
 QSound crumpleSfx(":/sfx/crumple.wav");
 QSound penSfx(":/sfx/pen.wav");
 QSound clickSfx(":/sfx/click.wav");
-#define playSound(a) (a.stop(),a.play())
+#define playSound(a) (a.stop(), a.play())
 bool interactEnabled = false;
 bool examineClicked = false;
+
+template <typename T> void debug(const T &x) {
+  cout << "This is the line number " << __LINE__;
+  cout << " of file " << __FILE__ << ".\n";
+  cout << "Its compilation began " << __DATE__;
+  cout << " at " << __TIME__ << ".\n";
+  cout << "The compiler gives a __cplusplus value of " << __cplusplus;
+  cout << "The string value of X is " << x << endl;
+}
 
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
 
@@ -42,9 +51,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   time = new Times();
   textDayList = new vector<string>({"", "", "", "", "", "", ""});
   QFontDatabase::addApplicationFont(":/barbies-jalous-sisters.handwriting.ttf");
-  QFont grafiti("Barbies Jalous Sisters", 14, QFont::Normal);
   QFontDatabase::addApplicationFont("  :/fonts/Graduate-Regular.ttf");
-  QFont graduate("Graduate", 14, QFont::Normal);
 
   string welcomeText = "Welcome to University Life!\n\n";
   (*textDayList)[0] = (welcomeText);
@@ -60,7 +67,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
   ui->polaroidLabel->setText(
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
-
+  debug(&welcomeText);
   // update disable buttons
   updateDisabledDirections();
 }
@@ -250,21 +257,21 @@ void Zork::updatePositionAfterMoving() {
 }
 
 void Zork::on_northButton_clicked() {
-    playSound(scratchSfx);
+  playSound(scratchSfx);
   Command *northCommand = new Command("go", "north");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_eastButton_clicked() {
-    playSound(scratchSfx);
+  playSound(scratchSfx);
   Command *northCommand = new Command("go", "east");
   uniLife->processCommand(*northCommand);
   updatePositionAfterMoving();
 }
 
 void Zork::on_westButton_clicked() {
-    playSound(scratchSfx);
+  playSound(scratchSfx);
 
   Command *northCommand = new Command("go", "west");
   uniLife->processCommand(*northCommand);
@@ -272,7 +279,7 @@ void Zork::on_westButton_clicked() {
 }
 
 void Zork::on_southButton_clicked() {
-    playSound(scratchSfx);
+  playSound(scratchSfx);
 
   Command *northCommand = new Command("go", "south");
   uniLife->processCommand(*northCommand);
@@ -297,17 +304,13 @@ void Zork::on_examineButton_clicked() {
   }
 
   playSound(scratchSfx);
-
 }
 
-void Zork::on_infoButton_clicked() {
-    playSound(scratchSfx);
-
-}
+void Zork::on_infoButton_clicked() { playSound(scratchSfx); }
 
 void Zork::on_mapButton_clicked() {
 
-    playSound(scratchSfx);
+  playSound(scratchSfx);
 
   if (mapIsHidden) {
     ui->lasso->show();
@@ -405,13 +408,13 @@ void Zork::on_mapButton_clicked() {
 }
 
 void Zork::on_actButton_clicked() {
-    playSound(scratchSfx);
+  playSound(scratchSfx);
 
   eventStart();
 }
 
 void Zork::on_quitButton_clicked() {
-    playSound(crumpleSfx);
+  playSound(crumpleSfx);
 
   // disable all buttons
   ui->northButton->setDisabled(true);
@@ -429,7 +432,7 @@ void Zork::on_quitButton_clicked() {
 }
 
 void Zork::on_goToExplore_clicked() {
-    playSound(clickSfx);
+  playSound(clickSfx);
 
   ui->stackedWidget->setCurrentIndex(0);
   updatePositionAfterMoving();
@@ -437,14 +440,14 @@ void Zork::on_goToExplore_clicked() {
 }
 
 void Zork::on_quitButton_2_clicked() {
-    playSound(crumpleSfx);
+  playSound(crumpleSfx);
 
   ui->quitOverlay->show();
   ui->quitSheet->show();
 }
 
 void Zork::on_quitCancel_clicked() {
-    playSound(crumpleSfx);
+  playSound(crumpleSfx);
 
   updateDisabledDirections();
   ui->actButton->setDisabled(false);
@@ -463,15 +466,14 @@ void Zork::on_notebookButton_clicked() {
   QString currentRambleText = QString::fromStdString(currentRamble->text);
   updateNotebookDuringEvent(currentRambleText);
   playSound(penSfx);
-
 }
 
 // for debug ONLY/ replace with a call to an event outcome
 void Zork::on_option_1_clicked() {
-    playSound(clickSfx);
+  playSound(clickSfx);
 
   if (currentEvent->isEnd) {
-      playSound(penSfx);
+    playSound(penSfx);
 
     if (currentEvent->locationLeft) {
       uniLife->setLocation(currentEvent->locationLeft);
@@ -535,9 +537,9 @@ void Zork::interactChance() {
     eventExistsText = "";
 }
 void Zork::on_option_2_clicked() {
- playSound(clickSfx);
+  playSound(clickSfx);
   if (currentEvent->isEnd) {
-      playSound(penSfx);
+    playSound(penSfx);
     if (currentEvent->locationRight) {
       uniLife->setLocation(currentEvent->locationRight);
       updateLocation();
