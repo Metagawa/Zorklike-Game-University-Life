@@ -2,6 +2,9 @@
 #include "ramble.h"
 #include "ramblelist.h"
 #include <stdio.h>
+#define ARRAY_SIZE 20
+int arrayrambles[ARRAY_SIZE];
+#define getRand(a)  ((rand() % a))
 RambleList::RambleList() {
   Ramble *ramble1 = new Ramble("Not to self: Buy some noodles.");
   arrayrambles[0] = ramble1;
@@ -53,7 +56,7 @@ RambleList::RambleList() {
 }
 
 Ramble *RambleList::getRandomRambles() {
-  int randomNumber = (rand() % 20);
+  int randomNumber = getRand(ARRAY_SIZE);
   return arrayrambles[randomNumber];
 }
 RambleList::~RambleList() {  }
