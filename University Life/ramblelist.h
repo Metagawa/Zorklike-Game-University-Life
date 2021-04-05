@@ -1,17 +1,15 @@
 #ifndef RAMBLELIST_H
 #define RAMBLELIST_H
 #include "ramble.h"
-#include <vector>
+#include <iostream>
 
-using std::vector;
 class RambleList
 {
 public:
   RambleList();
-  vector<Ramble> rambles;
   Ramble *getRandomRambles();
   ~RambleList();
-
+  Ramble *arrayrambles;
 
 private:
 };
