@@ -1,6 +1,7 @@
 #include "eventlist.h"
 #include "event.h"
 #include <vector>
+#define getRand(a) ((rand() % a))
 EventList::EventList() {
 
   // REMEMBER TO ADD EVENT CALL HERE
@@ -11,7 +12,7 @@ EventList::EventList() {
 }
 
 Event *EventList::getRandomEvent() {
-  int randomNumber = (rand() % events.size());
+  int randomNumber = getRand(events.size());
   return &events[randomNumber];
 }
 
