@@ -60,7 +60,7 @@
      </size>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="exploreScene">
      <widget class="QTabWidget" name="tabWidget">
@@ -471,10 +471,10 @@ QPushButton:hover{font:30pt &quot;Barbies Jalous Sisters&quot;;color: rgb(35, 35
       </property>
       <property name="geometry">
        <rect>
-        <x>412</x>
-        <y>320</y>
-        <width>50</width>
-        <height>46</height>
+        <x>435</x>
+        <y>348</y>
+        <width>33</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="toolTip">
@@ -822,7 +822,7 @@ color: rgb(255, 132, 24);
       <property name="geometry">
        <rect>
         <x>600</x>
-        <y>17</y>
+        <y>18</y>
         <width>201</width>
         <height>251</height>
        </rect>
@@ -841,7 +841,7 @@ color: rgb(255, 132, 24);
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>17</y>
+        <y>18</y>
         <width>181</width>
         <height>251</height>
        </rect>
@@ -979,7 +979,7 @@ color: rgb(170, 0, 0);
    <widget class="QLabel" name="quitSheet">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>846</x>
       <y>0</y>
       <width>846</width>
       <height>385</height>

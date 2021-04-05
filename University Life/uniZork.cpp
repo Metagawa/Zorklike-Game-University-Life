@@ -143,6 +143,8 @@ void Zork::eventStart()
       QString::fromStdString(currentEvent->rightOptiontext);
   ui->option_2->setText(currentEventOption2);
 
+  ui->person_2->setPixmap(
+      QPixmap(QString::fromStdString(currentEvent->pixmapCharacterResource)));
   // update background image based on room
   bool isRaining = time->isRaining();
   if (time->isDayTime() && !isRaining)
