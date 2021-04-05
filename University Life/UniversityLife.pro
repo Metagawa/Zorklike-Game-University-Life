@@ -13,9 +13,11 @@ SOURCES += \
     CommandWords.cpp \
     Parser.cpp \
     Room.cpp \
+    character.cpp \
     event.cpp \
     eventlist.cpp \
     main.cpp \
+    person.cpp \
     ramble.cpp \
     ramblelist.cpp \
     times.cpp \
@@ -27,8 +29,10 @@ HEADERS += \
     CommandWords.h \
     Parser.cpp \
     Room.h \
+    character.h \
     event.h \
     eventlist.h \
+    person.h \
     ramble.h \
     ramblelist.h \
     times.h \
