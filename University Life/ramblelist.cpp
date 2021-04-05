@@ -5,6 +5,7 @@
 #define ARRAY_SIZE 20
 int arrayrambles[ARRAY_SIZE];
 #define getRand(a)  ((rand() % a))
+
 RambleList::RambleList() {
   Ramble *ramble1 = new Ramble("Not to self: Buy some noodles.");
   arrayrambles[0] = ramble1;
