@@ -531,10 +531,9 @@ void Zork::updateLocation() {
   }
 }
 void Zork::interactChance() {
-  bool chance = (rand() % 100) < 25;
+  interactEnabled = (rand() % 100) < 25;
 
   // interactEnabled is a reference to chance.
-  bool &interactEnabled = chance;
   if (interactEnabled) {
     ui->actButton->setDisabled(false);
     eventExistsText = "It looked like something was going on...\n";
