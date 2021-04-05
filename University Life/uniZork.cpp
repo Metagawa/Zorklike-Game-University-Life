@@ -25,12 +25,15 @@ QSound clickSfx(":/sfx/click.wav");
 bool interactEnabled = false;
 bool examineClicked = false;
 
-template <typename T> void debug(const T &x) {
-  cout << "This is the line number " << __LINE__;
+template <typename T> void debug(const T x) {
   cout << " of file " << __FILE__ << ".\n";
   cout << "Its compilation began " << __DATE__;
   cout << " at " << __TIME__ << ".\n";
   cout << "The compiler gives a __cplusplus value of " << __cplusplus;
+  cout << "The string value of X is " << x << endl;
+}
+
+template <typename T> void debugMini(const T x) {
   cout << "The string value of X is " << x << endl;
 }
 
@@ -67,7 +70,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   ui->lcdNumber->display(QString::fromStdString(time->getTimeString()));
   ui->polaroidLabel->setText(
       QString::fromStdString(uniLife->currentRoom->shortDescription()));
-  debug(&welcomeText);
+  debug(welcomeText);
   // update disable buttons
   updateDisabledDirections();
 }
@@ -113,6 +116,7 @@ void Zork::updateDisabledDirections() {
 void Zork::eventStart() {
   // for debug ONLY/ add more functionality to determine what event
   currentEvent = eventList->getRandomEvent();
+  debugMini(currentEvent);
   updateNumberOfOptions();
   updateLocation();
   // sets the event scene stacked widget page
