@@ -1,6 +1,7 @@
 #ifndef EVENT_H
-#include <string>
 #define EVENT_H
+#include <string>
+
 using namespace std;
 
 class Event {

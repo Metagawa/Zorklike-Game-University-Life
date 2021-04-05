@@ -1,13 +1,13 @@
 #ifndef RAMBLE_H
-#include <string>
 #define RAMBLE_H
+#include <string>
+
 using namespace std;
 
-class Ramble
-{
+class Ramble {
 public:
-    Ramble(string text);
-    string text;
+  Ramble(string text);
+  string text;
 };
 
 #endif // RAMBLE_H
