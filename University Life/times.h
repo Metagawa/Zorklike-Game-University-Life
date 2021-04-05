@@ -21,6 +21,7 @@ public:
   string getDayString();
   bool isDayTime();
   bool isRaining();
+  void operator++();
 
 private:
   int dayNum;

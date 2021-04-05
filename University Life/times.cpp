@@ -11,7 +11,6 @@ Times::Times() {
 int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
 bool Times::advanceTime() {
-  time += 1;
   if (time >= NUM_HOURS_IN_DAY) {
     rain = (rand() % 2) != 0;
     dayNum++;
@@ -58,3 +57,5 @@ string Times::getDayString(int i) {
 string Times::getDayString() { return getDayString(getDayNum()); }
 void Times::setTime(int newtime) { this->time = newtime; }
 void Times::setDayNum(int newday) { this->dayNum = newday; }
+
+void Times::operator++() { time += 1; }
