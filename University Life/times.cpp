@@ -1,5 +1,6 @@
 #include "times.h"
 #include <string>
+#define NUM_HOURS_IN_DAY 24
 using namespace std;
 Times::Times() {
   setTime(9);
@@ -11,7 +12,7 @@ int Times::getDayNum() { return this->dayNum; }
 int Times::getTime() { return this->time; }
 bool Times::advanceTime() {
   time += 1;
-  if (time >= 24) {
+  if (time >= NUM_HOURS_IN_DAY) {
     rain = (rand() % 2) != 0;
     dayNum++;
     time = 9;
