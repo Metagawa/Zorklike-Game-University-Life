@@ -16,7 +16,7 @@ class Zork;
 QT_END_NAMESPACE
 class Zork : public QMainWindow {
   Q_OBJECT
-
+    friend Event *getRandomEvent();
 public:
   Zork(QWidget *parent = nullptr);
   ~Zork();
