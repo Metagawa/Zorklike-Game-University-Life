@@ -16,3 +16,4 @@ Event::~Event() {
   delete leftOption;
   delete rightOption;
 }
+Event::operator std::string() { return text; }

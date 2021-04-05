@@ -13,6 +13,7 @@ public:
   ~Event();
   friend class Zork;
   friend class EventList;
+  operator std::string();
 
 private:
   Event *leftOption;
