@@ -50,9 +50,11 @@ RambleList::RambleList() {
   arrayrambles[16] = ramble17;
   Ramble *ramble18 = new Ramble("I could use a pint...");
   arrayrambles[17] = ramble18;
-  Ramble *ramble19 = new Ramble("Not to self: Buy some noodles.");
+  //shallow copy
+  Ramble *ramble19 = ramble11;
   arrayrambles[18] = ramble19;
-  Ramble *ramble20 = new Ramble("I saw a weird lookin bird.");
+  //deep copy
+  Ramble *ramble20 = new Ramble(*ramble18);
   arrayrambles[19] = ramble20;
 }
 
