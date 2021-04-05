@@ -56,4 +56,4 @@ Ramble *RambleList::getRandomRambles() {
   int randomNumber = (rand() % 20);
   return arrayrambles[randomNumber];
 }
-RambleList::~RambleList() { delete[] this->arrayrambles; }
+RambleList::~RambleList() {  }
