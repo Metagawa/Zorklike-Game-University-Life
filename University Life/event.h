@@ -9,6 +9,14 @@ public:
   Event(string text, string leftOptiontext, string rightOptiontext,
         string pixmapCharacterResource, bool isEnd, bool isSolo,
         int locationLeft, int locationRight);
+
+  ~Event();
+  friend class Zork;
+  friend class EventList;
+
+private:
+  Event *leftOption;
+  Event *rightOption;
   string text;
   string leftOptiontext;
   string rightOptiontext;
@@ -18,13 +26,6 @@ public:
   bool isSolo;
   bool isEnd;
   string pixmapCharacterResource;
-  ~Event();
-  friend class Zork;
-  friend class EventList;
-
-private:
-  Event *leftOption;
-  Event *rightOption;
 };
 
 #endif // EVENT_H
