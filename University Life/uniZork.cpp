@@ -533,7 +533,7 @@ void Zork::updateLocation() {
 void Zork::interactChance() {
   bool chance = (rand() % 100) < 25;
 
-  // ref is a reference to x.
+  // interactEnabled is a reference to chance.
   bool &interactEnabled = chance;
   if (interactEnabled) {
     ui->actButton->setDisabled(false);

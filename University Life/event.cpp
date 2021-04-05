@@ -14,3 +14,7 @@ Event::Event(string text, string leftOptiontext, string rightOptiontext,
   this->locationLeft = locationLeft;
   this->locationRight = locationRight;
 }
+Event::~Event() {
+  delete leftOption;
+  delete rightOption;
+}

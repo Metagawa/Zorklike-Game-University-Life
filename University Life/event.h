@@ -3,8 +3,7 @@
 #define EVENT_H
 using namespace std;
 
-class Event
-{
+class Event {
 public:
   Event(string text, string leftOptiontext, string rightOptiontext,
         string pixmapCharacterResource, bool isEnd, bool isSolo,
@@ -19,6 +18,7 @@ public:
   bool isSolo;
   bool isEnd;
   string pixmapCharacterResource;
+  ~Event();
 };
 
 #endif // EVENT_H

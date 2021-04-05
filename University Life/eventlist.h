@@ -4,16 +4,16 @@
 #include <vector>
 
 using std::vector;
-class EventList
-{
+class EventList {
 public:
   EventList();
   vector<Event> events;
   Event *getRandomEvent();
+  ~EventList();
 
 private:
   void createMissingDogEvent();
-  //void createEvent();
+  // void createEvent();
 };
 
 #endif // EVENTLIST_H
