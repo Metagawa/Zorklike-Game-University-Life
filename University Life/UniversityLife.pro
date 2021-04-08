@@ -17,6 +17,7 @@ SOURCES += \
     event.cpp \
     eventlist.cpp \
     main.cpp \
+    nameable.cpp \
     person.cpp \
     ramble.cpp \
     ramblelist.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     character.h \
     event.h \
     eventlist.h \
+    nameable.h \
     person.h \
     ramble.h \
     ramblelist.h \

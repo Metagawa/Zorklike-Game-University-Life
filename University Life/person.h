@@ -1,9 +1,10 @@
 #ifndef PERSON_H
 #define PERSON_H
+#include <nameable.h>
 #include <string>
 using namespace std;
 
-class Person {
+class Person : public Nameable {
 public:
   string getName();
 
