@@ -4,12 +4,11 @@
 
 using namespace std;
 // Variable created inside namespace
-namespace Timespace {
-// Main globals
+namespace timespace {
 string season = "Autumn";
-} // namespace Timespace
+} // namespace timespace
 
-string Times::getSeason() { return Timespace::season; }
+string Times::getSeason() { return timespace::season; }
 
 Times::Times() {
   setTime(9);

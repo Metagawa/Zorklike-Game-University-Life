@@ -8,34 +8,46 @@
 #include "uniLife.h"
 #include <QMainWindow>
 #include <QStringList>
-#include <string>
 #include <exception>
+#include <string>
 using namespace std;
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Zork;
 }
 QT_END_NAMESPACE
-class Zork : public QMainWindow{
+class Zork : public QMainWindow {
   Q_OBJECT
 public:
+  template <typename T> void debugMini(const T x) {
+    cout << "The string value of X is " << x << endl;
+  }
 
-    template <typename T> void debugMini(const T x) {
-      cout << "The string value of X is " << x << endl;
-    }
-
-    template <typename T> void debug(const T x) {
-      cout << "Name of file " << __FILE__ << ".\n";
-      cout << "Its compilation began " << __DATE__;
-      cout << " at " << __TIME__ << ".\n";
-      cout << "The compiler gives a __cplusplus value of " << __cplusplus << endl;
-      debugMini(x);
-    }
+  template <typename T> void debug(const T x) {
+    cout << "Name of file " << __FILE__ << ".\n";
+    cout << "Its compilation began " << __DATE__;
+    cout << " at " << __TIME__ << ".\n";
+    cout << "The compiler gives a __cplusplus value of " << __cplusplus << endl;
+    debugMini(x);
+  }
   Zork(QWidget *parent = nullptr);
   ~Zork();
 
-  class exceptionZork : public exception {
+  class exceptionZork : public exception {};
+  template <class T> class TemplatePair {
+    T pair[2];
 
+  public:
+    TemplatePair(T one, T two) {
+      pair[0] = one;
+      pair[1] = two;
+    }
+    void printPair() {
+      cout << "value 1 is: " << pair[0] << endl;
+      cout << "value 2 is: " << pair[1] << endl;
+    }
+    T getFirst() { return pair[0]; }
+    T getSecond() { return pair[1]; }
   };
 
 private slots:
