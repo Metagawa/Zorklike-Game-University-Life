@@ -28,17 +28,6 @@ bool examineClicked = false;
 // example of reference
 bool &examine = examineClicked;
 
-template <typename T> void debugMini(const T x) {
-  cout << "The string value of X is " << x << endl;
-}
-
-template <typename T> void debug(const T x) {
-  cout << "Name of file " << __FILE__ << ".\n";
-  cout << "Its compilation began " << __DATE__;
-  cout << " at " << __TIME__ << ".\n";
-  cout << "The compiler gives a __cplusplus value of " << __cplusplus << endl;
-  debugMini(x);
-}
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   tim = new Character("Tim");
   eventList = new EventList();

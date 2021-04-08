@@ -18,6 +18,17 @@ QT_END_NAMESPACE
 class Zork : public QMainWindow {
   Q_OBJECT
 public:
+    template <typename T> void debugMini(const T x) {
+      cout << "The string value of X is " << x << endl;
+    }
+
+    template <typename T> void debug(const T x) {
+      cout << "Name of file " << __FILE__ << ".\n";
+      cout << "Its compilation began " << __DATE__;
+      cout << " at " << __TIME__ << ".\n";
+      cout << "The compiler gives a __cplusplus value of " << __cplusplus << endl;
+      debugMini(x);
+    }
   Zork(QWidget *parent = nullptr);
   ~Zork();
 
