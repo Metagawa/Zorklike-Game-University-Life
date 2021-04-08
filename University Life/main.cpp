@@ -4,8 +4,7 @@
 #include <QSplashScreen>
 #include <QTimer>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   QApplication a(argc, argv);
   QPixmap pixmap(":/images/misc/splash.png");
   QSplashScreen splash(pixmap);
@@ -20,7 +19,6 @@ int main(int argc, char *argv[])
   mut.tryLock(1500);
   mut.unlock(); // I am not sure if this is a necessity
   w.show();
-  a.setOverrideCursor(QCursor(
-      QPixmap(":/images/misc/black-biro.png")));
+  a.setOverrideCursor(QCursor(QPixmap(":/images/misc/black-biro.png")));
   return a.exec();
 }

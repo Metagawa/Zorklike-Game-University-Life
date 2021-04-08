@@ -22,10 +22,11 @@ public:
   bool isDayTime();
   bool isRaining();
   void operator++(int);
+  string getSeason();
 
 private:
-  unsigned int time:5;
-   unsigned int dayNum:3;
+  unsigned int time : 5;
+  unsigned int dayNum : 3;
   bool rain;
 };
 

@@ -3,6 +3,14 @@
 #define NUM_HOURS_IN_DAY 24
 
 using namespace std;
+// Variable created inside namespace
+namespace Timespace {
+// Main globals
+string season = "Autumn";
+} // namespace Timespace
+
+string Times::getSeason() { return Timespace::season; }
+
 Times::Times() {
   setTime(9);
   setDayNum(0);
