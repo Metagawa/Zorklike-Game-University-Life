@@ -9,9 +9,12 @@ class Person : public Nameable, public Ageable {
 public:
   Person(string name);
   string getName();
+  void greet();
 
 protected:
   string name;
+
+private:
 };
 
 #endif // PERSON_H
