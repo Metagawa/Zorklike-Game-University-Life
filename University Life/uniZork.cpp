@@ -25,6 +25,8 @@ QSound clickSfx(":/sfx/click.wav");
 #define playSound(a) (a.stop(), a.play())
 bool interactEnabled = false;
 bool examineClicked = false;
+// example of reference
+bool &examine = examineClicked;
 
 template <typename T> void debugMini(const T x) {
   cout << "The string value of X is " << x << endl;
