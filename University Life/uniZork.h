@@ -9,15 +9,17 @@
 #include <QMainWindow>
 #include <QStringList>
 #include <string>
+#include <exception>
 using namespace std;
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Zork;
 }
 QT_END_NAMESPACE
-class Zork : public QMainWindow {
+class Zork : public QMainWindow{
   Q_OBJECT
 public:
+
     template <typename T> void debugMini(const T x) {
       cout << "The string value of X is " << x << endl;
     }
@@ -31,6 +33,10 @@ public:
     }
   Zork(QWidget *parent = nullptr);
   ~Zork();
+
+  class exceptionZork : public exception {
+
+  };
 
 private slots:
 
