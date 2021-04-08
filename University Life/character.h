@@ -4,7 +4,7 @@
 
 class Character : public Person {
 public:
-  Character(string name);
+  Character(string name) : Person(name) {}
 };
 
 #endif // CHARACTER_H

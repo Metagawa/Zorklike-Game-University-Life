@@ -7,6 +7,7 @@ using namespace std;
 
 class Person : public Nameable, public Ageable {
 public:
+  Person(string name);
   string getName();
 
 protected:
