@@ -13,6 +13,7 @@ SOURCES += \
     CommandWords.cpp \
     Parser.cpp \
     Room.cpp \
+    ageable.cpp \
     character.cpp \
     event.cpp \
     eventlist.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     CommandWords.h \
     Parser.cpp \
     Room.h \
+    ageable.h \
     character.h \
     event.h \
     eventlist.h \
