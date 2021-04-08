@@ -313,6 +313,8 @@ void Zork::on_examineButton_clicked() {
       ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
   }
+  TemplatePair<bool> boolChecks(interactEnabled,examineClicked);
+  boolChecks.printPair();
 
   playSound(scratchSfx);
 }
