@@ -11,6 +11,8 @@ EventList::EventList() {
 
   // createMissingDogEvent();
   createPoem();
+  createShoppingList();
+  createGoForStrollEvent();
 }
 
 Event *EventList::getRandomEvent() {
@@ -136,6 +138,46 @@ void EventList::createPoem() {
 
   Event *midlevelSceneB = new Event("Maybe I will think of a song next time",
                                     "Maybe...", "", "", true, true, -1, -1);
+
+  toplevelScene->leftOption = midlevelSceneA;
+  // connects the top level's second option with MidLevelB
+  toplevelScene->rightOption = midlevelSceneB;
+
+  // puts the event into the list of events.
+  events.push_back(*toplevelScene);
+}
+void EventList::createShoppingList() {
+  Event *toplevelScene =
+      new Event("I need to write my shopping list", "I want noodles",
+                "I want pasta!", "", false, false, -1, -1);
+
+  // top level's left option
+  Event *midlevelSceneA =
+      new Event("Noodles!", "Thats all.", "", "", true, true, -1, -1);
+
+  Event *midlevelSceneB =
+      new Event("Pasta!", "Thats all.", "", "", true, true, -1, -1);
+
+  toplevelScene->leftOption = midlevelSceneA;
+  // connects the top level's second option with MidLevelB
+  toplevelScene->rightOption = midlevelSceneB;
+
+  // puts the event into the list of events.
+  events.push_back(*toplevelScene);
+}
+void EventList::createGoForStrollEvent() {
+  Event *toplevelScene =
+      new Event("I need to clear my head, maybe I should go for a stroll",
+                "I will walk around the Quad", "I will walk to to the shop", "",
+                false, false, -1, -1);
+
+  // top level's left option
+  Event *midlevelSceneA =
+      new Event("Seeing busy people in the quad always relaxes me",
+                "Stay at the quad", "", "", true, true, 8, 8);
+
+  Event *midlevelSceneB = new Event("I'm all better after getting some food",
+                                    "Eat food", "", "", true, true, 11, 11);
 
   toplevelScene->leftOption = midlevelSceneA;
   // connects the top level's second option with MidLevelB

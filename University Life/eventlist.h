@@ -17,6 +17,8 @@ public:
 private:
   void createMissingDogEvent();
   void createPoem();
+  void createShoppingList();
+  void createGoForStrollEvent();
   // void createEvent();
 };
 
