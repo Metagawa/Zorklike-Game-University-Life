@@ -30,17 +30,18 @@ bool &examine = examineClicked;
 
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
 
-    union{
-        char* timsname;
-        char* charactername;
-    };
-    timsname = "Tim";
+  union {
+    char *timsname;
+    char *charactername;
+  };
+  string name = "Tim";
+  timsname = (char *)name.c_str();
   tim = new Character(timsname);
   Person *timAsAPerson = dynamic_cast<Person *>(tim);
   timAsAPerson->greet();
 
   charname = new Character(charactername);
-  cout << "Character name set to "<< charactername<<endl;
+  cout << "Character name set to " << charactername << endl;
 
   /*cout<<endl;
   cout << tim->getName() << endl;*/
