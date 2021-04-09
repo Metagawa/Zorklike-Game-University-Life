@@ -4,9 +4,7 @@
 using namespace std;
 class Nameable {
 public:
-    virtual string getName() {
-        return name;
-    };
+  virtual string getName() { return name; };
   void setName(string name);
 
 protected:

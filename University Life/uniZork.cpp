@@ -188,10 +188,10 @@ void Zork::eventStart() {
 Zork::~Zork() {
   delete ui;
   delete uniLife;
- delete textDayList;
- delete time;
- delete eventList;
- delete rambleList;
+  delete textDayList;
+  delete time;
+  delete eventList;
+  delete rambleList;
 }
 
 void Zork::updatePositionAfterMoving() {

@@ -11,6 +11,7 @@ public:
   Event *getRandomEvent();
   ~EventList();
   vector<Event> getShuffledDeepCopy();
+
 private:
   void createMissingDogEvent();
   // void createEvent();

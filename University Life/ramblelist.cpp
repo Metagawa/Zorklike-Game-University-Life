@@ -4,7 +4,7 @@
 #include <stdio.h>
 #define ARRAY_SIZE 20
 int arrayrambles[ARRAY_SIZE];
-#define getRand(a)  ((rand() % a))
+#define getRand(a) ((rand() % a))
 
 RambleList::RambleList() {
   Ramble *ramble1 = new Ramble("Not to self: Buy some noodles.");
@@ -50,10 +50,10 @@ RambleList::RambleList() {
   arrayrambles[16] = ramble17;
   Ramble *ramble18 = new Ramble("I could use a pint...");
   arrayrambles[17] = ramble18;
-  //shallow copy
+  // shallow copy
   Ramble *ramble19 = ramble11;
   arrayrambles[18] = ramble19;
-  //deep copy
+  // deep copy
   Ramble *ramble20 = new Ramble(*ramble18);
   arrayrambles[19] = ramble20;
 }
@@ -62,4 +62,4 @@ Ramble *RambleList::getRandomRambles() {
   int randomNumber = getRand(ARRAY_SIZE);
   return arrayrambles[randomNumber];
 }
-RambleList::~RambleList() {  }
+RambleList::~RambleList() {}

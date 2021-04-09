@@ -182,7 +182,7 @@ void EventList::createMissingDogEvent() {
   events.push_back(*ToplevelDogScene);
 }
 
-EventList::~EventList() { events.~vector<Event>();}
+EventList::~EventList() { events.~vector<Event>(); }
 
 vector<Event> EventList::getShuffledDeepCopy() {
   vector<Event> copy = events; // deep copy, unlike java, All Events copied
