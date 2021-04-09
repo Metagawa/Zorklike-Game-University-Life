@@ -392,7 +392,10 @@ void Zork::on_examineButton_clicked() {
   playSound(scratchSfx);
 }
 
-void Zork::on_infoButton_clicked() { playSound(scratchSfx); }
+void Zork::on_infoButton_clicked() {
+QString str = QString::fromUtf8(charname->getName().c_str());
+    updateNotebookDuringEvent(str);
+    playSound(scratchSfx); }
 
 void Zork::on_mapButton_clicked() {
 
@@ -587,6 +590,7 @@ void Zork::on_option_1_clicked() {
   ui->option_2->setText(currentEventOption2);
   updateNotebookDuringEvent(currentEventText);
 }
+
 void Zork::updateNumberOfOptions() {
   if (currentEvent->isSolo) {
     ui->option_2->hide();
@@ -594,6 +598,7 @@ void Zork::updateNumberOfOptions() {
     ui->option_2->show();
   }
 }
+
 void Zork::updateLocation() {
   bool isRaining = time->isRaining();
   if (time->isDayTime() && !isRaining) {
@@ -614,7 +619,9 @@ void Zork::updateLocation() {
     movie->start();
   }
 }
+
 void Zork::interactChance() {
+
   interactEnabled = (rand() % 100) < 25;
 
   // interactEnabled is a reference to chance.
@@ -624,6 +631,7 @@ void Zork::interactChance() {
   } else
     eventExistsText = "";
 }
+
 void Zork::on_option_2_clicked() {
   playSound(clickSfx);
   if (currentEvent->isEnd) {
