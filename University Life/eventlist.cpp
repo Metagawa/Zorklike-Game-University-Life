@@ -2,7 +2,7 @@
 #include "event.h"
 #include <algorithm>
 #include <stdio.h>
-#define ARRAY_SIZE 5
+#define ARRAY_SIZE 9
 int arrayevents[ARRAY_SIZE];
 #define getRand(a) ((rand() % a))
 
@@ -156,7 +156,7 @@ Event *toplevelJakeScene =
 // top level's left option
 Event *midlevelJakeSceneA =
     new Event("The relax area is completely dead at this time of day, maybe if I came earlier there'd be more people. Ah well suits me I can have a nice walk for a bit here.",
-              "Ah well, back to the grind.", "", "", true, false, 5, 5);
+              "Ah well, back to the grind.", "", "", true, true, 5, 5);
 
 Event *midlevelJakeSceneB = new Event("The line at Raps is mad, I hate this shite.   \n I keep getting weird looks for writing my journal entries in the line.   \n \"Hey, how are ya keepin?\"",
                                       "Sorry who are you?", "Jake! Haven't seen you in ages.", ":/images/people/Jake.png", false, false, 11, 11);
@@ -299,6 +299,6 @@ Event *EventList::createFinalEvent()
 
 Event *EventList::getRandomEvent()
 {
-    int randomNumber = 4;
+    int randomNumber = getRand(ARRAY_SIZE);
     return arrayevents[randomNumber];
 }
