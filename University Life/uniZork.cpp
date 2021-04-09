@@ -79,7 +79,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   debug(welcomeText);
   // update disable buttons
   updateDisabledDirections();
-
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -524,8 +523,8 @@ void Zork::on_goToExplore_clicked() {
   updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
   // start pecific event
-  //currentEvent = eventList->createDayOneEvent();
-  //eventStartSpecific();
+  currentEvent = eventList->createDayOneEvent();
+  eventStartSpecific();
 }
 
 void Zork::on_quitButton_2_clicked() {
