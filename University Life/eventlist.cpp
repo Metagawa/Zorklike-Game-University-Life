@@ -1,14 +1,12 @@
 #include "eventlist.h"
 #include "event.h"
 #include <algorithm>
-#include <vector>
+#include <stdio.h>
+#define ARRAY_SIZE 4
+int arrayevents[ARRAY_SIZE];
 #define getRand(a) ((rand() % a))
-EventList::EventList() { events = new vector<Event>; }
 
-Event *EventList::getRandomEvent() {
-  int randomNumber = getRand(events->size());
-  return &events->at(randomNumber);
-}
+EventList::EventList() {
 
 /*TEMPLATE EVENT START
 void EventList::createEvent()
@@ -109,13 +107,13 @@ void EventList::createEvent()
     events.push_back(*ToplevelScene);
 }
 TEMPLATE EVENT END*/
-void EventList::createPoem() {
-  Event *toplevelScene =
+
+  Event *toplevelPoemScene =
       new Event("I have an idea for a poem!", "Yay, I love poems",
                 "But I hate poems!", "", false, false, -1, -1);
 
   // top level's left option
-  Event *midlevelSceneA = new Event(
+  Event *midlevelPoemSceneA = new Event(
       "Whose pen is that? I think I know. Its owner is quite happy though. "
       "Full of joy like a vivid rainbow, I watch him laugh. I cry hello. He "
       "gives his pen a shake, And laughs until her belly aches. The only other "
@@ -126,57 +124,57 @@ void EventList::createPoem() {
       "bread. Ready for the day ahead.",
       "I need to jot that down!", "", "", true, true, -1, -1);
 
-  Event *midlevelSceneB = new Event("Maybe I will think of a song next time",
+  Event *midlevelPoemSceneB = new Event("Maybe I will think of a song next time",
                                     "Maybe...", "", "", true, true, -1, -1);
 
-  toplevelScene->leftOption = midlevelSceneA;
+  toplevelPoemScene->leftOption = midlevelPoemSceneA;
   // connects the top level's second option with MidLevelB
-  toplevelScene->rightOption = midlevelSceneB;
+  toplevelPoemScene->rightOption = midlevelPoemSceneB;
 
   // puts the event into the list of events.
-  events->push_back(*toplevelScene);
-}
-void EventList::createShoppingList() {
-  Event *toplevelScene =
+  arrayevents[0] = toplevelPoemScene;
+
+
+  Event *toplevelShopScene =
       new Event("I need to write my shopping list", "I want noodles",
                 "I want pasta!", "", false, false, -1, -1);
 
   // top level's left option
-  Event *midlevelSceneA =
+  Event *midlevelShopSceneA =
       new Event("Noodles!", "Thats all.", "", "", true, true, -1, -1);
 
-  Event *midlevelSceneB =
+  Event *midlevelShopSceneB =
       new Event("Pasta!", "Thats all.", "", "", true, true, -1, -1);
 
-  toplevelScene->leftOption = midlevelSceneA;
+  toplevelShopScene->leftOption = midlevelShopSceneA;
   // connects the top level's second option with MidLevelB
-  toplevelScene->rightOption = midlevelSceneB;
+  toplevelShopScene->rightOption = midlevelShopSceneB;
 
   // puts the event into the list of events.
-  events->push_back(*toplevelScene);
-}
-void EventList::createGoForStrollEvent() {
-  Event *toplevelScene =
+  arrayevents[1] = toplevelShopScene;
+
+
+  Event *toplevelStrollScene =
       new Event("I need to clear my head, maybe I should go for a stroll",
                 "I will walk around the Quad", "I will walk to to the shop", "",
                 false, false, -1, -1);
 
   // top level's left option
-  Event *midlevelSceneA =
+  Event *midlevelStrollSceneA =
       new Event("Seeing busy people in the quad always relaxes me",
                 "Stay at the quad", "", "", true, true, 8, 8);
 
-  Event *midlevelSceneB = new Event("I'm all better after getting some food",
+  Event *midlevelStrollSceneB = new Event("I'm all better after getting some food",
                                     "Eat food", "", "", true, true, 11, 11);
 
-  toplevelScene->leftOption = midlevelSceneA;
+  toplevelStrollScene->leftOption = midlevelStrollSceneA;
   // connects the top level's second option with MidLevelB
-  toplevelScene->rightOption = midlevelSceneB;
+  toplevelStrollScene->rightOption = midlevelStrollSceneB;
 
   // puts the event into the list of events.
-  events->push_back(*toplevelScene);
-}
-void EventList::createMissingDogEvent() {
+  arrayevents[2] = toplevelStrollScene;
+
+
   Event *ToplevelDogScene =
       new Event("I saw a small dog lying in the road",
                 "I Ignored it, not like it was my problem.",
@@ -238,9 +236,9 @@ void EventList::createMissingDogEvent() {
   MidlevelDogSceneB->rightOption = BottomlevelDogSceneD;
 
   // puts the event into the list of events.
-  events->push_back(*ToplevelDogScene);
-}
-Event *EventList::createDayOneEvent() {
+  arrayevents[3] = ToplevelDogScene;
+
+}Event *EventList::createDayOneEvent() {
   Event *toplevelScene =
       new Event("I have just arrived on campus. ", "It's chilly this morning.",
                 "", "", false, true, -1, -1);
@@ -291,10 +289,8 @@ Event *EventList::createFinalEvent() {
   // puts the event into the list of events.
   return toplevelScene;
 }
-EventList::~EventList() { events->~vector<Event>(); }
 
-vector<Event> EventList::getShuffledDeepCopy() {
-  vector<Event> copy = *events; // deep copy, unlike java, All Events copied
-  random_shuffle(copy.begin(), copy.end());
-  return copy;
+Event *EventList::getRandomEvent() {
+    int randomNumber = getRand(ARRAY_SIZE);
+  return arrayevents[randomNumber];
 }

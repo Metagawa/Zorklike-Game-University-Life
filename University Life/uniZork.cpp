@@ -46,8 +46,6 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   /*cout<<endl;
   cout << tim->getName() << endl;*/
   eventList = new EventList();
-  eventList->createPoem();
-  eventList->createShoppingList();
   rambleList = new RambleList();
   ui->setupUi(this);
   this->setWindowTitle("University Life");
@@ -178,7 +176,7 @@ void Zork::eventStartSpecific() {
 void Zork::eventStart() {
   cout << "Attempting to set current event...\n";
   try {
-    if (eventList->events->empty()) {
+    if (eventList->getRandomEvent()==NULL) {
       cout << "Failed to set an event...\n";
 
       exceptionZork eventException;
@@ -246,7 +244,6 @@ Zork::~Zork() {
   delete uniLife;
   delete textDayList;
   delete time;
-  delete eventList;
   delete rambleList;
 }
 
