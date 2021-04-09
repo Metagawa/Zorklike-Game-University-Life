@@ -519,15 +519,13 @@ void Zork::on_quitButton_clicked() {
 }
 
 void Zork::on_goToExplore_clicked() {
-
   playSound(clickSfx);
-
   ui->stackedWidget->setCurrentIndex(0);
   updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
   // start pecific event
-  currentEvent = eventList->createDayOneEvent();
-  eventStartSpecific();
+  //currentEvent = eventList->createDayOneEvent();
+  //eventStartSpecific();
 }
 
 void Zork::on_quitButton_2_clicked() {
@@ -550,7 +548,7 @@ void Zork::on_quitCancel_clicked() {
   ui->mapButton->setDisabled(false);
 }
 
-void Zork::on_quitConfirm_clicked() { QApplication::quit(); }
+void Zork::on_quitConfirm_clicked() { exit(EXIT_SUCCESS); }
 
 void Zork::on_notebookButton_clicked() {
   currentRamble = rambleList->getRandomRambles();
