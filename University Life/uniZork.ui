@@ -633,7 +633,7 @@ QPushButton:hover{	background-image: url(:/images/misc/black-overlay.png);}
       <property name="geometry">
        <rect>
         <x>33</x>
-        <y>269</y>
+        <y>201</y>
         <width>781</width>
         <height>111</height>
        </rect>
@@ -694,9 +694,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="option_2">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>233</y>
-        <width>646</width>
+        <x>33</x>
+        <y>348</y>
+        <width>781</width>
         <height>27</height>
        </rect>
       </property>
@@ -734,9 +734,9 @@ color: rgb(255, 132, 24);
      <widget class="QPushButton" name="option_1">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>200</y>
-        <width>646</width>
+        <x>33</x>
+        <y>316</y>
+        <width>781</width>
         <height>28</height>
        </rect>
       </property>
@@ -822,9 +822,9 @@ color: rgb(255, 132, 24);
       <property name="geometry">
        <rect>
         <x>600</x>
-        <y>19</y>
-        <width>200</width>
-        <height>250</height>
+        <y>3</y>
+        <width>158</width>
+        <height>198</height>
        </rect>
       </property>
       <property name="text">
@@ -840,10 +840,10 @@ color: rgb(255, 132, 24);
      <widget class="QLabel" name="person_2">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>19</y>
-        <width>200</width>
-        <height>250</height>
+        <x>106</x>
+        <y>3</y>
+        <width>158</width>
+        <height>198</height>
        </rect>
       </property>
       <property name="text">

@@ -42,13 +42,13 @@ RambleList::RambleList() {
   arrayrambles[12] = ramble13;
   Ramble *ramble14 = new Ramble("I think I have an exam coming up?");
   arrayrambles[13] = ramble14;
-  Ramble *ramble15 = new Ramble("");
+  Ramble *ramble15 = new Ramble("I should workout at the Gym more often.");
   arrayrambles[14] = ramble15;
-  Ramble *ramble16 = new Ramble("");
+  Ramble *ramble16 = new Ramble("I wonder what happens at the shopping outlet at night...?");
   arrayrambles[15] = ramble16;
-  Ramble *ramble17 = new Ramble("");
+  Ramble *ramble17 = new Ramble("I bet the Library is packed on rainy days.");
   arrayrambles[16] = ramble17;
-  Ramble *ramble18 = new Ramble("");
+  Ramble *ramble18 = new Ramble("I wonder if any of my friends are at the Quad?");
   arrayrambles[17] = ramble18;
   // shallow copy
   Ramble *ramble19 = ramble11;
