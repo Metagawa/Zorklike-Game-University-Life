@@ -2,7 +2,7 @@
 #include "event.h"
 #include <algorithm>
 #include <stdio.h>
-#define ARRAY_SIZE 9
+#define ARRAY_SIZE 10
 int arrayevents[ARRAY_SIZE];
 #define getRand(a) ((rand() % a))
 
@@ -149,26 +149,17 @@ EventList::EventList()
     arrayevents[3] = ToplevelDogScene;
 
 Event *toplevelJakeScene =
-    new Event("That lecture was mind-numbing, I need to take a break. A wrap would be the proper job right about now. But maybe I should just walk around for a bit.",
-              "I'll walk around the Relax Area, it's better for me.", "WRAP! WRAP! WRAP!", "",
-              false, false, -1, -1);
+    new Event("That lecture was mind-numbing, I need to take a break. A wrap would be the proper job right about now."
+              "The line at Raps is mad, I hate this shite."
+              "\nI keep getting weird looks for writing my journal entries in the line."
+              "\n\"Hey, how are ya keepin?\"",
 
-// top level's left option
-Event *midlevelJakeSceneA =
-    new Event("The relax area is completely dead at this time of day, maybe if I came earlier there'd be more people. Ah well suits me I can have a nice walk for a bit here.",
-              "Ah well, back to the grind.", "", "", true, true, 5, 5);
+               "Sorry who are you?", "", ":/images/people/Jake.png", false, true, 11, 11);
 
-Event *midlevelJakeSceneB = new Event("The line at Raps is mad, I hate this shite.   \n I keep getting weird looks for writing my journal entries in the line.   \n \"Hey, how are ya keepin?\"",
-                                      "Sorry who are you?", "Jake! Haven't seen you in ages.", ":/images/people/Jake.png", false, false, 11, 11);
-
-Event *bottomLevelJake = new Event("\"Bro, it's me, Jake. You didn't forget me did you? I sat next to you in 3rd year physics remember?\" \nI faintly remembered something about a Jake in 3rd year.\n","Ahhhh right... Jake. I remember you for sure, yep.","", "Jake", false, false, 11, 11);
+Event *bottomLevelJake = new Event("\"Bro, it's me, Jake. You didn't forget me did you? I sat next to you in 3rd year physics remember?\" \nI faintly remembered something about a Jake in 3rd year.\n","Ahhhh right... Jake. I remember you for sure, yep.","", ":/images/people/Jake.png", false, true, 11, 11);
 Event *endJake = new Event("\"Anyway it was nice to see you again Mark, talk to ya later.\"\n", "I'm so embarrassed I could die.", "", ":/images/people/Jake.png", true, true, 11, 11);
-toplevelJakeScene->leftOption = midlevelJakeSceneA;
+toplevelJakeScene->leftOption = bottomLevelJake;
 // connects the top level's second option with MidLevelB
-toplevelJakeScene->rightOption = midlevelJakeSceneB;
-
-midlevelJakeSceneB->leftOption = bottomLevelJake;
-midlevelJakeSceneB->rightOption = bottomLevelJake;
 bottomLevelJake->leftOption = endJake;
 // puts the event into the list of events.
 arrayevents[4] = toplevelJakeScene;
@@ -238,6 +229,23 @@ Event *toplevelStudyScene =
 
         // puts the event into the list of events.
         arrayevents[8] = toplevelFreedomScene;
+
+        Event *toplevelGymScene =
+              new Event("Perhaps I should start going to the gym", "Yeah I should",
+                        "No that aint for me dawg", "", false, false, -1, -1);
+
+          // top level's left option
+          Event *midlevelGymSceneA = new Event("I will probably have to give up wraps",
+              "Now that's not really an option is it", "", "", true, true, -1, -1);
+
+         Event *midlevelGymSceneB = new Event("I shall go and eat a wrap",
+              "Damn right dawg", "", "", true, true, -1, -1);
+          toplevelGymScene->leftOption = midlevelGymSceneA;
+        toplevelGymScene->rightOption = midlevelGymSceneB;
+          // connects the top level's second option with MidLevelB
+
+          // puts the event into the list of events.
+          arrayevents[9] = toplevelGymScene;
 }
 
 

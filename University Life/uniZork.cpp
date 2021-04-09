@@ -249,7 +249,7 @@ Zork::~Zork() {
 
 void Zork::updatePositionAfterMoving() {
 
-  if (time->getDayNum() == 0 && time->getTime() == 21) {
+  if (time->getDayNum() == 0 && time->getTime() >= 21) {
     // starts specific event
     currentEvent = eventList->createFinalEvent();
     eventStartSpecific();
