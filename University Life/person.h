@@ -12,8 +12,6 @@ public:
   void greet();
 
 protected:
-  string name;
-
 private:
 };
 

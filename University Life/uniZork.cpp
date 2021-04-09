@@ -29,6 +29,7 @@ bool examineClicked = false;
 bool &examine = examineClicked;
 
 Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
+
   tim = new Character("Tim");
   Person *timAsAPerson = dynamic_cast<Person *>(tim);
   timAsAPerson->greet();
@@ -313,7 +314,7 @@ void Zork::on_examineButton_clicked() {
       ui->plainTextEdit->moveCursor(QTextCursor::End);
     }
   }
-  TemplatePair<bool> boolChecks(interactEnabled,examineClicked);
+  TemplatePair<bool> boolChecks(interactEnabled, examineClicked);
   boolChecks.printPair();
 
   playSound(scratchSfx);
