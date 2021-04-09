@@ -2,9 +2,10 @@
 #include "event.h"
 #include <algorithm>
 #include <stdio.h>
-#define ARRAY_SIZE 10
+#define ARRAY_SIZE 11
 int arrayevents[ARRAY_SIZE];
 #define getRand(a) ((rand() % a))
+int eventNumber = 0;
 
 EventList::EventList()
 {
@@ -246,6 +247,12 @@ Event *toplevelStudyScene =
 
           // puts the event into the list of events.
           arrayevents[9] = toplevelGymScene;
+
+          Event *toplevelDancingScene =
+                new Event("On the floors of Tokyo\nOr down in London town to go, go\nWith a record selection and a mirror direction", "I'm dancing with myself",
+                          "", "", true, true, -1, -1);
+
+            arrayevents[10] = toplevelDancingScene;
 }
 
 
@@ -305,8 +312,8 @@ Event *EventList::createFinalEvent()
     return toplevelScene;
 }
 
-Event *EventList::getRandomEvent()
+Event *EventList::getNextEvent()
 {
-    int randomNumber = getRand(ARRAY_SIZE);
-    return arrayevents[randomNumber];
+    return arrayevents[eventNumber];
+    eventNumber++;
 }

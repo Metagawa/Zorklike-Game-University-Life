@@ -5,7 +5,7 @@
 class EventList {
 public:
   EventList();
-  Event *getRandomEvent();
+  Event *getNextEvent();
   ~EventList();
   Event *arrayevents[20];
     Event *createDayOneEvent();
