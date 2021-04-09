@@ -249,6 +249,14 @@ Zork::~Zork() {
 }
 
 void Zork::updatePositionAfterMoving() {
+
+    if (time->getDayNum()==0 && time->getTime()==21 ){
+        // starts specific event
+        currentEvent = eventList->createFinalEvent();
+        eventStartSpecific();
+
+    }
+
   examineClicked = false;
   ui->actButton->setDisabled(true);
   interactChance();
@@ -527,7 +535,7 @@ void Zork::on_goToExplore_clicked() {
   ui->stackedWidget->setCurrentIndex(0);
   updatePositionAfterMoving();
   updateOnChangeStackPaneIndex();
-  // start pecific event
+  // starts specific event
   currentEvent = eventList->createDayOneEvent();
   eventStartSpecific();
 }
@@ -681,4 +689,10 @@ void Zork::updateNotebookDuringEvent(QString currentEventText) {
     qpte->setPlainText(currentPlainText);
     qpte->moveCursor(QTextCursor::End);
   }
+
+  if (currentEventText=="Exit Game" ){
+      // starts specific event
+      exit(EXIT_SUCCESS);
+  }
+
 }

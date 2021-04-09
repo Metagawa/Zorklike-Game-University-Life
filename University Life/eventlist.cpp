@@ -204,6 +204,30 @@ Event *EventList::createDayOneEvent() {
   // puts the event into the list of events.
   return toplevelScene;
 }
+
+Event *EventList::createFinalEvent() {
+  Event *toplevelScene =
+      new Event("Hard to believe it's Sunday already, feels like the last week went by in minutes... But I had a lot of fun", "This is just the start after all.",
+                "", "", false, true, -1, -1);
+
+  // top level's left option
+  Event *midlevelSceneA =
+      new Event("Sure was a craaaaaaazy week feels like so much happened. I probably missed a ton of lectures with all that walking around.",
+                "Eh I'm sure I'll catch up... Probably.", "", "", false, true, -1, -1);
+
+  // Mid level a's left option
+  Event *bottomlevelSceneA = new Event(
+      "If my first week was this hectic, I'm sure there's lots more in store for me over the next few years.",
+      "My University Life starts here!", "", "", false, true, -1, -1);
+ Event *finallevelSceneA = new Event("Exit Game","","", "", true, true, -1, -1);
+  toplevelScene->leftOption = midlevelSceneA;
+  // connects the top level's second option with MidLevelB
+  midlevelSceneA->leftOption = bottomlevelSceneA;
+  bottomlevelSceneA->leftOption=finallevelSceneA;
+
+  // puts the event into the list of events.
+  return toplevelScene;
+}
 EventList::~EventList() { events.~vector<Event>(); }
 
 vector<Event> EventList::getShuffledDeepCopy() {
