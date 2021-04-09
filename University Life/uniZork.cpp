@@ -33,7 +33,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   tim = new Character("Tim");
   Person *timAsAPerson = dynamic_cast<Person *>(tim);
   timAsAPerson->greet();
-  cout << tim->getName() << endl;
+  /*cout<<endl;
+  cout << tim->getName() << endl;*/
   eventList = new EventList();
   rambleList = new RambleList();
   ui->setupUi(this);
