@@ -40,7 +40,7 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   timAsAPerson->greet();
 
   charname = new Character(charactername);
-  cout << "Character name set to"<< charactername<<endl;
+  cout << "Character name set to "<< charactername<<endl;
 
   /*cout<<endl;
   cout << tim->getName() << endl;*/
