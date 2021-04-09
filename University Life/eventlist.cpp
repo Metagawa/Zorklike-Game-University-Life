@@ -173,6 +173,71 @@ bottomLevelJake->leftOption = endJake;
 // puts the event into the list of events.
 arrayevents[4] = toplevelJakeScene;
 
+
+Event *toplevelStudyScene =
+      new Event("Its only week one but it appears the workload is alread piling up.", "I need to find a studybuddy",
+                "I'm a lone ranger and I'll get it all done by myself", "", false, false, -1, -1);
+
+  // top level's left option
+  Event *midlevelStudySceneA = new Event("Perhaps I could find a study buddy at the library",
+      "Maybe, lets find out!", "", "", true, true, 3, 3);
+
+  Event *midlevelStudySceneB =
+      new Event("My drom room may be a good place to study without being interrupted by others", "I'm going to head back to it", "", "",
+                true, true, 1, 1);
+
+  toplevelStudyScene->leftOption = midlevelStudySceneA;
+  // connects the top level's second option with MidLevelB
+  toplevelStudyScene->rightOption = midlevelStudySceneB;
+
+  // puts the event into the list of events.
+  arrayevents[5] = toplevelStudyScene;
+
+  Event *toplevelShakespeareScene =
+        new Event("To be or not to be", "That is the question",
+                  "", "", false, true, -1, -1);
+
+    // top level's left option
+    Event *midlevelShakespeareSceneA = new Event(" Whether ’tis Nobler in the mind to suffer The Slings and Arrows of outrageous Fortune",
+        "Or to take Arms against a Sea of troubles", "", "", true, true, -1, -1);
+
+
+
+    toplevelShakespeareScene->leftOption = midlevelShakespeareSceneA;
+    // connects the top level's second option with MidLevelB
+
+
+    // puts the event into the list of events.
+    arrayevents[6] = toplevelShakespeareScene;
+
+    Event *toplevelHungryScene =
+          new Event("I feel my stomach grumbling", "Grumble...",
+                    "", "", false, true, -1, -1);
+
+      // top level's left option
+      Event *midlevelHungrySceneA = new Event("My stomach continues to grumble",
+          "Grumble grumble", "", "", true, true, -1, -1);
+
+      toplevelHungryScene->leftOption = midlevelHungrySceneA;
+      // connects the top level's second option with MidLevelB
+
+      // puts the event into the list of events.
+      arrayevents[7] = toplevelHungryScene;
+
+
+      Event *toplevelFreedomScene =
+            new Event("I feel as though I do not have free will", "Of course I do! What am I thinking!",
+                      "", "", false, true, -1, -1);
+
+        // top level's left option
+        Event *midlevelFreedomSceneA = new Event("But I must believe in free will",
+            "I have no choice but to believe", "", "", true, true, -1, -1);
+
+        toplevelFreedomScene->leftOption = midlevelFreedomSceneA;
+        // connects the top level's second option with MidLevelB
+
+        // puts the event into the list of events.
+        arrayevents[8] = toplevelFreedomScene;
 }
 
 
