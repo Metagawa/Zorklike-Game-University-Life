@@ -26,19 +26,19 @@ RambleList::RambleList() {
       "you get to the till you have a bag of Gummis, a protein bar, a pack of "
       "mints and a bottle of chocolate milk.");
   arrayrambles[5] = ramble6;
-  Ramble *ramble7 = new Ramble("Not to self: Buy some noodles.");
+  Ramble *ramble7 = new Ramble("I could do with a student loan.");
   arrayrambles[6] = ramble7;
-  Ramble *ramble8 = new Ramble("I saw a weird lookin bird.");
+  Ramble *ramble8 = new Ramble("When is my SUSI coming in?.");
   arrayrambles[7] = ramble8;
-  Ramble *ramble9 = new Ramble("I could use a pint...");
+  Ramble *ramble9 = new Ramble("My housemates are the worst!");
   arrayrambles[8] = ramble9;
-  Ramble *ramble10 = new Ramble("Not to self: Buy some noodles.");
+  Ramble *ramble10 = new Ramble("I need to start my assignment...");
   arrayrambles[9] = ramble10;
-  Ramble *ramble11 = new Ramble("I saw a weird lookin bird.");
+  Ramble *ramble11 = new Ramble("I should try to meet some people this week");
   arrayrambles[10] = ramble11;
-  Ramble *ramble12 = new Ramble("I could use a pint...");
+  Ramble *ramble12 = new Ramble("I'd love a cup of java");
   arrayrambles[11] = ramble12;
-  Ramble *ramble13 = new Ramble("Not to self: Buy some noodles.");
+  Ramble *ramble13 = new Ramble("The €5 deal at Raps is dangerous...");
   arrayrambles[12] = ramble13;
   Ramble *ramble14 = new Ramble("I saw a weird lookin bird.");
   arrayrambles[13] = ramble14;
