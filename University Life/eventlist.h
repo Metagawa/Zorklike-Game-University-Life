@@ -12,9 +12,11 @@ public:
   ~EventList();
   vector<Event> getShuffledDeepCopy();
   Event *createDayOneEvent();
-    Event *createFinalEvent();
+  Event *createFinalEvent();
+
 private:
   void createMissingDogEvent();
+  void createPoem();
   // void createEvent();
 };
 

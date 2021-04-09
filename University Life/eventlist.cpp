@@ -9,7 +9,8 @@ EventList::EventList() {
   // REMEMBER TO ADD EVENT TO HEADER
   // createEvent();
 
-  createMissingDogEvent();
+  // createMissingDogEvent();
+  createPoem();
 }
 
 Event *EventList::getRandomEvent() {
@@ -116,7 +117,33 @@ void EventList::createEvent()
     events.push_back(*ToplevelScene);
 }
 TEMPLATE EVENT END*/
+void EventList::createPoem() {
+  Event *toplevelScene =
+      new Event("I have an idea for a poem!", "Yay, I love poems",
+                "But I hate poems!", "", false, false, -1, -1);
 
+  // top level's left option
+  Event *midlevelSceneA = new Event(
+      "Whose pen is that? I think I know. Its owner is quite happy though. "
+      "Full of joy like a vivid rainbow, I watch him laugh. I cry hello. He "
+      "gives his pen a shake, And laughs until her belly aches. The only other "
+      "sound's the break, Of distant waves and birds awake. The pen is black, "
+      "powerful and deep, But he has promises to keep, After cake and lots of "
+      "sleep. Sweet dreams come to him cheap. He rises from his gentle bed, "
+      "With thoughts of kittens in his head, He eats his jam with lots of "
+      "bread. Ready for the day ahead.",
+      "I need to jot that down!", "", "", true, true, -1, -1);
+
+  Event *midlevelSceneB = new Event("Maybe I will think of a song next time",
+                                    "Maybe...", "", "", true, true, -1, -1);
+
+  toplevelScene->leftOption = midlevelSceneA;
+  // connects the top level's second option with MidLevelB
+  toplevelScene->rightOption = midlevelSceneB;
+
+  // puts the event into the list of events.
+  events.push_back(*toplevelScene);
+}
 void EventList::createMissingDogEvent() {
   Event *ToplevelDogScene =
       new Event("I saw a small dog lying in the road",
@@ -206,24 +233,28 @@ Event *EventList::createDayOneEvent() {
 }
 
 Event *EventList::createFinalEvent() {
-  Event *toplevelScene =
-      new Event("Hard to believe it's Sunday already, feels like the last week went by in minutes... But I had a lot of fun", "This is just the start after all.",
-                "", "", false, true, -1, -1);
+  Event *toplevelScene = new Event(
+      "Hard to believe it's Sunday already, feels like the last week went by "
+      "in minutes... But I had a lot of fun",
+      "This is just the start after all.", "", "", false, true, -1, -1);
 
   // top level's left option
-  Event *midlevelSceneA =
-      new Event("Sure was a craaaaaaazy week feels like so much happened. I probably missed a ton of lectures with all that walking around.",
-                "Eh I'm sure I'll catch up... Probably.", "", "", false, true, -1, -1);
+  Event *midlevelSceneA = new Event(
+      "Sure was a craaaaaaazy week feels like so much happened. I probably "
+      "missed a ton of lectures with all that walking around.",
+      "Eh I'm sure I'll catch up... Probably.", "", "", false, true, -1, -1);
 
   // Mid level a's left option
-  Event *bottomlevelSceneA = new Event(
-      "If my first week was this hectic, I'm sure there's lots more in store for me over the next few years.",
-      "My University Life starts here!", "", "", false, true, -1, -1);
- Event *finallevelSceneA = new Event("Exit Game","","", "", true, true, -1, -1);
+  Event *bottomlevelSceneA =
+      new Event("If my first week was this hectic, I'm sure there's lots more "
+                "in store for me over the next few years.",
+                "My University Life starts here!", "", "", false, true, -1, -1);
+  Event *finallevelSceneA =
+      new Event("Exit Game", "", "", "", true, true, -1, -1);
   toplevelScene->leftOption = midlevelSceneA;
   // connects the top level's second option with MidLevelB
   midlevelSceneA->leftOption = bottomlevelSceneA;
-  bottomlevelSceneA->leftOption=finallevelSceneA;
+  bottomlevelSceneA->leftOption = finallevelSceneA;
 
   // puts the event into the list of events.
   return toplevelScene;
