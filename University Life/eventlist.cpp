@@ -10,9 +10,6 @@ EventList::EventList() {
   // createEvent();
 
   // createMissingDogEvent();
-  createPoem();
-  createShoppingList();
-  createGoForStrollEvent();
 }
 
 Event *EventList::getRandomEvent() {

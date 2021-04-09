@@ -13,12 +13,12 @@ public:
   vector<Event> getShuffledDeepCopy();
   Event *createDayOneEvent();
   Event *createFinalEvent();
-
-private:
   void createMissingDogEvent();
   void createPoem();
   void createShoppingList();
   void createGoForStrollEvent();
+
+private:
   // void createEvent();
 };
 

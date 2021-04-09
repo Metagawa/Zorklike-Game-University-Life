@@ -46,6 +46,8 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   /*cout<<endl;
   cout << tim->getName() << endl;*/
   eventList = new EventList();
+  eventList->createPoem();
+  eventList->createShoppingList();
   rambleList = new RambleList();
   ui->setupUi(this);
   this->setWindowTitle("University Life");
@@ -250,12 +252,11 @@ Zork::~Zork() {
 
 void Zork::updatePositionAfterMoving() {
 
-    if (time->getDayNum()==0 && time->getTime()==21 ){
-        // starts specific event
-        currentEvent = eventList->createFinalEvent();
-        eventStartSpecific();
-
-    }
+  if (time->getDayNum() == 0 && time->getTime() == 21) {
+    // starts specific event
+    currentEvent = eventList->createFinalEvent();
+    eventStartSpecific();
+  }
 
   examineClicked = false;
   ui->actButton->setDisabled(true);
@@ -401,11 +402,17 @@ void Zork::on_examineButton_clicked() {
 }
 
 void Zork::on_infoButton_clicked() {
-    QString str ="Welcome to University Life! Your name is " + QString::fromUtf8(charname->getName().c_str()) + ". In University life your goal is to explore the campus, meet new people and have fun along the way. New events appear around every corner, so make sure to explore the campus every day and night during your first week as a college student!";
+  QString str = "Welcome to University Life! Your name is " +
+                QString::fromUtf8(charname->getName().c_str()) +
+                ". In University life your goal is to explore the campus, meet "
+                "new people and have fun along the way. New events appear "
+                "around every corner, so make sure to explore the campus every "
+                "day and night during your first week as a college student!";
 
-updateNotebookDuringEvent(str);
+  updateNotebookDuringEvent(str);
 
-playSound(scratchSfx); }
+  playSound(scratchSfx);
+}
 
 void Zork::on_mapButton_clicked() {
 
@@ -690,9 +697,8 @@ void Zork::updateNotebookDuringEvent(QString currentEventText) {
     qpte->moveCursor(QTextCursor::End);
   }
 
-  if (currentEventText=="Exit Game" ){
-      // starts specific event
-      exit(EXIT_SUCCESS);
+  if (currentEventText == "Exit Game") {
+    // starts specific event
+    exit(EXIT_SUCCESS);
   }
-
 }
