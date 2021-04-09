@@ -393,9 +393,11 @@ void Zork::on_examineButton_clicked() {
 }
 
 void Zork::on_infoButton_clicked() {
-QString str = QString::fromUtf8(charname->getName().c_str());
-    updateNotebookDuringEvent(str);
-    playSound(scratchSfx); }
+    QString str ="Welcome to University Life! Your name is " + QString::fromUtf8(charname->getName().c_str()) + ". In University life your goal is to explore the campus, meet new people and have fun along the way. New events appear around every corner, so make sure to explore the campus every day and night during your first week as a college student!";
+
+updateNotebookDuringEvent(str);
+
+playSound(scratchSfx); }
 
 void Zork::on_mapButton_clicked() {
 
