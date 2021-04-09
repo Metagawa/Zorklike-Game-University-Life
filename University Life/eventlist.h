@@ -7,7 +7,7 @@ using std::vector;
 class EventList {
 public:
   EventList();
-  vector<Event> events;
+  vector<Event> *events;
   Event *getRandomEvent();
   ~EventList();
   vector<Event> getShuffledDeepCopy();

@@ -178,7 +178,7 @@ void Zork::eventStartSpecific() {
 void Zork::eventStart() {
   cout << "Attempting to set current event...\n";
   try {
-    if (eventList->events.empty()) {
+    if (eventList->events->empty()) {
       cout << "Failed to set an event...\n";
 
       exceptionZork eventException;

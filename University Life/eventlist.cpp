@@ -3,18 +3,11 @@
 #include <algorithm>
 #include <vector>
 #define getRand(a) ((rand() % a))
-EventList::EventList() {
-
-  // REMEMBER TO ADD EVENT CALL HERE
-  // REMEMBER TO ADD EVENT TO HEADER
-  // createEvent();
-
-  // createMissingDogEvent();
-}
+EventList::EventList() { events = new vector<Event>; }
 
 Event *EventList::getRandomEvent() {
-  int randomNumber = getRand(events.size());
-  return &events[randomNumber];
+  int randomNumber = getRand(events->size());
+  return &events->at(randomNumber);
 }
 
 /*TEMPLATE EVENT START
@@ -141,7 +134,7 @@ void EventList::createPoem() {
   toplevelScene->rightOption = midlevelSceneB;
 
   // puts the event into the list of events.
-  events.push_back(*toplevelScene);
+  events->push_back(*toplevelScene);
 }
 void EventList::createShoppingList() {
   Event *toplevelScene =
@@ -160,7 +153,7 @@ void EventList::createShoppingList() {
   toplevelScene->rightOption = midlevelSceneB;
 
   // puts the event into the list of events.
-  events.push_back(*toplevelScene);
+  events->push_back(*toplevelScene);
 }
 void EventList::createGoForStrollEvent() {
   Event *toplevelScene =
@@ -181,7 +174,7 @@ void EventList::createGoForStrollEvent() {
   toplevelScene->rightOption = midlevelSceneB;
 
   // puts the event into the list of events.
-  events.push_back(*toplevelScene);
+  events->push_back(*toplevelScene);
 }
 void EventList::createMissingDogEvent() {
   Event *ToplevelDogScene =
@@ -245,7 +238,7 @@ void EventList::createMissingDogEvent() {
   MidlevelDogSceneB->rightOption = BottomlevelDogSceneD;
 
   // puts the event into the list of events.
-  events.push_back(*ToplevelDogScene);
+  events->push_back(*ToplevelDogScene);
 }
 Event *EventList::createDayOneEvent() {
   Event *toplevelScene =
@@ -298,10 +291,10 @@ Event *EventList::createFinalEvent() {
   // puts the event into the list of events.
   return toplevelScene;
 }
-EventList::~EventList() { events.~vector<Event>(); }
+EventList::~EventList() { events->~vector<Event>(); }
 
 vector<Event> EventList::getShuffledDeepCopy() {
-  vector<Event> copy = events; // deep copy, unlike java, All Events copied
+  vector<Event> copy = *events; // deep copy, unlike java, All Events copied
   random_shuffle(copy.begin(), copy.end());
   return copy;
 }
