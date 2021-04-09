@@ -5,7 +5,7 @@
 #define ARRAY_SIZE 11
 int arrayevents[ARRAY_SIZE];
 #define getRand(a) ((rand() % a))
-int eventNumber = 0;
+int eventNumber = -1;
 
 EventList::EventList()
 {
@@ -314,6 +314,5 @@ Event *EventList::createFinalEvent()
 
 Event *EventList::getNextEvent()
 {
-    return arrayevents[eventNumber];
-    eventNumber++;
+return arrayevents[eventNumber++];
 }
