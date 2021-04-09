@@ -105,5 +105,6 @@ private:
   void interactChance();
   bool interactEnabled = false;
   Character *tim;
+  Character *charname;
 };
 #endif // UNIZORK_H
