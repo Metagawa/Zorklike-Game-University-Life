@@ -185,7 +185,16 @@ void Zork::eventStart() {
     cout << "No event left to return! Returning to explore scene...\n";
   }
 }
-Zork::~Zork() { delete ui; }
+Zork::~Zork() {
+  delete ui;
+  delete uniLife;
+  delete textDayList;
+  delete time;
+  delete eventList;
+  delete rambleList;
+  delete currentEvent;
+  delete currentEvent;
+}
 
 void Zork::updatePositionAfterMoving() {
   examineClicked = false;
