@@ -79,6 +79,9 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   debug(welcomeText);
   // update disable buttons
   updateDisabledDirections();
+  // start pecific event
+  currentEvent = eventList->createDayOneEvent();
+  eventStartSpecific();
 }
 void Zork::updateOnChangeStackPaneIndex() {
   if (ui->stackedWidget->currentIndex() == 0) {
@@ -118,6 +121,60 @@ void Zork::updateDisabledDirections() {
   if (uniLife->currentRoom->nextRoom("west") == NULL) {
     ui->westButton->setDisabled(true);
   }
+}
+
+void Zork::eventStartSpecific() {
+  cout << "New current event set!\n";
+  debugMini(currentEvent->text);
+
+  updateNumberOfOptions();
+  updateLocation();
+  // sets the event scene stacked widget page
+
+  ui->stackedWidget->setCurrentIndex(2);
+
+  // sets the eventText box equal to the event dialogue.
+  // QString::fromStdString(uniLife->currentRoom->longDescription()); is
+  // dummy code and needs to be replaced for proper functionality.
+  QString currentEventText = QString::fromStdString(currentEvent->text);
+  ui->eventText->setPlainText(currentEventText);
+  updateNotebookDuringEvent(currentEventText);
+
+  // sets options equal to event options
+  // QString::fromStdString(uniLife->currentRoom->longDescription()); is
+  // dummy code and needs to be replaced for proper functionality.
+  QString currentEventOption1 =
+      QString::fromStdString(currentEvent->leftOptiontext);
+  ui->option_1->setText(currentEventOption1);
+
+  QString currentEventOption2 =
+      QString::fromStdString(currentEvent->rightOptiontext);
+  ui->option_2->setText(currentEventOption2);
+
+  ui->person_2->setPixmap(
+      QPixmap(QString::fromStdString(currentEvent->pixmapCharacterResource)));
+  // update background image based on room
+  bool isRaining = time->isRaining();
+  if (time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getDayClear())));
+  } else if (time->isDayTime() && isRaining) {
+    QMovie *movie =
+        new QMovie(QString::fromStdString(uniLife->currentRoom->getDayRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  } else if (!time->isDayTime() && !isRaining) {
+    ui->imageBackground_2->setPixmap(
+        QPixmap(QString::fromStdString(uniLife->currentRoom->getNightClear())));
+  } else if (!time->isDayTime() && isRaining) {
+    QMovie *movie = new QMovie(
+        QString::fromStdString(uniLife->currentRoom->getNightRain()));
+    ui->imageBackground_2->setMovie(movie);
+    movie->start();
+  }
+  // calls updateOnChangeStackPaneIndex so that ui elements are hidden
+  // correctly.
+  updateOnChangeStackPaneIndex();
 }
 void Zork::eventStart() {
   cout << "Attempting to set current event...\n";

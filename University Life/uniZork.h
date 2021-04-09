@@ -93,6 +93,7 @@ private:
   void updateOnChangeStackPaneIndex();
   void updateDisabledDirections();
   void eventStart();
+  void eventStartSpecific();
   string getRoomName(string s);
   string eventExistsText;
   EventList *eventList;
