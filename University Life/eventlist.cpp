@@ -161,7 +161,7 @@ Event *toplevelStudyScene =
       "Maybe, lets find out!", "", "", true, true, 3, 3);
 
   Event *midlevelStudySceneB =
-      new Event("My drom room may be a good place to study without being interrupted by others", "I'm going to head back to it", "", "",
+      new Event("My dorm room may be a good place to study without being interrupted by others", "I'm going to head back to it", "", "",
                 true, true, 1, 1);
 
   toplevelStudyScene->leftOption = midlevelStudySceneA;
@@ -309,7 +309,7 @@ Event *toplevelStudyScene =
                   arrayevents[15] = toplevelPoemScene;
 
                   Event *toplevelLunchScene =
-                        new Event("I'm sick of eating lunch alone", "Maybe I can have luch with Jake or Sarah?",
+                        new Event("I'm sick of eating lunch alone", "Maybe I can have luch with Jake or Sarah? I still have to show her my l33tcode.",
                                   "", "", false, true, -1, -1);
 
                     // top level's left option
@@ -321,6 +321,46 @@ Event *toplevelStudyScene =
 
                     // puts the event into the list of events.
                     arrayevents[16] = toplevelLunchScene;
+
+
+                    Event *toplevelFAANGScene =
+                          new Event("1 week into college and I already have 4 FAANG interviews lined up", "FAANGTASTIC!",
+                                    "", "", false, true, -1, -1);
+
+                      // top level's left option
+                      Event *midlevelFAANGSceneA = new Event("I was born for the behavioural interview",
+                          "I have the worlds greatest personality", "", "", true, true, -1, -1);
+
+                      toplevelFAANGScene->leftOption = midlevelFAANGSceneA;
+
+
+                      // puts the event into the list of events.
+                      arrayevents[17] = toplevelFAANGScene;
+
+                      Event *toplevelGroupScene =
+                            new Event("Ugh I hate group work, why did the lecturer have to assign a group project this early!?", "I could do this by myself easy.",
+                                      "", "", false, true, -1, -1);
+
+                        // top level's left option
+                        Event *midlevelGroupSceneA = new Event("It's just a simple little fullstack javafx program using sql database management. Probably super easy to do, I just need to google what sql and javafx are first.",
+                            "I'll get it done before I get assigned a group!", "", "", true, true, -1, -1);
+
+                        toplevelGroupScene->leftOption = midlevelGroupSceneA;
+                        // puts the event into the list of events.
+                        arrayevents[17] = toplevelGroupScene;
+
+
+                        Event *toplevelEnergyScene =
+                              new Event("Ugh I hate group work, why did the lecturer have to assign a group project this early!?", "I could do this by myself easy.",
+                                        "", "", false, true, -1, -1);
+
+                          // top level's left option
+                          Event *midlevelEnergySceneA = new Event("It's just a simple little fullstack javafx program using sql database management. Probably super easy to do, I just need to google what sql and javafx are first.",
+                              "I'll get it done before I get assigned a group!", "", "", true, true, -1, -1);
+
+                          toplevelEnergyScene->leftOption = midlevelEnergySceneA;
+                          // puts the event into the list of events.
+                          arrayevents[17] = toplevelEnergyScene;
 }
 
 
