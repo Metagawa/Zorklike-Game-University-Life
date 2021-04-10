@@ -10,6 +10,7 @@ public:
   Event *arrayevents[20];
     Event *createDayOneEvent();
   Event *createFinalEvent();
+  Event *createNoEvent();
   void createMissingDogEvent();
   void createPoem();
   void createShoppingList();

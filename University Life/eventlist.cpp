@@ -253,6 +253,20 @@ Event *toplevelStudyScene =
                           "", "", true, true, -1, -1);
 
             arrayevents[10] = toplevelDancingScene;
+
+            Event *toplevelCourseScene =
+                  new Event("I sometimes wonder if I have chosen the right college course","I guess I should figure this out pretty soon",
+                            "", "", false, true, -1, -1);
+
+              // top level's left option
+              Event *midlevelCourseSceneA = new Event("Maybe it will become clearer to me after I have attended some lectures",
+                  "Maybe...", "", "", true, true, -1, -1);
+
+              toplevelCourseScene->leftOption = midlevelCourseSceneA;
+
+
+              // puts the event into the list of events.
+              arrayevents[11] = toplevelCourseScene;
 }
 
 
@@ -301,6 +315,32 @@ Event *EventList::createFinalEvent()
         new Event("If my first week was this hectic, I'm sure there's lots more "
                   "in store for me over the next few years.",
                   "My University Life starts here!", "", "", false, true, -1, -1);
+    Event *finallevelSceneA =
+        new Event("Exit Game", "", "", "", true, true, -1, -1);
+    toplevelScene->leftOption = midlevelSceneA;
+    // connects the top level's second option with MidLevelB
+    midlevelSceneA->leftOption = bottomlevelSceneA;
+    bottomlevelSceneA->leftOption = finallevelSceneA;
+
+    // puts the event into the list of events.
+    return toplevelScene;
+}
+
+Event *EventList::createNoEvent()
+{
+    Event *toplevelScene = new Event(
+        "Wow, things have really gotten dull around here, feels like I've done all there is to do here already.",
+        "I'm probably just tired.", "", "", false, true, -1, -1);
+
+    // top level's left option
+    Event *midlevelSceneA = new Event(
+        "I should try and follow up on some of the people I met during this crazy week, like that Jake guy or Sarah.",
+        "We could make a study group or something to keep in touch.", "", "", false, true, -1, -1);
+
+    // Mid level a's left option
+    Event *bottomlevelSceneA =
+        new Event("This first week was super hectic, but I pulled through really well, maybe it would've been different if I didn't manage to clear my schedule before sunday?\nMy University Life is going swimmingly.",
+                  "Hopefully I can handle every week like this!", "", "", false, true, -1, -1);
     Event *finallevelSceneA =
         new Event("Exit Game", "", "", "", true, true, -1, -1);
     toplevelScene->leftOption = midlevelSceneA;

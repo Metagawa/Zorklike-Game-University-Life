@@ -255,6 +255,10 @@ void Zork::updatePositionAfterMoving() {
     eventStartSpecific();
   }
 
+  if (eventList->eventNumber>=2){
+      currentEvent = eventList->createNoEvent();
+      eventStartSpecific();
+  }
   examineClicked = false;
   ui->actButton->setDisabled(true);
   interactChance();
