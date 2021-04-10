@@ -266,22 +266,6 @@ Event *toplevelStudyScene =
 
               // puts the event into the list of events.
               arrayevents[11] = toplevelCourseScene;
-
-              Event *toplevelSummerScene =
-                    new Event("I had a great summer.", "I sure did",
-                              "", "", false, true, -1, -1);
-
-                // top level's left option
-                Event *midlevelSummerSceneA = new Event("I'm looking forward to next summer",
-                    "I sure am", "", "", true, true, -1, -1);
-
-                toplevelSummerScene->leftOption = midlevelSummerSceneA;
-
-
-                // puts the event into the list of events.
-                arrayevents[12] = toplevelSummerScene;
-
-
 }
 
 
