@@ -37,11 +37,10 @@ Zork::Zork(QWidget *parent) : QMainWindow(parent), ui(new Ui::Zork) {
   string name = "Tim";
   timsname = (char *)name.c_str();
   tim = new Character(timsname);
-  Person *timAsAPerson = dynamic_cast<Person *>(tim);
-  timAsAPerson->greet();
-
   charname = new Character(charactername);
   cout << "Character name set to " << charactername << endl;
+  Person *timAsAPerson = dynamic_cast<Person *>(tim);
+  timAsAPerson->greet();
 
   /*cout<<endl;
   cout << tim->getName() << endl;*/
@@ -183,7 +182,7 @@ void Zork::eventStart() {
       throw eventException;
     } else {
       currentEvent = eventList->getNextEvent();
-      eventList->eventNumber++;
+
       cout << "New current event set!\n";
       debugMini(currentEvent->text);
 
@@ -250,7 +249,7 @@ Zork::~Zork() {
 
 void Zork::updatePositionAfterMoving() {
 
-  if (time->getDayNum() == 0 && time->getTime() >= 21) {
+  if (time->getDayNum() == 6 && time->getTime() >= 21) {
     // starts specific event
     currentEvent = eventList->createFinalEvent();
     eventStartSpecific();
@@ -513,8 +512,9 @@ void Zork::on_mapButton_clicked() {
 
 void Zork::on_actButton_clicked() {
   playSound(scratchSfx);
+    eventStart();
+eventList->eventNumber++;
 
-  eventStart();
 }
 
 void Zork::on_quitButton_clicked() {
@@ -637,8 +637,7 @@ void Zork::updateLocation() {
 
 void Zork::interactChance() {
 
-  interactEnabled = (rand() % 100) < 25;
-
+ interactEnabled = (rand() % 100) < 25;
   // interactEnabled is a reference to chance.
   if (interactEnabled) {
     ui->actButton->setDisabled(false);
