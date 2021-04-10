@@ -323,7 +323,7 @@ Event *toplevelStudyScene =
                   arrayevents[15] = toplevelPoemScene;
 
                   Event *toplevelLunchScene =
-                        new Event("I'm sick of eating lunch alone", "Maybe I can have luch with Jake or Sarah? I still have to show her my l33tcode.",
+                        new Event("I'm sick of eating lunch alone", "Maybe I can have luch with Jake or Sarah?",
                                   "", "", false, true, -1, -1);
 
                     // top level's left option
