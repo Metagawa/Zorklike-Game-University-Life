@@ -33,12 +33,12 @@ public:
   Zork(QWidget *parent = nullptr);
   ~Zork();
 
-  class exceptionZork : public exception {};
+  class exceptionZork : public exception {}; //example of exception class
   template <class T> class TemplatePair {
     T pair[2];
 
   public:
-    TemplatePair(T one, T two) {
+    TemplatePair(T one, T two) { //example of template class
       pair[0] = one;
       pair[1] = two;
     }
