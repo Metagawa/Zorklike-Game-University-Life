@@ -22,7 +22,7 @@ EventList::EventList()
 */
 
     Event *toplevelSarahScene =
-        new Event("\"Hi are you new? You look really lost haha.\"\nA helpful looking girl approaches me as I finish my map sketch.",
+        new Event("\"Hi are you new? You look really lost haha.\"\nA helpful looking girl approaches me as I walk through.",
 
                    "What gave it away, the overstuffed bag or the map I sketched?", "", ":/images/people/Sarah.png", false, true, -1, -1);
 
