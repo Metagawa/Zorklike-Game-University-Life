@@ -255,7 +255,7 @@ void Zork::updatePositionAfterMoving() {
     eventStartSpecific();
   }
 
-  if (eventList->eventNumber>=2){
+  if (eventList->eventNumber>20){
       currentEvent = eventList->createNoEvent();
       eventStartSpecific();
   }
@@ -641,7 +641,8 @@ void Zork::updateLocation() {
 
 void Zork::interactChance() {
 
- interactEnabled = (rand() % 100) < 25;
+interactEnabled = (rand() % 100) < 25;
+   //interactEnabled=true;
   // interactEnabled is a reference to chance.
   if (interactEnabled) {
     ui->actButton->setDisabled(false);
