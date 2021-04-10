@@ -788,8 +788,8 @@ void Zork::updateLocation()
 //random chance to activate the interact button so a player can start a new event.
 void Zork::interactChance()
 {
-  //interactEnabled is a reference to chance.
-  interactEnabled = (rand() % 100) < 65;
+//sets interactEnabled as true based on random chance
+    interactEnabled = (rand() % 100) < 65;
 
   //if interactEnabled is true, returns a message to the notebook.
   if (interactEnabled)
