@@ -641,7 +641,7 @@ void Zork::updateLocation() {
 
 void Zork::interactChance() {
 
-interactEnabled = (rand() % 100) < 25;
+interactEnabled = (rand() % 100) < 65;
    //interactEnabled=true;
   // interactEnabled is a reference to chance.
   if (interactEnabled) {

@@ -21,31 +21,18 @@ EventList::EventList()
 
 */
 
-    Event *toplevelPoemScene =
-        new Event("I have an idea for a poem!", "Yay, I love poems",
-                  "But I hate poems!", "", false, false, -1, -1);
+    Event *toplevelSarahScene =
+        new Event("\"Hi are you new? You look really lost haha.\"\nA helpful looking girl approaches me as I finish my map sketch.",
 
-    // top level's left option
-    Event *midlevelPoemSceneA = new Event(
-        "Whose pen is that? I think I know. Its owner is quite happy though. "
-        "Full of joy like a vivid rainbow, I watch him laugh. I cry hello. He "
-        "gives his pen a shake, And laughs until her belly aches. The only other "
-        "sound's the break, Of distant waves and birds awake. The pen is black, "
-        "powerful and deep, But he has promises to keep, After cake and lots of "
-        "sleep. Sweet dreams come to him cheap. He rises from his gentle bed, "
-        "With thoughts of kittens in his head, He eats his jam with lots of "
-        "bread. Ready for the day ahead.",
-        "I need to jot that down!", "", "", true, true, -1, -1);
+                   "What gave it away, the overstuffed bag or the map I sketched?", "", ":/images/people/Sarah.png", false, true, -1, -1);
 
-    Event *midlevelPoemSceneB = new Event("Maybe I will think of a song next time",
-                                          "Maybe...", "", "", true, true, -1, -1);
-
-    toplevelPoemScene->leftOption = midlevelPoemSceneA;
+    Event *midLevelSarah = new Event("\"A little of both, Hi I'm Sarah, I'm a second year arts student, what course are you in?\"\n\"Nice to meet you Sarah, I'm in Computer Science, I'm an expert coder already though. Made 3 websites over the summer.","Want to see my l33tcode scores?","", ":/images/people/Sarah.png", false, true, -1, -1);
+    Event *bottomLevelSarah = new Event("\"No thanks I'm ok... I have to get going now bye...\"\nShe quickly hurries off, probably late for class or something.", "I should show her my scores next time I see her.", "", ":/images/people/Sarah.png", true, true, -1, -1);
+    toplevelSarahScene->leftOption = midLevelSarah;
     // connects the top level's second option with MidLevelB
-    toplevelPoemScene->rightOption = midlevelPoemSceneB;
-
+    midLevelSarah->leftOption = bottomLevelSarah;
     // puts the event into the list of events.
-    arrayevents[0] = toplevelPoemScene;
+    arrayevents[0] = toplevelSarahScene;
 
     Event *toplevelShopScene =
         new Event("I need to write my shopping list", "I want noodles",
@@ -266,6 +253,74 @@ Event *toplevelStudyScene =
 
               // puts the event into the list of events.
               arrayevents[11] = toplevelCourseScene;
+
+              Event *toplevelNotebookScene =
+                    new Event("My notebook is getting quite full ", "It really is",
+                              "", "", false, true, -1, -1);
+
+                // top level's left option
+                Event *midlevelNotebookSceneA = new Event("I should buy another notebook",
+                    "I proabaly won't need one this week though", "", "", true, true, -1, -1);
+
+                toplevelNotebookScene->leftOption = midlevelNotebookSceneA;
+
+
+                // puts the event into the list of events.
+                arrayevents[12] = toplevelNotebookScene;
+
+                Event *toplevelTimeScene =
+                      new Event("Random thought: I will spend 4 years here", "It will probably fly",
+                                "", "", false, true, -1, -1);
+
+                  // top level's left option
+                  Event *midlevelTimeSceneA = new Event("I'm not so sure what I will do after yet",
+                      "Time will tell", "", "", true, true, -1, -1);
+
+                  toplevelTimeScene->leftOption = midlevelTimeSceneA;
+
+
+                  // puts the event into the list of events.
+                  arrayevents[14] = toplevelTimeScene;
+
+                  Event *toplevelPoemScene =
+                      new Event("I have an idea for a poem!", "Yay, I love poems",
+                                "But I hate poems!", "", false, false, -1, -1);
+
+                  // top level's left option
+                  Event *midlevelPoemSceneA = new Event(
+                      "Whose pen is that? I think I know. Its owner is quite happy though. "
+                      "Full of joy like a vivid rainbow, I watch him laugh. I cry hello. He "
+                      "gives his pen a shake, And laughs until her belly aches. The only other "
+                      "sound's the break, Of distant waves and birds awake. The pen is black, "
+                      "powerful and deep, But he has promises to keep, After cake and lots of "
+                      "sleep. Sweet dreams come to him cheap. He rises from his gentle bed, "
+                      "With thoughts of kittens in his head, He eats his jam with lots of "
+                      "bread. Ready for the day ahead.",
+                      "I need to jot that down!", "", "", true, true, -1, -1);
+
+                  Event *midlevelPoemSceneB = new Event("Maybe I will think of a song next time",
+                                                        "Maybe...", "", "", true, true, -1, -1);
+
+                  toplevelPoemScene->leftOption = midlevelPoemSceneA;
+                  // connects the top level's second option with MidLevelB
+                  toplevelPoemScene->rightOption = midlevelPoemSceneB;
+
+                  // puts the event into the list of events.
+                  arrayevents[15] = toplevelPoemScene;
+
+                  Event *toplevelLunchScene =
+                        new Event("I'm sick of eating lunch alone", "Maybe I can have luch with Jake or Sarah?",
+                                  "", "", false, true, -1, -1);
+
+                    // top level's left option
+                    Event *midlevelLunchSceneA = new Event("I will send both of them a text",
+                        "Text: hv lunch w/ me?", "", "", true, true, -1, -1);
+
+                    toplevelLunchScene->leftOption = midlevelLunchSceneA;
+
+
+                    // puts the event into the list of events.
+                    arrayevents[16] = toplevelLunchScene;
 }
 
 
@@ -333,7 +388,7 @@ Event *EventList::createNoEvent()
 
     // top level's left option
     Event *midlevelSceneA = new Event(
-        "I should try and follow up on some of the people I met during this crazy week, like that Jake guy or Sarah.",
+        "I should try and follow up on some of the people I met during this crazy week, like that Jake guy or Sarah. I still have to show her my l33tcode scores.",
         "We could make a study group or something to keep in touch.", "", "", false, true, -1, -1);
 
     // Mid level a's left option
