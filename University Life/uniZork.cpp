@@ -23,6 +23,8 @@ QSound crumpleSfx(":/sfx/crumple.wav");
 QSound penSfx(":/sfx/pen.wav");
 QSound clickSfx(":/sfx/click.wav");
 #define playSound(a) (a.stop(), a.play())
+#define getRand(a) (rand() % 100 <  a)
+
 bool interactEnabled = false;
 bool examineClicked = false;
 // example of reference
@@ -261,7 +263,7 @@ void Zork::updatePositionAfterMoving() {
   }
   examineClicked = false;
   ui->actButton->setDisabled(true);
-  interactChance();
+  interactEnabled=getRand(15);
   ui->tabWidget->setCurrentIndex(time->getDayNum());
   bool itsABrandNewDay = time->advanceTime();
   if (itsABrandNewDay) {
@@ -641,7 +643,7 @@ void Zork::updateLocation() {
 
 void Zork::interactChance() {
 
-interactEnabled = (rand() % 100) < 25;
+interactEnabled = getRand(20);
    //interactEnabled=true;
   // interactEnabled is a reference to chance.
   if (interactEnabled) {
