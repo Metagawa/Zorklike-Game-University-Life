@@ -268,6 +268,20 @@ Event *toplevelStudyScene =
                 // puts the event into the list of events.
                 arrayevents[12] = toplevelNotebookScene;
 
+                Event *toplevelUnluckyScene =
+                      new Event("I have the worst luck", "I'm one unfortunate cookie",
+                                "", "", false, true, -1, -1);
+
+                  // top level's left option
+                  Event *midlevelUnluckySceneA = new Event("I just gobbled that fortune cookie whole",
+                      "I should have looked at the message inside", "", "", true, true, -1, -1);
+
+                  toplevelUnluckyScene->leftOption = midlevelUnluckySceneA;
+
+
+                  // puts the event into the list of events.
+                  arrayevents[13] = toplevelUnluckyScene;
+
                 Event *toplevelTimeScene =
                       new Event("Random thought: I will spend 4 years here", "It will probably fly",
                                 "", "", false, true, -1, -1);
