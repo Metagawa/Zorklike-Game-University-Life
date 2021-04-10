@@ -136,7 +136,7 @@ EventList::EventList()
     arrayevents[3] = ToplevelDogScene;
 
 Event *toplevelJakeScene =
-    new Event("That lecture was mind-numbing, I need to take a break. A wrap would be the proper job right about now."
+    new Event("I'm exhausteed after those classes, I need to take a break. A wrap would be the proper job right about now."
               "The line at Raps is mad, I hate this shite."
               "\nI keep getting weird looks for writing my journal entries in the line."
               "\n\"Hey, how are ya keepin?\"",

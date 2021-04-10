@@ -255,10 +255,6 @@ void Zork::updatePositionAfterMoving() {
     eventStartSpecific();
   }
 
-  if (eventList->eventNumber>19){
-      currentEvent = eventList->createNoEvent();
-      eventStartSpecific();
-  }
   examineClicked = false;
   ui->actButton->setDisabled(true);
   interactChance();
@@ -515,6 +511,10 @@ void Zork::on_mapButton_clicked() {
 }
 
 void Zork::on_actButton_clicked() {
+    if (eventList->eventNumber>19){
+        currentEvent = eventList->createNoEvent();
+        eventStartSpecific();
+    }
   playSound(scratchSfx);
     eventStart();
 eventList->eventNumber++;
