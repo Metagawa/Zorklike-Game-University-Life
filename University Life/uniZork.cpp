@@ -175,7 +175,7 @@ void Zork::eventStartSpecific() {
 void Zork::eventStart() {
   cout << "Attempting to set current event...\n";
   try {
-    if (eventList->eventNumber>=21) {
+    if (eventList->eventNumber>19) {
       cout << "Failed to set an event...\n";
 
       exceptionZork eventException;
@@ -255,7 +255,7 @@ void Zork::updatePositionAfterMoving() {
     eventStartSpecific();
   }
 
-  if (eventList->eventNumber>20){
+  if (eventList->eventNumber>19){
       currentEvent = eventList->createNoEvent();
       eventStartSpecific();
   }

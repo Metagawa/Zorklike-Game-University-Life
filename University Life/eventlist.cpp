@@ -347,20 +347,33 @@ Event *toplevelStudyScene =
 
                         toplevelGroupScene->leftOption = midlevelGroupSceneA;
                         // puts the event into the list of events.
-                        arrayevents[17] = toplevelGroupScene;
+                        arrayevents[18] = toplevelGroupScene;
 
 
                         Event *toplevelEnergyScene =
-                              new Event("Ugh I hate group work, why did the lecturer have to assign a group project this early!?", "I could do this by myself easy.",
-                                        "", "", false, true, -1, -1);
+                              new Event("I just noticed I haven't actually gone to my dorm room since I arrived here, that Energy drink they sell at Raps is ridiculously good.", "I should get some more right now.",
+                                        "", "", false, true, 11, 11);
 
                           // top level's left option
-                          Event *midlevelEnergySceneA = new Event("It's just a simple little fullstack javafx program using sql database management. Probably super easy to do, I just need to google what sql and javafx are first.",
-                              "I'll get it done before I get assigned a group!", "", "", true, true, -1, -1);
+                          Event *midlevelEnergySceneA = new Event("Ah they have my favourite in stock, \"Wonster Energy Espresso Shot\". Truly the nectar of the gods for a Computer Science student. A couple of these can keep you going for days.","Drink a \"couple\".", "", "", true, true, 11, 11);
 
                           toplevelEnergyScene->leftOption = midlevelEnergySceneA;
                           // puts the event into the list of events.
-                          arrayevents[17] = toplevelEnergyScene;
+                          arrayevents[18] = toplevelEnergyScene;
+
+                          Event *toplevelStartupScene =
+                                new Event("If FAANG doesn't work out I will make a startup", "Maybe I will drop out of college to start it!",
+                                          "", "", false, true, -1, -1);
+
+                            // top level's left option
+                            Event *midlevelStartupSceneA = new Event("Idea: A distributed peer to peer blockchain optimized with AI on the clientside as a service",
+                                "If that doesn't work out I will pivot to a VR startup", "", "", true, true, -1, -1);
+
+                            toplevelStartupScene->leftOption = midlevelStartupSceneA;
+
+
+                            // puts the event into the list of events.
+                            arrayevents[19] = toplevelStartupScene;
 }
 
 
