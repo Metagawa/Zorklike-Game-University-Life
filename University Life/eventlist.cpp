@@ -6,8 +6,6 @@
 #define ARRAY_SIZE 20
 //sets an array size
 int arrayevents[ARRAY_SIZE];
-//definition of a random number macro
-#define getRand(a) ((rand() % a))
 
 //list of events in an array
 EventList::EventList()
