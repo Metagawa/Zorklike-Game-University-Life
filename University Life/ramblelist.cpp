@@ -2,15 +2,13 @@
 #include "ramble.h"
 #include "ramblelist.h"
 #include <stdio.h>
-//defines array size
+// defines array size
 #define ARRAY_SIZE 20
-int arrayrambles[ARRAY_SIZE];
-//defines random number macro
+// defines random number macro
 #define getRand(a) ((rand() % a))
 
-//arraylist of rambles
-RambleList::RambleList()
-{
+// arraylist of rambles
+RambleList::RambleList() {
   Ramble *ramble1 = new Ramble("Not to self: Buy some noodles.");
   arrayrambles[0] = ramble1;
   Ramble *ramble2 = new Ramble("I saw a weird lookin bird.");
@@ -48,11 +46,13 @@ RambleList::RambleList()
   arrayrambles[13] = ramble14;
   Ramble *ramble15 = new Ramble("I should workout at the Gym more often.");
   arrayrambles[14] = ramble15;
-  Ramble *ramble16 = new Ramble("I wonder what happens at the shopping outlet at night...?");
+  Ramble *ramble16 =
+      new Ramble("I wonder what happens at the shopping outlet at night...?");
   arrayrambles[15] = ramble16;
   Ramble *ramble17 = new Ramble("I bet the Library is packed on rainy days.");
   arrayrambles[16] = ramble17;
-  Ramble *ramble18 = new Ramble("I wonder if any of my friends are at the Quad?");
+  Ramble *ramble18 =
+      new Ramble("I wonder if any of my friends are at the Quad?");
   arrayrambles[17] = ramble18;
   // shallow copy
   Ramble *ramble19 = ramble11;
@@ -62,9 +62,8 @@ RambleList::RambleList()
   arrayrambles[19] = ramble20;
 }
 
-//returns a random ramble
-Ramble *RambleList::getRandomRambles()
-{
+// returns a random ramble
+Ramble *RambleList::getRandomRambles() {
   int randomNumber = getRand(ARRAY_SIZE);
   return arrayrambles[randomNumber];
 }
