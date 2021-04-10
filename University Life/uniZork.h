@@ -19,11 +19,11 @@ QT_END_NAMESPACE
 class Zork : public QMainWindow {
   Q_OBJECT
 public:
-  template <typename T> void debugMini(const T x) {
+  template <typename T> void debugMini(const T x) { //example of template function
     cout << "The string value of X is " << x << endl;
   }
 
-  template <typename T> void debug(const T x) {
+  template <typename T> void debug(const T x) { //example of template function
     cout << "Name of file " << __FILE__ << ".\n";
     cout << "Its compilation began " << __DATE__;
     cout << " at " << __TIME__ << ".\n";
