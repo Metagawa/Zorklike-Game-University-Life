@@ -12,7 +12,10 @@ public:
   void greet();
 
 protected:
+  string gender;
+
 private:
+  string id;
 };
 
 #endif // PERSON_H
