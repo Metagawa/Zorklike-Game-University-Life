@@ -14,6 +14,7 @@ public:
   void createPoem();
   void createShoppingList();
   void createGoForStrollEvent();
+  int eventNumber;
 
 private:
   // void createEvent();

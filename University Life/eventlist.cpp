@@ -314,5 +314,5 @@ Event *EventList::createFinalEvent()
 
 Event *EventList::getNextEvent()
 {
-return arrayevents[eventNumber++];
+return arrayevents[eventNumber];
 }
