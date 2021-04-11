@@ -3,7 +3,7 @@ Zork based game about the first week of University Life
 
 
 <p align="center">
-![](https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.gif)
+<img src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.gif alt="demo gif" />
 </p>
 
 <p align="center">
