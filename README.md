@@ -1,5 +1,5 @@
-# CS4076-Project-University-Life
-Zork based game about the first week of University Life
+# CS4076-Zork-Project-University-Life
+Zork based game about the first week of University Life by group Misbits
 
 
 <p align="center">
