@@ -2,9 +2,9 @@
 Zork based game about the first week of University Life
 
 
-
+<p align="center">
 ![](https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.gif)
-
+</p>
 
 <p align="center">
   <img src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/resources/images/Misbits%20Games%20logo%201.png" alt="Misbits Games"/>
