@@ -1,7 +1,11 @@
 # CS4076-Project-University-Life
 Zork based game about the first week of University Life
 
-![](https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.mp4)
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.mp4" type="video/mp4">
+</video>
+
 
 <p align="center">
   <img src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/resources/images/Misbits%20Games%20logo%201.png" alt="Misbits Games"/>
