@@ -67,5 +67,6 @@
         <file>images/misc/scribble_hover.png</file>
         <file>images/people/blank.png</file>
         <file>images/people/Jake.png</file>
+        <file>../University Life/appico.ico</file>
     </qresource>
 </RCC>
