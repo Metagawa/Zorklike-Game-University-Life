@@ -2,9 +2,8 @@
 Zork based game about the first week of University Life
 
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.mp4" type="video/mp4">
-</video>
+
+![](https://github.com/TomC17/CS4076-Project-University-Life/blob/main/github%20files/github%20demo.gif)
 
 
 <p align="center">
