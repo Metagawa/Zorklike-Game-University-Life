@@ -1,4 +1,4 @@
-# CS4076-Zork-Project-University-Life
+# :mortar_board: University-Life
 Zork based game about the first week of University Life by group Misbits
 
 
@@ -14,17 +14,17 @@ Zork based game about the first week of University Life by group Misbits
   <img src="https://github.com/TomC17/CS4076-Project-University-Life/blob/main/resources/images/University%20Life%20logo%201.png" alt="UL - University Life"/>
 </p>
 
-## Get the game
+## :arrow_down: Get the game
 - [Latest Release](https://github.com/TomC17/CS4076-Project-University-Life/releases/latest)
 
 - [Game Design Document - WIP](https://docs.google.com/document/d/1k5iGqbBDBJeoLZsss46p7gMZREndBEyazYB0fdtogC8)
 
 
-## Built with
+## :hammer_and_wrench: Built with
 - [QT Creator](https://www.qt.io/offline-installers)
 - [Photoshop](https://www.adobe.com/ie/products/photoshop.html)
 - [VS Code Insiders](https://code.visualstudio.com/insiders)
 
-## Contributors
+## :busts_in_silhouette: Contributors
 
 See [who worked on the project](https://github.com/TomC17/CS4076-Project-University-Life/graphs/contributors).
